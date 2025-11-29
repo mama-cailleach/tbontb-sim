@@ -1,0 +1,1357 @@
+﻿match_id,team_id,team_name,player_id,player_name,batting_order,dismissal_mode,runs,balls,4s,6s,strike_rate,did_not_bat,Season
+M001,TBONTB,Two Bats or Not To Bat,,TGR Thorn,4,Bowled,21,14,,,150,FALSE,2013
+M001,TBONTB,Two Bats or Not To Bat,,WE Leuty,6,Bowled,0,4,,,0,FALSE,2013
+M001,TBONTB,Two Bats or Not To Bat,,MP Young,7,Caught,8,17,,,47.06,FALSE,2013
+M001,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Caught,8,12,,,66.67,FALSE,2013
+M001,TBONTB,Two Bats or Not To Bat,,PB Heath,1,Caught,0,1,,,0,FALSE,2013
+M001,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Not Out,35,41,,,85.37,FALSE,2013
+M001,TBONTB,Two Bats or Not To Bat,,DM Sheridan,5,Run Out,0,3,,,0,FALSE,2013
+M002,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Bowled,11,15,,,73.33,FALSE,2013
+M002,TBONTB,Two Bats or Not To Bat,,PB Heath,1,Caught,14,13,,,107.69,FALSE,2013
+M002,TBONTB,Two Bats or Not To Bat,,CTP Clark,7,Caught,6,12,,,50,FALSE,2013
+M002,TBONTB,Two Bats or Not To Bat,,TGR Thorn,4,Caught,8,11,,,72.73,FALSE,2013
+M002,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,18,10,,,180,FALSE,2013
+M002,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Caught,3,4,,,75,FALSE,2013
+M002,TBONTB,Two Bats or Not To Bat,,DM Sheridan,6,Run Out,6,13,,,46.15,FALSE,2013
+M003,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,26,16,,,162.5,FALSE,2013
+M003,TBONTB,Two Bats or Not To Bat,,PB Heath,1,Bowled,18,13,,,138.46,FALSE,2013
+M003,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Caught,9,12,,,75,FALSE,2013
+M003,TBONTB,Two Bats or Not To Bat,,MP Young,4,Caught,1,5,,,20,FALSE,2013
+M003,TBONTB,Two Bats or Not To Bat,,DM Sheridan,7,Caught,7,5,,,140,FALSE,2013
+M003,TBONTB,Two Bats or Not To Bat,,CTP Clark,8,Caught,0,5,,,0,FALSE,2013
+M003,TBONTB,Two Bats or Not To Bat,,TP Marshall,6,Caught,1,3,,,33.33,FALSE,2013
+M003,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Not Out,50,49,,,102.04,FALSE,2013
+M004,TBONTB,Two Bats or Not To Bat,,JC Davies,3,Caught,12,12,,,100,FALSE,2013
+M004,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Not Out,45,48,,,93.75,FALSE,2013
+M004,TBONTB,Two Bats or Not To Bat,,PB Heath,1,Not Out,50,46,,,108.7,FALSE,2013
+M004,TBONTB,Two Bats or Not To Bat,,Higgins PA,,,,,,,,TRUE,2013
+M004,TBONTB,Two Bats or Not To Bat,,TP Marshall,,,,,,,,TRUE,2013
+M004,TBONTB,Two Bats or Not To Bat,,DM Sheridan,,,,,,,,TRUE,2013
+M004,TBONTB,Two Bats or Not To Bat,,OCYG Willems,,,,,,,,TRUE,2013
+M004,TBONTB,Two Bats or Not To Bat,,MP Young,,,,,,,,TRUE,2013
+M005,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,2,4,,,50,FALSE,2013
+M005,TBONTB,Two Bats or Not To Bat,,TGR Thorn,4,Caught,28,25,,,112,FALSE,2013
+M005,TBONTB,Two Bats or Not To Bat,,PB Heath,1,Caught,10,12,,,83.33,FALSE,2013
+M005,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Caught,11,11,,,100,FALSE,2013
+M005,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Not Out,50,47,,,106.38,FALSE,2013
+M005,TBONTB,Two Bats or Not To Bat,,TP Marshall,6,Not Out,6,5,,,120,FALSE,2013
+M005,TBONTB,Two Bats or Not To Bat,,DM Sheridan,7,Not Out,4,5,,,80,FALSE,2013
+M006,TBONTB,Two Bats or Not To Bat,,PB Heath,3,Bowled,26,25,,,104,FALSE,2013
+M006,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Bowled,1,3,,,33.33,FALSE,2013
+M006,TBONTB,Two Bats or Not To Bat,,CTP Clark,1,Caught,0,4,,,0,FALSE,2013
+M006,TBONTB,Two Bats or Not To Bat,,GL Levine,5,Caught,3,4,,,75,FALSE,2013
+M006,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Not Out,47,53,,,88.68,FALSE,2013
+M006,TBONTB,Two Bats or Not To Bat,,AMC Hopkins,6,Not Out,0,1,,,0,FALSE,2013
+M006,TBONTB,Two Bats or Not To Bat,,Higgins PA,,,,,,,,TRUE,2013
+M007,TBONTB,Two Bats or Not To Bat,,DM Sheridan,1,Bowled,0,2,,,0,FALSE,2013
+M007,TBONTB,Two Bats or Not To Bat,,KM Toms,3,Caught,19,46,,,41.3,FALSE,2013
+M007,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Caught,4,4,,,100,FALSE,2013
+M007,TBONTB,Two Bats or Not To Bat,,OCYG Willems,6,Caught,4,4,,,100,FALSE,2013
+M007,TBONTB,Two Bats or Not To Bat,,PB Heath,7,Run Out,14,12,,,116.67,FALSE,2013
+M007,TBONTB,Two Bats or Not To Bat,,MP Young,2,Run Out,9,11,,,81.82,FALSE,2013
+M007,TBONTB,Two Bats or Not To Bat,,RM Sheridan,8,Run Out,3,10,,,30,FALSE,2013
+M007,TBONTB,Two Bats or Not To Bat,,TP Marshall,5,Run Out,8,7,,,114.29,FALSE,2013
+M008,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Bowled,43,30,,,143.33,FALSE,2013
+M008,TBONTB,Two Bats or Not To Bat,,PB Heath,1,Bowled,10,8,,,125,FALSE,2013
+M008,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Bowled,4,7,,,57.14,FALSE,2013
+M008,TBONTB,Two Bats or Not To Bat,,TP Marshall,6,Caught,24,17,,,141.18,FALSE,2013
+M008,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,27,15,,,180,FALSE,2013
+M008,TBONTB,Two Bats or Not To Bat,,KM Toms,7,Caught,9,8,,,112.5,FALSE,2013
+M008,TBONTB,Two Bats or Not To Bat,,TGR Thorn,4,LBW,40,20,,,200,FALSE,2013
+M008,TBONTB,Two Bats or Not To Bat,,DM Sheridan,8,Not Out,6,3,,,200,FALSE,2013
+M009,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Bowled,8,10,,,80,FALSE,2013
+M009,TBONTB,Two Bats or Not To Bat,,Higgins PA,8,Bowled,3,4,,,75,FALSE,2013
+M009,TBONTB,Two Bats or Not To Bat,,PB Heath,1,Caught,23,15,,,153.33,FALSE,2013
+M009,TBONTB,Two Bats or Not To Bat,,JBP McDonnell,3,Caught,6,5,,,120,FALSE,2013
+M009,TBONTB,Two Bats or Not To Bat,,DM Sheridan,7,Caught,2,3,,,66.67,FALSE,2013
+M009,TBONTB,Two Bats or Not To Bat,,MP Young,5,Run Out,7,8,,,87.5,FALSE,2013
+M009,TBONTB,Two Bats or Not To Bat,,Asad Rehman,4,Stumped,62,38,,,163.16,FALSE,2013
+M009,TBONTB,Two Bats or Not To Bat,,KM Toms,6,Stumped,1,2,,,50,FALSE,2013
+M010,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Bowled,14,13,,,107.69,FALSE,2013
+M010,TBONTB,Two Bats or Not To Bat,,JBP McDonnell,4,Bowled,3,8,,,37.5,FALSE,2013
+M010,TBONTB,Two Bats or Not To Bat,,Asad Rehman,3,Bowled,8,7,,,114.29,FALSE,2013
+M010,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,LBW,19,17,,,111.76,FALSE,2013
+M010,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Not Out,25,25,,,100,FALSE,2013
+M010,TBONTB,Two Bats or Not To Bat,,Altaf Hussain,5,Run Out,49,39,,,125.64,FALSE,2013
+M010,TBONTB,Two Bats or Not To Bat,,RN Arnott - Davies,6,Run Out,7,5,,,140,FALSE,2013
+M011,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Bowled,39,43,,,90.7,FALSE,2013
+M011,TBONTB,Two Bats or Not To Bat,,MP Young,5,Bowled,15,8,,,187.5,FALSE,2013
+M011,TBONTB,Two Bats or Not To Bat,,DM Sheridan,7,Caught,12,18,,,66.67,FALSE,2013
+M011,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Caught,15,17,,,88.24,FALSE,2013
+M011,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,Caught,11,11,,,100,FALSE,2013
+M011,TBONTB,Two Bats or Not To Bat,,WE Leuty,3,Caught,4,4,,,100,FALSE,2013
+M011,TBONTB,Two Bats or Not To Bat,,GL Levine,4,Caught,0,4,,,0,FALSE,2013
+M011,TBONTB,Two Bats or Not To Bat,,AMC Hopkins,8,Caught,0,3,,,0,FALSE,2013
+M012,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Bowled,18,22,,,81.82,FALSE,2013
+M012,TBONTB,Two Bats or Not To Bat,,MP Young,2,Bowled,6,12,,,50,FALSE,2013
+M012,TBONTB,Two Bats or Not To Bat,,RM Sheridan,3,Caught,11,21,,,52.38,FALSE,2013
+M012,TBONTB,Two Bats or Not To Bat,,DM Sheridan,5,Not Out,44,18,,,244.44,FALSE,2013
+M012,TBONTB,Two Bats or Not To Bat,,GL Levine,4,Not Out,5,13,,,38.46,FALSE,2013
+M012,TBONTB,Two Bats or Not To Bat,,RN Arnott - Davies,,,,,,,,TRUE,2013
+M012,TBONTB,Two Bats or Not To Bat,,Higgins PA,,,,,,,,TRUE,2013
+M013,TBONTB,Two Bats or Not To Bat,,MP Young,4,Bowled,22,17,,,129.41,FALSE,2013
+M013,TBONTB,Two Bats or Not To Bat,,DM Sheridan,3,Bowled,20,12,,,166.67,FALSE,2013
+M013,TBONTB,Two Bats or Not To Bat,,AMC Hopkins,8,Bowled,0,1,,,0,FALSE,2013
+M013,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Caught,33,25,,,132,FALSE,2013
+M013,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Caught,17,16,,,106.25,FALSE,2013
+M013,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Caught,13,14,,,92.86,FALSE,2013
+M013,TBONTB,Two Bats or Not To Bat,,CTP Clark,6,Run Out,3,5,,,60,FALSE,2013
+M013,TBONTB,Two Bats or Not To Bat,,GL Levine,5,Run Out,2,4,,,50,FALSE,2013
+M014,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Bowled,9,9,,,100,FALSE,2014
+M014,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Not Out,44,28,,,157.14,FALSE,2014
+M014,TBONTB,Two Bats or Not To Bat,,TGR Thorn,3,Not Out,23,19,,,121.05,FALSE,2014
+M014,TBONTB,Two Bats or Not To Bat,,CTP Clark,,,,,,,,TRUE,2014
+M014,TBONTB,Two Bats or Not To Bat,,DM Sheridan,,,,,,,,TRUE,2014
+M014,TBONTB,Two Bats or Not To Bat,,MP Young,,,,,,,,TRUE,2014
+M015,TBONTB,Two Bats or Not To Bat,,TGR Thorn,2,Bowled,51,41,,,124.39,FALSE,2014
+M015,TBONTB,Two Bats or Not To Bat,,DM Sheridan,4,Bowled,29,27,,,107.41,FALSE,2014
+M015,TBONTB,Two Bats or Not To Bat,,CTP Clark,7,Bowled,1,6,,,16.67,FALSE,2014
+M015,TBONTB,Two Bats or Not To Bat,,RM Sheridan,3,Bowled,3,4,,,75,FALSE,2014
+M015,TBONTB,Two Bats or Not To Bat,,WE Leuty,8,Bowled,0,1,,,0,FALSE,2014
+M015,TBONTB,Two Bats or Not To Bat,,GL Levine,6,Caught,1,8,,,12.5,FALSE,2014
+M015,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,LBW,5,5,,,100,FALSE,2014
+M015,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Not Out,16,17,,,94.12,FALSE,2014
+M016,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Bowled,24,18,,,133.33,FALSE,2014
+M016,TBONTB,Two Bats or Not To Bat,,MP Young,5,Bowled,8,14,,,57.14,FALSE,2014
+M016,TBONTB,Two Bats or Not To Bat,,DM Sheridan,3,Caught,32,20,,,160,FALSE,2014
+M016,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Caught,26,17,,,152.94,FALSE,2014
+M016,TBONTB,Two Bats or Not To Bat,,WE Leuty,7,Not Out,19,16,,,118.75,FALSE,2014
+M016,TBONTB,Two Bats or Not To Bat,,KM Toms,6,Not Out,18,15,,,120,FALSE,2014
+M016,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Run Out,0,1,,,0,FALSE,2014
+M016,TBONTB,Two Bats or Not To Bat,,SK Das,,,,,,,,TRUE,2014
+M017,TBONTB,Two Bats or Not To Bat,,DM Sheridan,3,Bowled,10,12,,,83.33,FALSE,2014
+M017,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Bowled,0,4,,,0,FALSE,2014
+M017,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Bowled,1,2,,,50,FALSE,2014
+M017,TBONTB,Two Bats or Not To Bat,,JP Hopper,8,Bowled,0,1,,,0,FALSE,2014
+M017,TBONTB,Two Bats or Not To Bat,,GL Levine,6,Caught,17,22,,,77.27,FALSE,2014
+M017,TBONTB,Two Bats or Not To Bat,,SK Das,4,Caught,9,12,,,75,FALSE,2014
+M017,TBONTB,Two Bats or Not To Bat,,TGR Thorn,2,Caught,18,11,,,163.64,FALSE,2014
+M017,TBONTB,Two Bats or Not To Bat,,Tristan Langford,5,Caught,0,3,,,0,FALSE,2014
+M018,TBONTB,Two Bats or Not To Bat,,DM Sheridan,3,Bowled,6,10,,,60,FALSE,2014
+M018,TBONTB,Two Bats or Not To Bat,,WE Leuty,7,Bowled,4,9,,,44.44,FALSE,2014
+M018,TBONTB,Two Bats or Not To Bat,,SK Das,4,Bowled,13,8,,,162.5,FALSE,2014
+M018,TBONTB,Two Bats or Not To Bat,,CJ Dixon,6,Bowled,0,3,,,0,FALSE,2014
+M018,TBONTB,Two Bats or Not To Bat,,Higgins PA,8,Caught,18,26,,,69.23,FALSE,2014
+M018,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Caught,8,17,,,47.06,FALSE,2014
+M018,TBONTB,Two Bats or Not To Bat,,TGR Thorn,1,Caught,4,10,,,40,FALSE,2014
+M018,TBONTB,Two Bats or Not To Bat,,TP Marshall,5,Run Out,3,10,,,30,FALSE,2014
+M019,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,38,20,,,190,FALSE,2014
+M019,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Bowled,12,8,,,150,FALSE,2014
+M019,TBONTB,Two Bats or Not To Bat,,CTP Clark,2,Bowled,3,5,,,60,FALSE,2014
+M019,TBONTB,Two Bats or Not To Bat,,SK Das,4,Caught,10,13,,,76.92,FALSE,2014
+M019,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Caught,11,12,,,91.67,FALSE,2014
+M019,TBONTB,Two Bats or Not To Bat,,DM Sheridan,1,Not Out,51,36,,,141.67,FALSE,2014
+M019,TBONTB,Two Bats or Not To Bat,,Tristan Langford,7,Not Out,11,5,,,220,FALSE,2014
+M019,TBONTB,Two Bats or Not To Bat,,MP Young,,,,,,,,TRUE,2014
+M020,TBONTB,Two Bats or Not To Bat,,DM Sheridan,1,Bowled,32,39,,,82.05,FALSE,2014
+M020,TBONTB,Two Bats or Not To Bat,,MP Young,4,Bowled,4,9,,,44.44,FALSE,2014
+M020,TBONTB,Two Bats or Not To Bat,,CTP Clark,6,Bowled,1,8,,,12.5,FALSE,2014
+M020,TBONTB,Two Bats or Not To Bat,,SK Das,5,LBW,27,22,,,122.73,FALSE,2014
+M020,TBONTB,Two Bats or Not To Bat,,Higgins PA,8,Not Out,4,2,,,200,FALSE,2014
+M020,TBONTB,Two Bats or Not To Bat,,WE Leuty,7,Not Out,0,1,,,0,FALSE,2014
+M020,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Run Out,8,11,,,72.73,FALSE,2014
+M020,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Run Out,5,6,,,83.33,FALSE,2014
+M021,TBONTB,Two Bats or Not To Bat,,JP Hopper,8,Bowled,3,9,,,33.33,FALSE,2014
+M021,TBONTB,Two Bats or Not To Bat,,SK Das,3,Caught,58,47,,,123.4,FALSE,2014
+M021,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Caught,5,12,,,41.67,FALSE,2014
+M021,TBONTB,Two Bats or Not To Bat,,KM Toms,5,Caught,1,11,,,9.09,FALSE,2014
+M021,TBONTB,Two Bats or Not To Bat,,CTP Clark,7,Caught,2,6,,,33.33,FALSE,2014
+M021,TBONTB,Two Bats or Not To Bat,,GL Levine,6,Caught,3,4,,,75,FALSE,2014
+M021,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Caught,0,2,,,0,FALSE,2014
+M021,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Run Out,7,4,,,175,FALSE,2014
+M022,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Bowled,0,3,,,0,FALSE,2014
+M022,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,31,24,,,129.17,FALSE,2014
+M022,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,4,Caught,0,0,,,0,FALSE,2014
+M022,TBONTB,Two Bats or Not To Bat,,DM Sheridan,1,Not Out,50,33,,,151.52,FALSE,2014
+M022,TBONTB,Two Bats or Not To Bat,,TP Marshall,6,Not Out,49,21,,,233.33,FALSE,2014
+M022,TBONTB,Two Bats or Not To Bat,,Tristan Langford,5,Not Out,10,8,,,125,FALSE,2014
+M022,TBONTB,Two Bats or Not To Bat,,Higgins PA,,,,,,,,TRUE,2014
+M023,TBONTB,Two Bats or Not To Bat,,KM Toms,5,Bowled,17,15,,,113.33,FALSE,2014
+M023,TBONTB,Two Bats or Not To Bat,,SK Das,3,Caught,41,31,,,132.26,FALSE,2014
+M023,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Caught,26,20,,,130,FALSE,2014
+M023,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Caught,13,13,,,100,FALSE,2014
+M023,TBONTB,Two Bats or Not To Bat,,AAT Veasey,7,Caught,0,10,,,0,FALSE,2014
+M023,TBONTB,Two Bats or Not To Bat,,CTP Clark,2,Caught,6,8,,,75,FALSE,2014
+M023,TBONTB,Two Bats or Not To Bat,,DM Sheridan,6,Caught,2,6,,,33.33,FALSE,2014
+M024,TBONTB,Two Bats or Not To Bat,,Kashif Kash,2,Bowled,0,2,,,0,FALSE,2014
+M024,TBONTB,Two Bats or Not To Bat,,RM Sheridan,1,Caught,24,47,,,51.06,FALSE,2014
+M024,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,Caught,9,11,,,81.82,FALSE,2014
+M024,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,9,9,,,100,FALSE,2014
+M024,TBONTB,Two Bats or Not To Bat,,CTP Clark,7,Not Out,0,2,,,0,FALSE,2014
+M024,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,5,Run Out,4,10,,,40,FALSE,2014
+M024,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Stumped,20,15,,,133.33,FALSE,2014
+M024,TBONTB,Two Bats or Not To Bat,,JP Hopper,,,,,,,,TRUE,2014
+M025,TBONTB,Two Bats or Not To Bat,,CTP Clark,5,Bowled,0,2,,,0,FALSE,2014
+M025,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Caught,26,29,,,89.66,FALSE,2014
+M025,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Caught,26,22,,,118.18,FALSE,2014
+M025,TBONTB,Two Bats or Not To Bat,,WE Leuty,1,Caught,2,7,,,28.57,FALSE,2014
+M025,TBONTB,Two Bats or Not To Bat,,Tristan Langford,3,Caught,1,3,,,33.33,FALSE,2014
+M025,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Not Out,12,9,,,133.33,FALSE,2014
+M025,TBONTB,Two Bats or Not To Bat,,GL Levine,7,Not Out,7,3,,,233.33,FALSE,2014
+M025,TBONTB,Two Bats or Not To Bat,,OCYG Willems,,,,,,,,TRUE,2014
+M026,TBONTB,Two Bats or Not To Bat,,KM Toms,5,Bowled,7,10,,,70,FALSE,2014
+M026,TBONTB,Two Bats or Not To Bat,,GL Levine,6,Bowled,1,4,,,25,FALSE,2014
+M026,TBONTB,Two Bats or Not To Bat,,GJ Marshall,1,Bowled,0,2,,,0,FALSE,2014
+M026,TBONTB,Two Bats or Not To Bat,,MP Young,4,Caught,25,28,,,89.29,FALSE,2014
+M026,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,4,7,,,57.14,FALSE,2014
+M026,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Caught,0,4,,,0,FALSE,2014
+M026,TBONTB,Two Bats or Not To Bat,,CTP Clark,8,Caught,0,4,,,0,FALSE,2014
+M026,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Run Out,48,54,,,88.89,FALSE,2014
+M027,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Bowled,43,27,,,159.26,FALSE,2014
+M027,TBONTB,Two Bats or Not To Bat,,GL Levine,5,Bowled,0,6,,,0,FALSE,2014
+M027,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,4,3,,,133.33,FALSE,2014
+M027,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Caught,23,19,,,121.05,FALSE,2014
+M027,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Caught,13,15,,,86.67,FALSE,2014
+M027,TBONTB,Two Bats or Not To Bat,,DM Sheridan,1,Not Out,50,26,,,192.31,FALSE,2014
+M027,TBONTB,Two Bats or Not To Bat,,MP Young,7,Not Out,5,3,,,166.67,FALSE,2014
+M027,TBONTB,Two Bats or Not To Bat,,TP Marshall,,,,,,,,TRUE,2014
+M028,TBONTB,Two Bats or Not To Bat,,DM Sheridan,1,Bowled,22,21,,,104.76,FALSE,2015
+M028,TBONTB,Two Bats or Not To Bat,,WE Leuty,7,Bowled,0,10,,,0,FALSE,2015
+M028,TBONTB,Two Bats or Not To Bat,,GL Levine,8,Bowled,4,6,,,66.67,FALSE,2015
+M028,TBONTB,Two Bats or Not To Bat,,CTP Clark,5,Bowled,0,2,,,0,FALSE,2015
+M028,TBONTB,Two Bats or Not To Bat,,KM Toms,6,Caught,0,6,,,0,FALSE,2015
+M028,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,1,2,,,50,FALSE,2015
+M028,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Caught,1,1,,,100,FALSE,2015
+M028,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Not Out,43,47,,,91.49,FALSE,2015
+M029,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,13,13,,,100,FALSE,2015
+M029,TBONTB,Two Bats or Not To Bat,,DM Sheridan,1,Caught,10,8,,,125,FALSE,2015
+M029,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Not Out,50,40,,,125,FALSE,2015
+M029,TBONTB,Two Bats or Not To Bat,,SK Das,4,Not Out,28,19,,,147.37,FALSE,2015
+M029,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Not Out,31,19,,,163.16,FALSE,2015
+M029,TBONTB,Two Bats or Not To Bat,,CTP Clark,,,,,,,,TRUE,2015
+M029,TBONTB,Two Bats or Not To Bat,,WE Leuty,,,,,,,,TRUE,2015
+M029,TBONTB,Two Bats or Not To Bat,,GL Levine,,,,,,,,TRUE,2015
+M030,TBONTB,Two Bats or Not To Bat,,AS Funnell,1,Bowled,21,22,,,95.45,FALSE,2015
+M030,TBONTB,Two Bats or Not To Bat,,WE Leuty,4,Bowled,8,22,,,36.36,FALSE,2015
+M030,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,3,Bowled,5,12,,,41.67,FALSE,2015
+M030,TBONTB,Two Bats or Not To Bat,,CTP Clark,8,Bowled,0,1,,,0,FALSE,2015
+M030,TBONTB,Two Bats or Not To Bat,,JA Teague,2,Caught,8,15,,,53.33,FALSE,2015
+M030,TBONTB,Two Bats or Not To Bat,,OCYG Willems,6,Caught,3,4,,,75,FALSE,2015
+M030,TBONTB,Two Bats or Not To Bat,,RM Sheridan,7,Not Out,12,11,,,109.09,FALSE,2015
+M030,TBONTB,Two Bats or Not To Bat,,DM Sheridan,5,Stumped,22,13,,,169.23,FALSE,2015
+M031,TBONTB,Two Bats or Not To Bat,,PB Heath,2,Bowled,6,5,,,120,FALSE,2015
+M031,TBONTB,Two Bats or Not To Bat,,SG Barnes,1,Bowled,5,3,,,166.67,FALSE,2015
+M031,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,Bowled,0,1,,,0,FALSE,2015
+M031,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,29,23,,,126.09,FALSE,2015
+M031,TBONTB,Two Bats or Not To Bat,,SK Das,4,Caught,1,3,,,33.33,FALSE,2015
+M031,TBONTB,Two Bats or Not To Bat,,GL Levine,7,Caught,6,3,,,200,FALSE,2015
+M031,TBONTB,Two Bats or Not To Bat,,RM Sheridan,5,Not Out,67,44,,,152.27,FALSE,2015
+M031,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,8,Not Out,19,17,,,111.76,FALSE,2015
+M032,TBONTB,Two Bats or Not To Bat,,SK Das,2,Bowled,39,26,,,150,FALSE,2015
+M032,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Not Out,50,29,,,172.41,FALSE,2015
+M032,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,Not Out,45,23,,,195.65,FALSE,2015
+M032,TBONTB,Two Bats or Not To Bat,,DM Sheridan,1,Not Out,51,19,,,268.42,FALSE,2015
+M032,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Not Out,9,4,,,225,FALSE,2015
+M032,TBONTB,Two Bats or Not To Bat,,WE Leuty,,,,,,,,TRUE,2015
+M032,TBONTB,Two Bats or Not To Bat,,GL Levine,,,,,,,,TRUE,2015
+M032,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,,,,,,,,TRUE,2015
+M033,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Bowled,7,11,,,63.64,FALSE,2015
+M033,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Bowled,4,4,,,100,FALSE,2015
+M033,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Bowled,3,3,,,100,FALSE,2015
+M033,TBONTB,Two Bats or Not To Bat,,CTP Clark,3,Bowled,0,2,,,0,FALSE,2015
+M033,TBONTB,Two Bats or Not To Bat,,TABG Willems,1,Caught,6,7,,,85.71,FALSE,2015
+M033,TBONTB,Two Bats or Not To Bat,,RM Sheridan,5,Not Out,48,41,,,117.07,FALSE,2015
+M033,TBONTB,Two Bats or Not To Bat,,KM Toms,8,Not Out,6,9,,,66.67,FALSE,2015
+M033,TBONTB,Two Bats or Not To Bat,,PB Heath,6,Run Out,15,14,,,107.14,FALSE,2015
+M034,TBONTB,Two Bats or Not To Bat,,JD Walker,3,Bowled,6,6,,,100,FALSE,2015
+M034,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Bowled,7,6,,,116.67,FALSE,2015
+M034,TBONTB,Two Bats or Not To Bat,,OCYG Willems,5,Bowled,5,5,,,100,FALSE,2015
+M034,TBONTB,Two Bats or Not To Bat,,LW Fraser,1,Caught,6,9,,,66.67,FALSE,2015
+M034,TBONTB,Two Bats or Not To Bat,,PT Spooner,2,Not Out,50,41,,,121.95,FALSE,2015
+M034,TBONTB,Two Bats or Not To Bat,,SK Das,6,Not Out,26,27,,,96.3,FALSE,2015
+M034,TBONTB,Two Bats or Not To Bat,,TABG Willems,4,Stumped,4,4,,,100,FALSE,2015
+M035,TBONTB,Two Bats or Not To Bat,,KM Toms,5,Bowled,39,25,,,156,FALSE,2015
+M035,TBONTB,Two Bats or Not To Bat,,JD Walker,3,Bowled,2,3,,,66.67,FALSE,2015
+M035,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Caught,10,9,,,111.11,FALSE,2015
+M035,TBONTB,Two Bats or Not To Bat,,SK Das,4,Caught,1,6,,,16.67,FALSE,2015
+M035,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,Not Out,33,22,,,150,FALSE,2015
+M035,TBONTB,Two Bats or Not To Bat,,TABG Willems,1,Run Out,24,21,,,114.29,FALSE,2015
+M036,TBONTB,Two Bats or Not To Bat,,DM Sheridan,4,Bowled,25,16,,,156.25,FALSE,2015
+M036,TBONTB,Two Bats or Not To Bat,,NJ Arnott - Davies,1,LBW,27,27,,,100,FALSE,2015
+M036,TBONTB,Two Bats or Not To Bat,,RN Arnott - Davies,2,LBW,31,16,,,193.75,FALSE,2015
+M036,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Not Out,47,32,,,146.88,FALSE,2015
+M036,TBONTB,Two Bats or Not To Bat,,SK Das,5,Not Out,40,21,,,190.48,FALSE,2015
+M036,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,,,,,,,,TRUE,2015
+M036,TBONTB,Two Bats or Not To Bat,,RM Sheridan,,,,,,,,TRUE,2015
+M036,TBONTB,Two Bats or Not To Bat,,KM Toms,,,,,,,,TRUE,2015
+M037,TBONTB,Two Bats or Not To Bat,,Nishant Joshi,1,Bowled,51,32,,,159.38,FALSE,2015
+M037,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,44,26,,,169.23,FALSE,2015
+M037,TBONTB,Two Bats or Not To Bat,,DM Sheridan,4,Bowled,8,6,,,133.33,FALSE,2015
+M037,TBONTB,Two Bats or Not To Bat,,RM Sheridan,5,Caught,15,13,,,115.38,FALSE,2015
+M037,TBONTB,Two Bats or Not To Bat,,KM Toms,8,LBW,7,9,,,77.78,FALSE,2015
+M037,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,LBW,1,4,,,25,FALSE,2015
+M037,TBONTB,Two Bats or Not To Bat,,LHB Vasiliadis,2,LBW,0,2,,,0,FALSE,2015
+M037,TBONTB,Two Bats or Not To Bat,,SK Das,7,Run Out,31,21,,,147.62,FALSE,2015
+M038,TBONTB,Two Bats or Not To Bat,,Nishant Joshi,4,Bowled,59,32,,,184.38,FALSE,2015
+M038,TBONTB,Two Bats or Not To Bat,,OCYG Willems,7,Bowled,12,11,,,109.09,FALSE,2015
+M038,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Bowled,13,10,,,130,FALSE,2015
+M038,TBONTB,Two Bats or Not To Bat,,LHB Vasiliadis,1,Bowled,0,3,,,0,FALSE,2015
+M038,TBONTB,Two Bats or Not To Bat,,DM Sheridan,8,Bowled,0,2,,,0,FALSE,2015
+M038,TBONTB,Two Bats or Not To Bat,,KM Toms,5,Caught,0,1,,,0,FALSE,2015
+M038,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,LBW,17,14,,,121.43,FALSE,2015
+M038,TBONTB,Two Bats or Not To Bat,,SK Das,6,LBW,7,10,,,70,FALSE,2015
+M039,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,Bowled,30,20,,,150,FALSE,2015
+M039,TBONTB,Two Bats or Not To Bat,,SK Das,7,Bowled,12,11,,,109.09,FALSE,2015
+M039,TBONTB,Two Bats or Not To Bat,,GL Levine,3,Bowled,12,10,,,120,FALSE,2015
+M039,TBONTB,Two Bats or Not To Bat,,NIO Soares,2,Bowled,1,4,,,25,FALSE,2015
+M039,TBONTB,Two Bats or Not To Bat,,DR Bilgil,1,Bowled,4,1,,,400,FALSE,2015
+M039,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Caught,22,28,,,78.57,FALSE,2015
+M039,TBONTB,Two Bats or Not To Bat,,WE Leuty,5,Run Out,1,3,,,33.33,FALSE,2015
+M040,TBONTB,Two Bats or Not To Bat,,WE Leuty,2,Bowled,4,15,,,26.67,FALSE,2016
+M040,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Bowled,16,9,,,177.78,FALSE,2016
+M040,TBONTB,Two Bats or Not To Bat,,DM Sheridan,8,Bowled,3,5,,,60,FALSE,2016
+M040,TBONTB,Two Bats or Not To Bat,,RM Sheridan,3,Bowled,2,2,,,100,FALSE,2016
+M040,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Caught,30,42,,,71.43,FALSE,2016
+M040,TBONTB,Two Bats or Not To Bat,,SK Das,4,Caught,19,20,,,95,FALSE,2016
+M040,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Caught,14,12,,,116.67,FALSE,2016
+M040,TBONTB,Two Bats or Not To Bat,,KM Toms,6,LBW,6,5,,,120,FALSE,2016
+M041,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Bowled,29,37,,,78.38,FALSE,2016
+M041,TBONTB,Two Bats or Not To Bat,,PB Heath,5,Bowled,0,3,,,0,FALSE,2016
+M041,TBONTB,Two Bats or Not To Bat,,KM Banerji,2,Caught,1,4,,,25,FALSE,2016
+M041,TBONTB,Two Bats or Not To Bat,,DM Sheridan,4,Caught,2,4,,,50,FALSE,2016
+M041,TBONTB,Two Bats or Not To Bat,,OCYG Willems,7,Caught,4,4,,,100,FALSE,2016
+M041,TBONTB,Two Bats or Not To Bat,,PT Spooner,1,Not Out,35,34,,,102.94,FALSE,2016
+M041,TBONTB,Two Bats or Not To Bat,,RM Sheridan,8,Run Out,9,18,,,50,FALSE,2016
+M041,TBONTB,Two Bats or Not To Bat,,SK Das,6,Run Out,11,8,,,137.5,FALSE,2016
+M042,TBONTB,Two Bats or Not To Bat,,PB Heath,3,Bowled,18,23,,,78.26,FALSE,2016
+M042,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Bowled,9,10,,,90,FALSE,2016
+M042,TBONTB,Two Bats or Not To Bat,,LW Fraser,2,Caught,23,25,,,92,FALSE,2016
+M042,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Caught,24,12,,,200,FALSE,2016
+M042,TBONTB,Two Bats or Not To Bat,,CTP Clark,5,Caught,11,12,,,91.67,FALSE,2016
+M042,TBONTB,Two Bats or Not To Bat,,RM Sheridan,6,Not Out,17,12,,,141.67,FALSE,2016
+M042,TBONTB,Two Bats or Not To Bat,,JP Hopper,8,Not Out,0,0,,,0,FALSE,2016
+M042,TBONTB,Two Bats or Not To Bat,,SK Das,7,Run Out,15,17,,,88.24,FALSE,2016
+M043,TBONTB,Two Bats or Not To Bat,,DM Sheridan,3,Bowled,36,43,,,83.72,FALSE,2016
+M043,TBONTB,Two Bats or Not To Bat,,PB Heath,4,Bowled,15,17,,,88.24,FALSE,2016
+M043,TBONTB,Two Bats or Not To Bat,,JJS Kelly,1,Bowled,4,8,,,50,FALSE,2016
+M043,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Bowled,1,6,,,16.67,FALSE,2016
+M043,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Bowled,3,3,,,100,FALSE,2016
+M043,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Caught,0,1,,,0,FALSE,2016
+M043,TBONTB,Two Bats or Not To Bat,,RM Sheridan,6,Not Out,24,23,,,104.35,FALSE,2016
+M043,TBONTB,Two Bats or Not To Bat,,CTP Clark,8,Not Out,0,8,,,0,FALSE,2016
+M044,TBONTB,Two Bats or Not To Bat,,JJS Kelly,7,Bowled,16,9,,,177.78,FALSE,2016
+M044,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,8,Bowled,0,4,,,0,FALSE,2016
+M044,TBONTB,Two Bats or Not To Bat,,KM Toms,2,Bowled,0,2,,,0,FALSE,2016
+M044,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Bowled,0,1,,,0,FALSE,2016
+M044,TBONTB,Two Bats or Not To Bat,,PB Heath,5,Bowled,0,1,,,0,FALSE,2016
+M044,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,Caught,16,39,,,41.03,FALSE,2016
+M044,TBONTB,Two Bats or Not To Bat,,Shabbir Ahmed,1,Caught,25,15,,,166.67,FALSE,2016
+M044,TBONTB,Two Bats or Not To Bat,,OCYG Willems,6,Caught,0,5,,,0,FALSE,2016
+M045,TBONTB,Two Bats or Not To Bat,,Tristan Langford,7,Bowled,0,2,,,0,FALSE,2016
+M045,TBONTB,Two Bats or Not To Bat,,TABG Willems,4,Caught,37,38,,,97.37,FALSE,2016
+M045,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,9,16,,,56.25,FALSE,2016
+M045,TBONTB,Two Bats or Not To Bat,,PB Heath,1,Caught,15,11,,,136.36,FALSE,2016
+M045,TBONTB,Two Bats or Not To Bat,,WE Leuty,2,Caught,0,1,,,0,FALSE,2016
+M045,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Not Out,52,31,,,167.74,FALSE,2016
+M045,TBONTB,Two Bats or Not To Bat,,RM Sheridan,6,Not Out,12,10,,,120,FALSE,2016
+M045,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,8,Run Out,0,1,,,0,FALSE,2016
+M046,TBONTB,Two Bats or Not To Bat,,WE Leuty,1,Bowled,3,9,,,33.33,FALSE,2016
+M046,TBONTB,Two Bats or Not To Bat,,Tristan Langford,2,Bowled,3,6,,,50,FALSE,2016
+M046,TBONTB,Two Bats or Not To Bat,,PB Heath,3,Bowled,2,2,,,100,FALSE,2016
+M046,TBONTB,Two Bats or Not To Bat,,TABG Willems,6,Caught,10,8,,,125,FALSE,2016
+M046,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,LBW,26,31,,,83.87,FALSE,2016
+M046,TBONTB,Two Bats or Not To Bat,,OCYG Willems,5,Not Out,41,35,,,117.14,FALSE,2016
+M046,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Not Out,15,15,,,100,FALSE,2016
+M046,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,,,,,,,,TRUE,2016
+M047,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Caught,14,18,,,77.78,FALSE,2016
+M047,TBONTB,Two Bats or Not To Bat,,PB Heath,2,Caught,16,16,,,100,FALSE,2016
+M047,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,1,Caught,5,12,,,41.67,FALSE,2016
+M047,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,Caught,6,9,,,66.67,FALSE,2016
+M047,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,6,6,,,100,FALSE,2016
+M047,TBONTB,Two Bats or Not To Bat,,PT Spooner,7,Caught,0,2,,,0,FALSE,2016
+M047,TBONTB,Two Bats or Not To Bat,,DM Sheridan,6,Not Out,35,32,,,109.38,FALSE,2016
+M047,TBONTB,Two Bats or Not To Bat,,WE Leuty,8,Not Out,11,17,,,64.71,FALSE,2016
+M048,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Bowled,35,33,,,106.06,FALSE,2016
+M048,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Bowled,1,4,,,25,FALSE,2016
+M048,TBONTB,Two Bats or Not To Bat,,Nishant Joshi,3,Caught,18,13,,,138.46,FALSE,2016
+M048,TBONTB,Two Bats or Not To Bat,,PT Spooner,1,Caught,13,11,,,118.18,FALSE,2016
+M048,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,Not Out,34,32,,,106.25,FALSE,2016
+M048,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Run Out,41,18,,,227.78,FALSE,2016
+M049,TBONTB,Two Bats or Not To Bat,,PB Heath,2,Caught,11,9,,,122.22,FALSE,2016
+M049,TBONTB,Two Bats or Not To Bat,,EJ Doody,1,Caught,8,8,,,100,FALSE,2016
+M049,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,LBW,29,31,,,93.55,FALSE,2016
+M049,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Not Out,64,49,,,130.61,FALSE,2016
+M049,TBONTB,Two Bats or Not To Bat,,KM Toms,5,Not Out,13,21,,,61.9,FALSE,2016
+M050,TBONTB,Two Bats or Not To Bat,,EJ Doody,2,Bowled,14,6,,,233.33,FALSE,2016
+M050,TBONTB,Two Bats or Not To Bat,,KM Toms,3,Bowled,2,4,,,50,FALSE,2016
+M050,TBONTB,Two Bats or Not To Bat,,PB Heath,4,Caught,14,19,,,73.68,FALSE,2016
+M050,TBONTB,Two Bats or Not To Bat,,OCYG Willems,5,Caught,13,11,,,118.18,FALSE,2016
+M050,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,Caught,10,11,,,90.91,FALSE,2016
+M050,TBONTB,Two Bats or Not To Bat,,DKT Ward,1,Run Out,10,17,,,58.82,FALSE,2016
+M051,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Bowled,21,23,,,91.3,FALSE,2016
+M051,TBONTB,Two Bats or Not To Bat,,PB Heath,1,Bowled,16,21,,,76.19,FALSE,2016
+M051,TBONTB,Two Bats or Not To Bat,,GL Levine,3,Bowled,5,7,,,71.43,FALSE,2016
+M051,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,Not Out,19,20,,,95,FALSE,2016
+M051,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Not Out,4,4,,,100,FALSE,2016
+M051,TBONTB,Two Bats or Not To Bat,,PT Spooner,2,Run Out,34,33,,,103.03,FALSE,2016
+M051,TBONTB,Two Bats or Not To Bat,,OCYG Willems,,,,,,,,TRUE,2016
+M051,TBONTB,Two Bats or Not To Bat,,CTP Clark,,,,,,,,TRUE,2016
+M052,TBONTB,Two Bats or Not To Bat,,WE Leuty,3,Bowled,5,9,,,55.56,FALSE,2016
+M052,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Bowled,3,3,,,100,FALSE,2016
+M052,TBONTB,Two Bats or Not To Bat,,JA Hall,1,Caught,33,32,,,103.13,FALSE,2016
+M052,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Caught,33,22,,,150,FALSE,2016
+M052,TBONTB,Two Bats or Not To Bat,,TGR Thorn,4,Not Out,34,22,,,154.55,FALSE,2016
+M052,TBONTB,Two Bats or Not To Bat,,DM Sheridan,6,Not Out,23,20,,,115,FALSE,2016
+M052,TBONTB,Two Bats or Not To Bat,,SK Das,,,,,,,,TRUE,2016
+M053,TBONTB,Two Bats or Not To Bat,,Hafiz Rehman,3,Bowled,2,8,,,25,FALSE,2016
+M053,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,5,Caught,35,40,,,87.5,FALSE,2016
+M053,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,Caught,10,9,,,111.11,FALSE,2016
+M053,TBONTB,Two Bats or Not To Bat,,SK Das,6,Not Out,34,26,,,130.77,FALSE,2016
+M053,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Not Out,25,20,,,125,FALSE,2016
+M053,TBONTB,Two Bats or Not To Bat,,PT Spooner,7,Not Out,2,4,,,50,FALSE,2016
+M053,TBONTB,Two Bats or Not To Bat,,Khalid Harris Khan,2,Run Out,0,0,,,0,FALSE,2016
+M054,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Bowled,24,25,,,96,FALSE,2016
+M054,TBONTB,Two Bats or Not To Bat,,MC D'Silva,1,Bowled,0,2,,,0,FALSE,2016
+M054,TBONTB,Two Bats or Not To Bat,,SK Das,4,Caught,31,29,,,106.9,FALSE,2016
+M054,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,Caught,9,9,,,100,FALSE,2016
+M054,TBONTB,Two Bats or Not To Bat,,Khalid Harris Khan,3,Caught,9,7,,,128.57,FALSE,2016
+M054,TBONTB,Two Bats or Not To Bat,,RM Sheridan,5,Not Out,18,19,,,94.74,FALSE,2016
+M054,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Not Out,20,15,,,133.33,FALSE,2016
+M054,TBONTB,Two Bats or Not To Bat,,CTP Clark,,,,,,,,TRUE,2016
+M055,TBONTB,Two Bats or Not To Bat,,S M Tanvir (LS),2,Bowled,50,29,,,172.41,FALSE,2016
+M055,TBONTB,Two Bats or Not To Bat,,MC D'Silva,1,Bowled,9,10,,,90,FALSE,2016
+M055,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,49,42,,,116.67,FALSE,2016
+M055,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,Not Out,12,17,,,70.59,FALSE,2016
+M055,TBONTB,Two Bats or Not To Bat,,Khalid Harris Khan,5,Not Out,25,15,,,166.67,FALSE,2016
+M055,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,,,,,,,,TRUE,2016
+M055,TBONTB,Two Bats or Not To Bat,,SK Das,,,,,,,,TRUE,2016
+M055,TBONTB,Two Bats or Not To Bat,,Higgins PA,,,,,,,,TRUE,2016
+M056,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,1,Bowled,32,38,,,84.21,FALSE,2017
+M056,TBONTB,Two Bats or Not To Bat,,Junaid Ahmed,2,Bowled,59,28,,,210.71,FALSE,2017
+M056,TBONTB,Two Bats or Not To Bat,,RM Sheridan,5,Bowled,9,9,,,100,FALSE,2017
+M056,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Bowled,6,4,,,150,FALSE,2017
+M056,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,4,3,,,133.33,FALSE,2017
+M056,TBONTB,Two Bats or Not To Bat,,DM Sheridan,6,Caught,15,12,,,125,FALSE,2017
+M056,TBONTB,Two Bats or Not To Bat,,SK Das,8,LBW,8,6,,,133.33,FALSE,2017
+M056,TBONTB,Two Bats or Not To Bat,,JD Walker,4,Run Out,13,4,,,325,FALSE,2017
+M057,TBONTB,Two Bats or Not To Bat,,RM Sheridan,1,Bowled,35,36,,,97.22,FALSE,2017
+M057,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Bowled,35,22,,,159.09,FALSE,2017
+M057,TBONTB,Two Bats or Not To Bat,,Tristan Langford,3,Not Out,44,17,,,258.82,FALSE,2017
+M057,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Not Out,13,7,,,185.71,FALSE,2017
+M057,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,,,,,,,,TRUE,2017
+M057,TBONTB,Two Bats or Not To Bat,,DM Sheridan,,,,,,,,TRUE,2017
+M057,TBONTB,Two Bats or Not To Bat,,SK Das,,,,,,,,TRUE,2017
+M058,TBONTB,Two Bats or Not To Bat,,KM Toms,5,Bowled,14,18,,,77.78,FALSE,2017
+M058,TBONTB,Two Bats or Not To Bat,,DM Sheridan,1,Bowled,11,7,,,157.14,FALSE,2017
+M058,TBONTB,Two Bats or Not To Bat,,OCYG Willems,7,Bowled,3,5,,,60,FALSE,2017
+M058,TBONTB,Two Bats or Not To Bat,,SK Das,2,Caught,18,20,,,90,FALSE,2017
+M058,TBONTB,Two Bats or Not To Bat,,PT Spooner,3,Caught,2,6,,,33.33,FALSE,2017
+M058,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,4,Caught,4,5,,,80,FALSE,2017
+M058,TBONTB,Two Bats or Not To Bat,,RM Sheridan,6,Not Out,59,44,,,134.09,FALSE,2017
+M058,TBONTB,Two Bats or Not To Bat,,Higgins PA,8,Run Out,12,12,,,100,FALSE,2017
+M059,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,6,Bowled,5,8,,,62.5,FALSE,2017
+M059,TBONTB,Two Bats or Not To Bat,,Higgins PA,8,Bowled,4,3,,,133.33,FALSE,2017
+M059,TBONTB,Two Bats or Not To Bat,,J Eakins,2,Bowled,0,1,,,0,FALSE,2017
+M059,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,5,Caught,55,59,,,93.22,FALSE,2017
+M059,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Caught,7,14,,,50,FALSE,2017
+M059,TBONTB,Two Bats or Not To Bat,,TO Jess,3,Caught,4,4,,,100,FALSE,2017
+M059,TBONTB,Two Bats or Not To Bat,,SK Das,7,Run Out,15,18,,,83.33,FALSE,2017
+M059,TBONTB,Two Bats or Not To Bat,,J Tobin-Berry,1,Stumped,0,1,,,0,FALSE,2017
+M060,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,4,Bowled,0,1,,,0,FALSE,2017
+M060,TBONTB,Two Bats or Not To Bat,,RM Sheridan,5,Caught,20,15,,,133.33,FALSE,2017
+M060,TBONTB,Two Bats or Not To Bat,,PT Spooner,3,LBW,0,3,,,0,FALSE,2017
+M060,TBONTB,Two Bats or Not To Bat,,Edmund Motley,2,Not Out,50,29,,,172.41,FALSE,2017
+M060,TBONTB,Two Bats or Not To Bat,,OCYG Willems,6,Not Out,50,26,,,192.31,FALSE,2017
+M060,TBONTB,Two Bats or Not To Bat,,Nishant Joshi,1,Not Out,52,22,,,236.36,FALSE,2017
+M060,TBONTB,Two Bats or Not To Bat,,SK Das,7,Not Out,9,12,,,75,FALSE,2017
+M060,TBONTB,Two Bats or Not To Bat,,CTP Clark,8,Not Out,1,1,,,100,FALSE,2017
+M061,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,7,Bowled,13,16,,,81.25,FALSE,2017
+M061,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,Bowled,13,12,,,108.33,FALSE,2017
+M061,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,2,Bowled,0,4,,,0,FALSE,2017
+M061,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Caught,17,17,,,100,FALSE,2017
+M061,TBONTB,Two Bats or Not To Bat,,Tristan Langford,5,Caught,20,13,,,153.85,FALSE,2017
+M061,TBONTB,Two Bats or Not To Bat,,SK Das,6,Caught,10,6,,,166.67,FALSE,2017
+M061,TBONTB,Two Bats or Not To Bat,,Higgins PA,8,Caught,0,2,,,0,FALSE,2017
+M061,TBONTB,Two Bats or Not To Bat,,PT Spooner,3,LBW,7,6,,,116.67,FALSE,2017
+M062,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,2,Bowled,16,15,,,106.67,FALSE,2017
+M062,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Bowled,5,8,,,62.5,FALSE,2017
+M062,TBONTB,Two Bats or Not To Bat,,OCYG Willems,5,Caught,18,15,,,120,FALSE,2017
+M062,TBONTB,Two Bats or Not To Bat,,DM Sheridan,6,Caught,9,8,,,112.5,FALSE,2017
+M062,TBONTB,Two Bats or Not To Bat,,RM Sheridan,1,Caught,3,6,,,50,FALSE,2017
+M062,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,LBW,12,10,,,120,FALSE,2017
+M062,TBONTB,Two Bats or Not To Bat,,SK Das,3,Not Out,53,39,,,135.9,FALSE,2017
+M062,TBONTB,Two Bats or Not To Bat,,PT Spooner,8,Not Out,11,9,,,122.22,FALSE,2017
+M063,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Bowled,2,5,,,40,FALSE,2017
+M063,TBONTB,Two Bats or Not To Bat,,WE Leuty,1,Caught,0,9,,,0,FALSE,2017
+M063,TBONTB,Two Bats or Not To Bat,,GL Levine,2,Caught,5,7,,,71.43,FALSE,2017
+M063,TBONTB,Two Bats or Not To Bat,,PT Spooner,6,Caught,9,5,,,180,FALSE,2017
+M063,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Not Out,30,34,,,88.24,FALSE,2017
+M063,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Not Out,53,28,,,189.29,FALSE,2017
+M063,TBONTB,Two Bats or Not To Bat,,DM Sheridan,8,Run Out,25,16,,,156.25,FALSE,2017
+M063,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,5,Run Out,14,7,,,200,FALSE,2017
+M064,TBONTB,Two Bats or Not To Bat,,PT Spooner,5,Bowled,11,18,,,61.11,FALSE,2017
+M064,TBONTB,Two Bats or Not To Bat,,Asad Rehman,3,Not Out,60,34,,,176.47,FALSE,2017
+M064,TBONTB,Two Bats or Not To Bat,,RM Sheridan,6,Not Out,52,29,,,179.31,FALSE,2017
+M064,TBONTB,Two Bats or Not To Bat,,KM Toms,7,Not Out,17,13,,,130.77,FALSE,2017
+M064,TBONTB,Two Bats or Not To Bat,,WJG Baldock,1,Run Out,16,11,,,145.45,FALSE,2017
+M064,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,4,Run Out,3,7,,,42.86,FALSE,2017
+M064,TBONTB,Two Bats or Not To Bat,,BAC Cunningham,2,Run Out,0,1,,,0,FALSE,2017
+M064,TBONTB,Two Bats or Not To Bat,,CTP Clark,,,,,,,,TRUE,2017
+M065,TBONTB,Two Bats or Not To Bat,,SJ Hargreaves,1,Bowled,4,5,,,80,FALSE,2017
+M065,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Bowled,5,5,,,100,FALSE,2017
+M065,TBONTB,Two Bats or Not To Bat,,WJG Baldock,5,Caught,16,22,,,72.73,FALSE,2017
+M065,TBONTB,Two Bats or Not To Bat,,Junaid Ahmed,3,Caught,20,19,,,105.26,FALSE,2017
+M065,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Caught,11,11,,,100,FALSE,2017
+M065,TBONTB,Two Bats or Not To Bat,,SK Das,2,Not Out,51,36,,,141.67,FALSE,2017
+M065,TBONTB,Two Bats or Not To Bat,,MC D'Silva,6,Not Out,0,9,,,0,FALSE,2017
+M065,TBONTB,Two Bats or Not To Bat,,PT Spooner,8,Not Out,4,1,,,400,FALSE,2017
+M066,TBONTB,Two Bats or Not To Bat,,PB Heath,5,Bowled,18,17,,,105.88,FALSE,2017
+M066,TBONTB,Two Bats or Not To Bat,,MC D'Silva,3,Bowled,1,5,,,20,FALSE,2017
+M066,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,Bowled,0,2,,,0,FALSE,2017
+M066,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,2,Caught,12,16,,,75,FALSE,2017
+M066,TBONTB,Two Bats or Not To Bat,,Nishant Joshi,1,Caught,17,15,,,113.33,FALSE,2017
+M066,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,LBW,17,12,,,141.67,FALSE,2017
+M066,TBONTB,Two Bats or Not To Bat,,DM Sheridan,7,Not Out,64,45,,,142.22,FALSE,2017
+M067,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,29,32,,,90.63,FALSE,2017
+M067,TBONTB,Two Bats or Not To Bat,,Jon Mason,1,Caught,16,35,,,45.71,FALSE,2017
+M067,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,6,Caught,17,13,,,130.77,FALSE,2017
+M067,TBONTB,Two Bats or Not To Bat,,SJ Hargreaves,7,Caught,0,2,,,0,FALSE,2017
+M067,TBONTB,Two Bats or Not To Bat,,SK Das,8,Not Out,11,10,,,110,FALSE,2017
+M067,TBONTB,Two Bats or Not To Bat,,Asad Rehman,2,Run Out,17,14,,,121.43,FALSE,2017
+M067,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Run Out,2,5,,,40,FALSE,2017
+M067,TBONTB,Two Bats or Not To Bat,,MC D'Silva,4,Run Out,0,1,,,0,FALSE,2017
+M068,TBONTB,Two Bats or Not To Bat,,PT Spooner,6,Bowled,19,39,,,48.72,FALSE,2017
+M068,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,5,Bowled,11,9,,,122.22,FALSE,2017
+M068,TBONTB,Two Bats or Not To Bat,,CTP Clark,8,Bowled,0,3,,,0,FALSE,2017
+M068,TBONTB,Two Bats or Not To Bat,,MJ Girard,1,Bowled,0,2,,,0,FALSE,2017
+M068,TBONTB,Two Bats or Not To Bat,,TABG Willems,2,Caught,7,11,,,63.64,FALSE,2017
+M068,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Caught,0,3,,,0,FALSE,2017
+M068,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,LBW,2,5,,,40,FALSE,2017
+M068,TBONTB,Two Bats or Not To Bat,,SK Das,7,Not Out,41,41,,,100,FALSE,2017
+M069,TBONTB,Two Bats or Not To Bat,,OCYG Willems,7,Bowled,24,26,,,92.31,FALSE,2017
+M069,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,Bowled,22,22,,,100,FALSE,2017
+M069,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,2,Bowled,11,9,,,122.22,FALSE,2017
+M069,TBONTB,Two Bats or Not To Bat,,MJ Girard,3,Bowled,2,6,,,33.33,FALSE,2017
+M069,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,1,Bowled,0,5,,,0,FALSE,2017
+M069,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,Caught,5,7,,,71.43,FALSE,2017
+M069,TBONTB,Two Bats or Not To Bat,,PT Spooner,8,Caught,3,6,,,50,FALSE,2017
+M069,TBONTB,Two Bats or Not To Bat,,TABG Willems,5,LBW,23,26,,,88.46,FALSE,2017
+M070,TBONTB,Two Bats or Not To Bat,,SK Das,4,Bowled,31,21,,,147.62,FALSE,2017
+M070,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Bowled,10,13,,,76.92,FALSE,2017
+M070,TBONTB,Two Bats or Not To Bat,,PT Spooner,2,Bowled,12,12,,,100,FALSE,2017
+M070,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,1,Bowled,2,8,,,25,FALSE,2017
+M070,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,3,6,,,50,FALSE,2017
+M070,TBONTB,Two Bats or Not To Bat,,RM Sheridan,6,Not Out,40,26,,,153.85,FALSE,2017
+M070,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Not Out,1,2,,,50,FALSE,2017
+M070,TBONTB,Two Bats or Not To Bat,,DM Sheridan,,,,,,,,TRUE,2017
+M071,TBONTB,Two Bats or Not To Bat,,Haris Khan,1,Bowled,32,32,,,100,FALSE,2017
+M071,TBONTB,Two Bats or Not To Bat,,DM Sheridan,6,Caught,25,15,,,166.67,FALSE,2017
+M071,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Caught,5,10,,,50,FALSE,2017
+M071,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,5,Caught,5,8,,,62.5,FALSE,2017
+M071,TBONTB,Two Bats or Not To Bat,,SK Das,3,Caught,2,7,,,28.57,FALSE,2017
+M071,TBONTB,Two Bats or Not To Bat,,Shabbir Ahmed,2,Not Out,50,22,,,227.27,FALSE,2017
+M071,TBONTB,Two Bats or Not To Bat,,KM Toms,7,Not Out,0,0,,,0,FALSE,2017
+M071,TBONTB,Two Bats or Not To Bat,,Higgins PA,8,Not Out,0,0,,,0,FALSE,2017
+M072,TBONTB,Two Bats or Not To Bat,,Shabbir Ahmed,8,Bowled,20,20,,,100,FALSE,2017
+M072,TBONTB,Two Bats or Not To Bat,,EJ Doody,2,Bowled,6,11,,,54.55,FALSE,2017
+M072,TBONTB,Two Bats or Not To Bat,,J Eakins,1,Bowled,0,7,,,0,FALSE,2017
+M072,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,7,Bowled,9,7,,,128.57,FALSE,2017
+M072,TBONTB,Two Bats or Not To Bat,,OCYG Willems,5,Bowled,0,1,,,0,FALSE,2017
+M072,TBONTB,Two Bats or Not To Bat,,Asad Rehman,3,Caught,0,1,,,0,FALSE,2017
+M072,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,LBW,6,8,,,75,FALSE,2017
+M072,TBONTB,Two Bats or Not To Bat,,DM Sheridan,6,Run Out,0,0,,,0,FALSE,2017
+M073,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,3,Bowled,21,22,,,95.45,FALSE,2017
+M073,TBONTB,Two Bats or Not To Bat,,SK Das,7,Bowled,12,18,,,66.67,FALSE,2017
+M073,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Bowled,3,8,,,37.5,FALSE,2017
+M073,TBONTB,Two Bats or Not To Bat,,PT Spooner,6,Bowled,4,7,,,57.14,FALSE,2017
+M073,TBONTB,Two Bats or Not To Bat,,CTP Clark,8,Bowled,0,7,,,0,FALSE,2017
+M073,TBONTB,Two Bats or Not To Bat,,RM Sheridan,1,Caught,10,14,,,71.43,FALSE,2017
+M073,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Caught,9,13,,,69.23,FALSE,2017
+M073,TBONTB,Two Bats or Not To Bat,,Asad Rehman,5,Caught,4,7,,,57.14,FALSE,2017
+M074,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,Bowled,41,34,,,120.59,FALSE,2017
+M074,TBONTB,Two Bats or Not To Bat,,Jawed Ahmed,1,Bowled,7,11,,,63.64,FALSE,2017
+M074,TBONTB,Two Bats or Not To Bat,,Asad Rehman,6,Bowled,14,6,,,233.33,FALSE,2017
+M074,TBONTB,Two Bats or Not To Bat,,DM Sheridan,2,Caught,14,18,,,77.78,FALSE,2017
+M074,TBONTB,Two Bats or Not To Bat,,PT Spooner,5,Caught,0,3,,,0,FALSE,2017
+M074,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Not Out,50,37,,,135.14,FALSE,2017
+M074,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,8,Not Out,2,2,,,100,FALSE,2017
+M074,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Not Out,2,1,,,200,FALSE,2017
+M075,TBONTB,Two Bats or Not To Bat,,CTP Clark,7,Bowled,0,5,,,0,FALSE,2017
+M075,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,3,Bowled,0,1,,,0,FALSE,2017
+M075,TBONTB,Two Bats or Not To Bat,,OCYG Willems,6,Caught,23,26,,,88.46,FALSE,2017
+M075,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,5,Caught,3,7,,,42.86,FALSE,2017
+M075,TBONTB,Two Bats or Not To Bat,,Asad Rehman,1,Caught,0,1,,,0,FALSE,2017
+M075,TBONTB,Two Bats or Not To Bat,,KM Toms,4,LBW,0,1,,,0,FALSE,2017
+M075,TBONTB,Two Bats or Not To Bat,,Higgins PA,2,Run Out,18,19,,,94.74,FALSE,2017
+M076,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Bowled,34,28,,,121.43,FALSE,2017
+M076,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Bowled,6,8,,,75,FALSE,2017
+M076,TBONTB,Two Bats or Not To Bat,,KM Toms,6,Bowled,2,7,,,28.57,FALSE,2017
+M076,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,5,Bowled,1,6,,,16.67,FALSE,2017
+M076,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Not Out,51,35,,,145.71,FALSE,2017
+M076,TBONTB,Two Bats or Not To Bat,,Asad Rehman,4,Not Out,51,28,,,182.14,FALSE,2017
+M076,TBONTB,Two Bats or Not To Bat,,SK Das,7,Not Out,4,4,,,100,FALSE,2017
+M076,TBONTB,Two Bats or Not To Bat,,PT Spooner,,,,,,,,TRUE,2017
+M077,TBONTB,Two Bats or Not To Bat,,DM Sheridan,6,Bowled,31,20,,,155,FALSE,2018
+M077,TBONTB,Two Bats or Not To Bat,,SK Das,5,Bowled,11,11,,,100,FALSE,2018
+M077,TBONTB,Two Bats or Not To Bat,,KM Toms,2,Bowled,13,9,,,144.44,FALSE,2018
+M077,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,4,Bowled,6,5,,,120,FALSE,2018
+M077,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,34,23,,,147.83,FALSE,2018
+M077,TBONTB,Two Bats or Not To Bat,,Asad Rehman,1,Not Out,85,38,,,223.68,FALSE,2018
+M077,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Not Out,12,7,,,171.43,FALSE,2018
+M078,TBONTB,Two Bats or Not To Bat,,Asad Rehman,1,Bowled,43,32,,,134.38,FALSE,2018
+M078,TBONTB,Two Bats or Not To Bat,,KM Toms,2,Bowled,1,5,,,20,FALSE,2018
+M078,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,3,Caught,40,27,,,148.15,FALSE,2018
+M078,TBONTB,Two Bats or Not To Bat,,PT Spooner,5,Caught,9,15,,,60,FALSE,2018
+M078,TBONTB,Two Bats or Not To Bat,,SK Das,4,Not Out,35,29,,,120.69,FALSE,2018
+M078,TBONTB,Two Bats or Not To Bat,,OCYG Willems,6,Not Out,2,1,,,200,FALSE,2018
+M078,TBONTB,Two Bats or Not To Bat,,DM Sheridan,,,,,,,,TRUE,2018
+M078,TBONTB,Two Bats or Not To Bat,,Higgins PA,,,,,,,,TRUE,2018
+M079,TBONTB,Two Bats or Not To Bat,,Asad Rehman,3,Bowled,14,10,,,140,FALSE,2018
+M079,TBONTB,Two Bats or Not To Bat,,RM Sheridan,6,Bowled,3,5,,,60,FALSE,2018
+M079,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,5,Caught,25,23,,,108.7,FALSE,2018
+M079,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Caught,11,9,,,122.22,FALSE,2018
+M079,TBONTB,Two Bats or Not To Bat,,DM Sheridan,7,Caught,11,8,,,137.5,FALSE,2018
+M079,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Caught,6,5,,,120,FALSE,2018
+M079,TBONTB,Two Bats or Not To Bat,,JP Smith,2,Caught,4,2,,,200,FALSE,2018
+M079,TBONTB,Two Bats or Not To Bat,,KM Toms,8,Caught,0,2,,,0,FALSE,2018
+M080,TBONTB,Two Bats or Not To Bat,,Asad Rehman,3,Bowled,19,16,,,118.75,FALSE,2018
+M080,TBONTB,Two Bats or Not To Bat,,TO Jess,1,Bowled,6,4,,,150,FALSE,2018
+M080,TBONTB,Two Bats or Not To Bat,,OCYG Willems,6,Caught,33,25,,,132,FALSE,2018
+M080,TBONTB,Two Bats or Not To Bat,,RA Fisher,2,Caught,1,17,,,5.88,FALSE,2018
+M080,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,4,Not Out,34,38,,,89.47,FALSE,2018
+M080,TBONTB,Two Bats or Not To Bat,,SK Das,7,Not Out,0,1,,,0,FALSE,2018
+M080,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Run Out,5,3,,,166.67,FALSE,2018
+M081,TBONTB,Two Bats or Not To Bat,,Asad Rehman,1,Bowled,19,17,,,111.76,FALSE,2018
+M081,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,2,Bowled,14,11,,,127.27,FALSE,2018
+M081,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,4,Bowled,8,9,,,88.89,FALSE,2018
+M081,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,Bowled,9,9,,,100,FALSE,2018
+M081,TBONTB,Two Bats or Not To Bat,,OCYG Willems,7,Caught,22,19,,,115.79,FALSE,2018
+M081,TBONTB,Two Bats or Not To Bat,,SK Das,5,Caught,0,2,,,0,FALSE,2018
+M081,TBONTB,Two Bats or Not To Bat,,TA Oberst,3,LBW,18,25,,,72,FALSE,2018
+M082,TBONTB,Two Bats or Not To Bat,,SK Das,5,Bowled,33,20,,,165,FALSE,2018
+M082,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,6,Bowled,21,15,,,140,FALSE,2018
+M082,TBONTB,Two Bats or Not To Bat,,PT Spooner,3,Bowled,10,7,,,142.86,FALSE,2018
+M082,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Caught,23,15,,,153.33,FALSE,2018
+M082,TBONTB,Two Bats or Not To Bat,,CD Shettle,1,Caught,1,3,,,33.33,FALSE,2018
+M082,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Not Out,52,41,,,126.83,FALSE,2018
+M082,TBONTB,Two Bats or Not To Bat,,OCYG Willems,8,Not Out,27,14,,,192.86,FALSE,2018
+M082,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Not Out,8,11,,,72.73,FALSE,2018
+M083,TBONTB,Two Bats or Not To Bat,,Asad Rehman,2,Bowled,2,2,,,100,FALSE,2018
+M083,TBONTB,Two Bats or Not To Bat,,J Eakins,4,Bowled,0,1,,,0,FALSE,2018
+M083,TBONTB,Two Bats or Not To Bat,,CTP Clark,7,Bowled,0,1,,,0,FALSE,2018
+M083,TBONTB,Two Bats or Not To Bat,,PT Spooner,6,Caught,14,11,,,127.27,FALSE,2018
+M083,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,LBW,3,5,,,60,FALSE,2018
+M083,TBONTB,Two Bats or Not To Bat,,Chris Somerville,1,Not Out,122,54,,,225.93,FALSE,2018
+M083,TBONTB,Two Bats or Not To Bat,,OCYG Willems,8,Not Out,27,27,,,100,FALSE,2018
+M083,TBONTB,Two Bats or Not To Bat,,DM Sheridan,3,Stumped,6,7,,,85.71,FALSE,2018
+M084,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,8,Bowled,5,5,,,100,FALSE,2018
+M084,TBONTB,Two Bats or Not To Bat,,SK Das,5,Caught,44,36,,,122.22,FALSE,2018
+M084,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,Caught,11,16,,,68.75,FALSE,2018
+M084,TBONTB,Two Bats or Not To Bat,,Asad Rehman,1,Caught,5,6,,,83.33,FALSE,2018
+M084,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,2,Caught,0,2,,,0,FALSE,2018
+M084,TBONTB,Two Bats or Not To Bat,,CTP Clark,7,Caught,0,2,,,0,FALSE,2018
+M084,TBONTB,Two Bats or Not To Bat,,DM Sheridan,3,Not Out,69,37,,,186.49,FALSE,2018
+M084,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,Stumped,17,8,,,212.5,FALSE,2018
+M085,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Bowled,19,17,,,111.76,FALSE,2018
+M085,TBONTB,Two Bats or Not To Bat,,CD Shettle,1,Bowled,1,2,,,50,FALSE,2018
+M085,TBONTB,Two Bats or Not To Bat,,SK Das,6,Caught,35,24,,,145.83,FALSE,2018
+M085,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,17,18,,,94.44,FALSE,2018
+M085,TBONTB,Two Bats or Not To Bat,,MC D'Silva,4,Caught,13,13,,,100,FALSE,2018
+M085,TBONTB,Two Bats or Not To Bat,,SJ Hargreaves,5,Caught,3,5,,,60,FALSE,2018
+M086,TBONTB,Two Bats or Not To Bat,,PT Spooner,2,Bowled,13,20,,,65,FALSE,2018
+M086,TBONTB,Two Bats or Not To Bat,,WE Leuty,6,Bowled,10,10,,,100,FALSE,2018
+M086,TBONTB,Two Bats or Not To Bat,,CTP Clark,7,Bowled,6,6,,,100,FALSE,2018
+M086,TBONTB,Two Bats or Not To Bat,,OCYG Willems,8,Caught,48,30,,,160,FALSE,2018
+M086,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,Caught,8,9,,,88.89,FALSE,2018
+M086,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,1,Caught,6,7,,,85.71,FALSE,2018
+M086,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,5,Run Out,4,6,,,66.67,FALSE,2018
+M086,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Run Out,0,3,,,0,FALSE,2018
+M087,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Bowled,28,34,,,82.35,FALSE,2018
+M087,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Caught,28,28,,,100,FALSE,2018
+M087,TBONTB,Two Bats or Not To Bat,,SK Das,2,Caught,14,12,,,116.67,FALSE,2018
+M087,TBONTB,Two Bats or Not To Bat,,CTP Clark,6,Caught,0,1,,,0,FALSE,2018
+M087,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Not Out,4,1,,,400,FALSE,2018
+M087,TBONTB,Two Bats or Not To Bat,,PT Spooner,8,Not Out,0,0,,,0,FALSE,2018
+M087,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,4,Stumped,22,19,,,115.79,FALSE,2018
+M087,TBONTB,Two Bats or Not To Bat,,RM Sheridan,5,Stumped,13,15,,,86.67,FALSE,2018
+M088,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Bowled,33,22,,,150,FALSE,2018
+M088,TBONTB,Two Bats or Not To Bat,,Asad Rehman,2,Bowled,0,1,,,0,FALSE,2018
+M088,TBONTB,Two Bats or Not To Bat,,Ali Rizvi,1,Caught,28,17,,,164.71,FALSE,2018
+M088,TBONTB,Two Bats or Not To Bat,,Jawed Ahmed,3,Caught,15,11,,,136.36,FALSE,2018
+M088,TBONTB,Two Bats or Not To Bat,,Awar Gul,5,Caught,6,11,,,54.55,FALSE,2018
+M088,TBONTB,Two Bats or Not To Bat,,Waleed Tariq,6,Not Out,34,27,,,125.93,FALSE,2018
+M088,TBONTB,Two Bats or Not To Bat,,Hamza Nisary,7,Not Out,33,19,,,173.68,FALSE,2018
+M088,TBONTB,Two Bats or Not To Bat,,DM Sheridan,,,,,,,,TRUE,2018
+M089,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Bowled,18,20,,,90,FALSE,2018
+M089,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,7,8,,,87.5,FALSE,2018
+M089,TBONTB,Two Bats or Not To Bat,,J Tobin-Berry,6,Bowled,1,7,,,14.29,FALSE,2018
+M089,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Bowled,2,3,,,66.67,FALSE,2018
+M089,TBONTB,Two Bats or Not To Bat,,DM Sheridan,2,Caught,6,6,,,100,FALSE,2018
+M089,TBONTB,Two Bats or Not To Bat,,Ali Rizvi,5,Caught,5,3,,,166.67,FALSE,2018
+M089,TBONTB,Two Bats or Not To Bat,,Aadil Gaffar,1,Run Out,14,16,,,87.5,FALSE,2018
+M089,TBONTB,Two Bats or Not To Bat,,TA Oberst,8,Stumped,5,5,,,100,FALSE,2018
+M090,TBONTB,Two Bats or Not To Bat,,TA Oberst,1,Bowled,30,24,,,125,FALSE,2018
+M090,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,2,Bowled,26,23,,,113.04,FALSE,2018
+M090,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,3,Not Out,7,9,,,77.78,FALSE,2018
+M090,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Not Out,9,4,,,225,FALSE,2018
+M090,TBONTB,Two Bats or Not To Bat,,DM Sheridan,,,,,,,,TRUE,2018
+M090,TBONTB,Two Bats or Not To Bat,,CTP Clark,,,,,,,,TRUE,2018
+M090,TBONTB,Two Bats or Not To Bat,,SK Das,,,,,,,,TRUE,2018
+M091,TBONTB,Two Bats or Not To Bat,,J Tobin-Berry,5,Bowled,1,17,,,5.88,FALSE,2018
+M091,TBONTB,Two Bats or Not To Bat,,SK Das,6,Bowled,9,15,,,60,FALSE,2018
+M091,TBONTB,Two Bats or Not To Bat,,TA Oberst,8,Bowled,12,10,,,120,FALSE,2018
+M091,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,10,9,,,111.11,FALSE,2018
+M091,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Bowled,2,6,,,33.33,FALSE,2018
+M091,TBONTB,Two Bats or Not To Bat,,Asad Rehman,2,Bowled,3,3,,,100,FALSE,2018
+M091,TBONTB,Two Bats or Not To Bat,,Chris Somerville,1,Caught,20,15,,,133.33,FALSE,2018
+M091,TBONTB,Two Bats or Not To Bat,,CTP Clark,7,Run Out,1,5,,,20,FALSE,2018
+M092,TBONTB,Two Bats or Not To Bat,,Asad Rehman,1,Bowled,3,6,,,50,FALSE,2018
+M092,TBONTB,Two Bats or Not To Bat,,TA Oberst,3,Caught,15,14,,,107.14,FALSE,2018
+M092,TBONTB,Two Bats or Not To Bat,,KM Toms,5,LBW,4,6,,,66.67,FALSE,2018
+M092,TBONTB,Two Bats or Not To Bat,,DM Sheridan,4,Not Out,51,38,,,134.21,FALSE,2018
+M092,TBONTB,Two Bats or Not To Bat,,Chris Somerville,2,Not Out,50,28,,,178.57,FALSE,2018
+M092,TBONTB,Two Bats or Not To Bat,,OCYG Willems,6,Not Out,18,19,,,94.74,FALSE,2018
+M092,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Not Out,3,2,,,150,FALSE,2018
+M092,TBONTB,Two Bats or Not To Bat,,SK Das,,,,,,,,TRUE,2018
+M093,TBONTB,Two Bats or Not To Bat,,Niranjan Shimoga,2,Bowled,55,28,,,196.43,FALSE,2018
+M093,TBONTB,Two Bats or Not To Bat,,SK Das,6,Bowled,13,15,,,86.67,FALSE,2018
+M093,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,5,Bowled,5,11,,,45.45,FALSE,2018
+M093,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,Bowled,5,2,,,250,FALSE,2018
+M093,TBONTB,Two Bats or Not To Bat,,Ali Rizvi,1,Caught,43,24,,,179.17,FALSE,2018
+M093,TBONTB,Two Bats or Not To Bat,,DM Sheridan,7,Caught,6,6,,,100,FALSE,2018
+M093,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,8,Not Out,12,12,,,100,FALSE,2018
+M093,TBONTB,Two Bats or Not To Bat,,Tristan Langford,3,Run Out,8,7,,,114.29,FALSE,2018
+M094,TBONTB,Two Bats or Not To Bat,,RM Sheridan,3,Bowled,29,24,,,120.83,FALSE,2019
+M094,TBONTB,Two Bats or Not To Bat,,DM Sheridan,7,Bowled,9,8,,,112.5,FALSE,2019
+M094,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Bowled,1,4,,,25,FALSE,2019
+M094,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Bowled,0,1,,,0,FALSE,2019
+M094,TBONTB,Two Bats or Not To Bat,,SK Das,5,Caught,3,4,,,75,FALSE,2019
+M094,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,2,Not Out,65,42,,,154.76,FALSE,2019
+M094,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Not Out,53,31,,,170.97,FALSE,2019
+M095,TBONTB,Two Bats or Not To Bat,,Tristan Langford,3,Bowled,21,25,,,84,FALSE,2019
+M095,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Bowled,20,14,,,142.86,FALSE,2019
+M095,TBONTB,Two Bats or Not To Bat,,SK Das,6,Bowled,11,8,,,137.5,FALSE,2019
+M095,TBONTB,Two Bats or Not To Bat,,DM Sheridan,8,Bowled,16,6,,,266.67,FALSE,2019
+M095,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,1,Caught,0,1,,,0,FALSE,2019
+M095,TBONTB,Two Bats or Not To Bat,,RM Sheridan,4,LBW,6,7,,,85.71,FALSE,2019
+M095,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Not Out,55,33,,,166.67,FALSE,2019
+M095,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Not Out,33,20,,,165,FALSE,2019
+M096,TBONTB,Two Bats or Not To Bat,,OCYG Willems,8,Bowled,25,23,,,108.7,FALSE,2019
+M096,TBONTB,Two Bats or Not To Bat,,Tristan Langford,5,Bowled,1,4,,,25,FALSE,2019
+M096,TBONTB,Two Bats or Not To Bat,,TA Oberst,2,Bowled,0,1,,,0,FALSE,2019
+M096,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,6,Caught,32,21,,,152.38,FALSE,2019
+M096,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,4,Caught,15,16,,,93.75,FALSE,2019
+M096,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Caught,15,11,,,136.36,FALSE,2019
+M096,TBONTB,Two Bats or Not To Bat,,CTP Clark,3,Caught,2,7,,,28.57,FALSE,2019
+M096,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,1,Run Out,1,3,,,33.33,FALSE,2019
+M097,TBONTB,Two Bats or Not To Bat,,Tristan Langford,5,Bowled,10,12,,,83.33,FALSE,2019
+M097,TBONTB,Two Bats or Not To Bat,,CJ Dixon,2,Bowled,3,8,,,37.5,FALSE,2019
+M097,TBONTB,Two Bats or Not To Bat,,OCYG Willems,8,Bowled,9,6,,,150,FALSE,2019
+M097,TBONTB,Two Bats or Not To Bat,,Asad Rehman,1,Bowled,1,2,,,50,FALSE,2019
+M097,TBONTB,Two Bats or Not To Bat,,KM Toms,3,Caught,24,21,,,114.29,FALSE,2019
+M097,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Caught,25,16,,,156.25,FALSE,2019
+M097,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Not Out,57,44,,,129.55,FALSE,2019
+M097,TBONTB,Two Bats or Not To Bat,,TA Oberst,4,Run Out,5,6,,,83.33,FALSE,2019
+M098,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Bowled,41,34,,,120.59,FALSE,2019
+M098,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,3,Bowled,14,12,,,116.67,FALSE,2019
+M098,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Bowled,14,11,,,127.27,FALSE,2019
+M098,TBONTB,Two Bats or Not To Bat,,KM Toms,2,Bowled,3,10,,,30,FALSE,2019
+M098,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Bowled,0,1,,,0,FALSE,2019
+M098,TBONTB,Two Bats or Not To Bat,,Dec Penfold,1,Caught,12,12,,,100,FALSE,2019
+M098,TBONTB,Two Bats or Not To Bat,,Tristan Langford,7,Run Out,42,28,,,150,FALSE,2019
+M098,TBONTB,Two Bats or Not To Bat,,DM Sheridan,8,Run Out,1,3,,,33.33,FALSE,2019
+M099,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Bowled,27,16,,,168.75,FALSE,2019
+M099,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,5,Bowled,4,5,,,80,FALSE,2019
+M099,TBONTB,Two Bats or Not To Bat,,SK Das,7,Bowled,0,2,,,0,FALSE,2019
+M099,TBONTB,Two Bats or Not To Bat,,CJ Dixon,3,Bowled,0,1,,,0,FALSE,2019
+M099,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,Bowled,0,1,,,0,FALSE,2019
+M099,TBONTB,Two Bats or Not To Bat,,Dec Penfold,1,Caught,17,12,,,141.67,FALSE,2019
+M099,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,2,Caught,3,3,,,100,FALSE,2019
+M100,TBONTB,Two Bats or Not To Bat,,OCYG Willems,7,Bowled,45,27,,,166.67,FALSE,2019
+M100,TBONTB,Two Bats or Not To Bat,,CJ Dixon,1,Bowled,0,7,,,0,FALSE,2019
+M100,TBONTB,Two Bats or Not To Bat,,Tristan Langford,6,Bowled,0,3,,,0,FALSE,2019
+M100,TBONTB,Two Bats or Not To Bat,,CTP Clark,3,Bowled,0,1,,,0,FALSE,2019
+M100,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Caught,20,33,,,60.61,FALSE,2019
+M100,TBONTB,Two Bats or Not To Bat,,Dec Penfold,5,Caught,20,10,,,200,FALSE,2019
+M100,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Caught,5,5,,,100,FALSE,2019
+M100,TBONTB,Two Bats or Not To Bat,,DM Sheridan,8,Not Out,18,21,,,85.71,FALSE,2019
+M101,TBONTB,Two Bats or Not To Bat,,SL Crawley,1,Bowled,26,30,,,86.67,FALSE,2019
+M101,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,4,Bowled,10,7,,,142.86,FALSE,2019
+M101,TBONTB,Two Bats or Not To Bat,,Tristan Langford,3,Caught,20,14,,,142.86,FALSE,2019
+M101,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Not Out,62,52,,,119.23,FALSE,2019
+M101,TBONTB,Two Bats or Not To Bat,,DM Sheridan,5,Not Out,4,6,,,66.67,FALSE,2019
+M101,TBONTB,Two Bats or Not To Bat,,Lauren Smith,6,Not Out,0,0,,,0,FALSE,2019
+M102,TBONTB,Two Bats or Not To Bat,,SL Crawley,5,Bowled,14,13,,,107.69,FALSE,2019
+M102,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,3,Bowled,7,4,,,175,FALSE,2019
+M102,TBONTB,Two Bats or Not To Bat,,OCYG Willems,7,Bowled,2,2,,,100,FALSE,2019
+M102,TBONTB,Two Bats or Not To Bat,,Lauren Smith,1,Caught,2,8,,,25,FALSE,2019
+M102,TBONTB,Two Bats or Not To Bat,,KM Toms,2,Caught,2,3,,,66.67,FALSE,2019
+M102,TBONTB,Two Bats or Not To Bat,,SK Das,4,Not Out,50,44,,,113.64,FALSE,2019
+M102,TBONTB,Two Bats or Not To Bat,,Tristan Langford,6,Not Out,54,33,,,163.64,FALSE,2019
+M102,TBONTB,Two Bats or Not To Bat,,DM Sheridan,8,Not Out,5,4,,,125,FALSE,2019
+M103,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Bowled,39,23,,,169.57,FALSE,2019
+M103,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,4,Bowled,37,22,,,168.18,FALSE,2019
+M103,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Bowled,4,6,,,66.67,FALSE,2019
+M103,TBONTB,Two Bats or Not To Bat,,CTP Clark,6,Bowled,0,5,,,0,FALSE,2019
+M103,TBONTB,Two Bats or Not To Bat,,RM Sheridan,3,Not Out,55,25,,,220,FALSE,2019
+M103,TBONTB,Two Bats or Not To Bat,,Tristan Langford,5,Not Out,47,22,,,213.64,FALSE,2019
+M103,TBONTB,Two Bats or Not To Bat,,DM Sheridan,8,Not Out,2,2,,,100,FALSE,2019
+M103,TBONTB,Two Bats or Not To Bat,,TABG Willems,1,Run Out,6,4,,,150,FALSE,2019
+M104,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Bowled,4,4,,,100,FALSE,2019
+M104,TBONTB,Two Bats or Not To Bat,,RM Sheridan,3,Caught,47,29,,,162.07,FALSE,2019
+M104,TBONTB,Two Bats or Not To Bat,,TABG Willems,1,Caught,0,5,,,0,FALSE,2019
+M104,TBONTB,Two Bats or Not To Bat,,CTP Clark,7,Caught,2,2,,,100,FALSE,2019
+M104,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,4,Not Out,51,30,,,170,FALSE,2019
+M104,TBONTB,Two Bats or Not To Bat,,DM Sheridan,8,Not Out,48,20,,,240,FALSE,2019
+M104,TBONTB,Two Bats or Not To Bat,,Tristan Langford,5,Not Out,13,13,,,100,FALSE,2019
+M104,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Run Out,11,10,,,110,FALSE,2019
+M105,TBONTB,Two Bats or Not To Bat,,Tristan Langford,3,Bowled,23,16,,,143.75,FALSE,2019
+M105,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,2,Bowled,27,13,,,207.69,FALSE,2019
+M105,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Bowled,5,6,,,83.33,FALSE,2019
+M105,TBONTB,Two Bats or Not To Bat,,SL Crawley,6,Bowled,5,3,,,166.67,FALSE,2019
+M105,TBONTB,Two Bats or Not To Bat,,RM Sheridan,1,Not Out,52,29,,,179.31,FALSE,2019
+M105,TBONTB,Two Bats or Not To Bat,,KM Toms,5,Not Out,36,23,,,156.52,FALSE,2019
+M105,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,8,Not Out,23,17,,,135.29,FALSE,2019
+M105,TBONTB,Two Bats or Not To Bat,,TA Oberst,7,Run Out,20,10,,,200,FALSE,2019
+M106,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Bowled,16,16,2,0,100,FALSE,2019
+M106,TBONTB,Two Bats or Not To Bat,,Dec Penfold,1,Not Out,52,32,7,0,162.5,FALSE,2019
+M106,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,3,Not Out,27,16,4,0,168.75,FALSE,2019
+M106,TBONTB,Two Bats or Not To Bat,,CTP Clark,,,,,,,,TRUE,2019
+M106,TBONTB,Two Bats or Not To Bat,,OCYG Willems,,,,,,,,TRUE,2019
+M106,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,,,,,,,,TRUE,2019
+M106,TBONTB,Two Bats or Not To Bat,,Tristan Langford,,,,,,,,TRUE,2019
+M106,TBONTB,Two Bats or Not To Bat,,Higgins PA,,,,,,,,TRUE,2019
+M107,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Bowled,50,27,2,3,185.19,FALSE,2019
+M107,TBONTB,Two Bats or Not To Bat,,Higgins PA,8,Bowled,3,8,0,0,37.5,FALSE,2019
+M107,TBONTB,Two Bats or Not To Bat,,Dec Penfold,1,Bowled,4,3,0,0,133.33,FALSE,2019
+M107,TBONTB,Two Bats or Not To Bat,,Sam Latter,2,Bowled,0,1,0,0,0,FALSE,2019
+M107,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,7,Bowled,0,1,0,0,0,FALSE,2019
+M107,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,22,19,1,0,115.79,FALSE,2019
+M107,TBONTB,Two Bats or Not To Bat,,TA Oberst,6,LBW,12,8,1,0,150,FALSE,2019
+M107,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,5,Run Out,4,2,0,0,200,FALSE,2019
+M108,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,6,Bowled,25,28,1,0,89.29,FALSE,2019
+M108,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,1,Bowled,6,9,0,0,66.67,FALSE,2019
+M108,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Caught,26,22,3,0,118.18,FALSE,2019
+M108,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,3,4,0,0,75,FALSE,2019
+M108,TBONTB,Two Bats or Not To Bat,,Dec Penfold,5,Not Out,47,39,5,0,120.51,FALSE,2019
+M108,TBONTB,Two Bats or Not To Bat,,SK Das,7,Not Out,4,4,0,0,100,FALSE,2019
+M108,TBONTB,Two Bats or Not To Bat,,TA Oberst,2,Run Out,3,4,0,0,75,FALSE,2019
+M108,TBONTB,Two Bats or Not To Bat,,CTP Clark,,,,,,,,TRUE,2019
+M109,TBONTB,Two Bats or Not To Bat,,TA Wood,1,Bowled,7,22,0,0,31.82,FALSE,2019
+M109,TBONTB,Two Bats or Not To Bat,,DM Sheridan,6,Bowled,3,14,0,0,21.43,FALSE,2019
+M109,TBONTB,Two Bats or Not To Bat,,Asad Rehman,5,Bowled,10,10,0,0,100,FALSE,2019
+M109,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Caught,9,15,0,0,60,FALSE,2019
+M109,TBONTB,Two Bats or Not To Bat,,Hafiz Rehman,7,Not Out,0,0,0,0,0,FALSE,2019
+M109,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Run Out,20,36,0,0,55.56,FALSE,2019
+M109,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Run Out,4,5,0,0,80,FALSE,2019
+M110,TBONTB,Two Bats or Not To Bat,,SK Das,5,Bowled,3,10,0,0,30,FALSE,2019
+M110,TBONTB,Two Bats or Not To Bat,,OCYG Willems,7,Bowled,0,1,0,0,0,FALSE,2019
+M110,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Caught,0,3,0,0,0,FALSE,2019
+M110,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Caught,0,1,0,0,0,FALSE,2019
+M110,TBONTB,Two Bats or Not To Bat,,RM Sheridan,3,LBW,20,27,0,0,74.07,FALSE,2019
+M110,TBONTB,Two Bats or Not To Bat,,TA Oberst,2,Not Out,50,54,0,0,92.59,FALSE,2019
+M110,TBONTB,Two Bats or Not To Bat,,Tristan Langford,8,Not Out,5,3,1,0,166.67,FALSE,2019
+M110,TBONTB,Two Bats or Not To Bat,,WE Leuty,1,Run Out,5,11,0,0,45.45,FALSE,2019
+M111,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Bowled,5,5,0,0,100,FALSE,2020
+M111,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,2,Caught,15,23,0,0,65.22,FALSE,2020
+M111,TBONTB,Two Bats or Not To Bat,,Adam Day,1,Caught,4,9,0,0,44.44,FALSE,2020
+M111,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Not Out,52,42,4,0,123.81,FALSE,2020
+M111,TBONTB,Two Bats or Not To Bat,,Dec Penfold,6,Not Out,34,18,4,2,188.89,FALSE,2020
+M111,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,5,Not Out,9,10,1,0,90,FALSE,2020
+M112,TBONTB,Two Bats or Not To Bat,,OCYG Willems,7,Bowled,32,23,4,0,139.13,FALSE,2020
+M112,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,5,Bowled,2,4,0,0,50,FALSE,2020
+M112,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Bowled,1,3,0,0,33.33,FALSE,2020
+M112,TBONTB,Two Bats or Not To Bat,,Tristan Langford,3,Caught,6,8,1,0,75,FALSE,2020
+M112,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Caught,4,5,0,0,80,FALSE,2020
+M112,TBONTB,Two Bats or Not To Bat,,Sam Latter,2,Caught,7,4,0,1,175,FALSE,2020
+M112,TBONTB,Two Bats or Not To Bat,,Dec Penfold,1,Not Out,83,40,9,3,207.5,FALSE,2020
+M112,TBONTB,Two Bats or Not To Bat,,DM Sheridan,8,Not Out,54,25,6,1,216,FALSE,2020
+M113,TBONTB,Two Bats or Not To Bat,,Tristan Langford,1,Bowled,22,18,4,0,122.22,FALSE,2020
+M113,TBONTB,Two Bats or Not To Bat,,Dec Penfold,3,Caught,30,24,2,1,125,FALSE,2020
+M113,TBONTB,Two Bats or Not To Bat,,HA Tebbutt,2,Caught,15,18,2,0,83.33,FALSE,2020
+M113,TBONTB,Two Bats or Not To Bat,,Adam Day,5,Caught,20,14,2,1,142.86,FALSE,2020
+M113,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Caught,9,5,0,1,180,FALSE,2020
+M113,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,4,Run Out,19,13,1,1,146.15,FALSE,2020
+M113,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,8,Run Out,10,9,1,0,111.11,FALSE,2020
+M113,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,6,Run Out,2,6,0,0,33.33,FALSE,2020
+M114,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,2,Not Out,50,45,3,0,111.11,FALSE,2020
+M114,TBONTB,Two Bats or Not To Bat,,Dec Penfold,1,Not Out,52,34,5,1,152.94,FALSE,2020
+M114,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Not Out,35,24,3,0,145.83,FALSE,2020
+M114,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Not Out,17,12,1,0,141.67,FALSE,2020
+M114,TBONTB,Two Bats or Not To Bat,,Adam Day,,,,,,,,TRUE,2020
+M114,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,,,,,,,,TRUE,2020
+M114,TBONTB,Two Bats or Not To Bat,,DM Sheridan,,,,,,,,TRUE,2020
+M114,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,,,,,,,,TRUE,2020
+M115,TBONTB,Two Bats or Not To Bat,,KM Toms,2,Bowled,23,30,1,0,76.67,FALSE,2020
+M115,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Bowled,36,23,6,0,156.52,FALSE,2020
+M115,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,4,Bowled,4,5,0,0,80,FALSE,2020
+M115,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,3,Caught,0,2,0,0,0,FALSE,2020
+M115,TBONTB,Two Bats or Not To Bat,,Adam Day,6,LBW,0,1,0,0,0,FALSE,2020
+M115,TBONTB,Two Bats or Not To Bat,,DM Sheridan,5,Not Out,35,22,4,0,159.09,FALSE,2020
+M115,TBONTB,Two Bats or Not To Bat,,RM Sheridan,8,Not Out,0,1,,,0,FALSE,2020
+M115,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Run Out,50,24,7,0,208.33,FALSE,2020
+M115,TBONTB,Two Bats or Not To Bat,,Dec Penfold,,,,,,,,TRUE,2020
+M116,TBONTB,Two Bats or Not To Bat,,Tristan Langford,1,Bowled,28,17,4,0,164.71,FALSE,2020
+M116,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,5,Bowled,1,7,0,0,14.29,FALSE,2020
+M116,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Not Out,51,30,8,0,170,FALSE,2020
+M116,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,4,Not Out,28,20,4,0,140,FALSE,2020
+M116,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Not Out,5,4,1,0,125,FALSE,2020
+M116,TBONTB,Two Bats or Not To Bat,,Vipin Kumar,2,Stumped,41,32,5,1,128.13,FALSE,2020
+M116,TBONTB,Two Bats or Not To Bat,,OCYG Willems,,,,,,,,TRUE,2020
+M117,TBONTB,Two Bats or Not To Bat,,Dhanveer Brar,1,Bowled,10,17,1,0,58.82,FALSE,2020
+M117,TBONTB,Two Bats or Not To Bat,,Tristan Langford,5,Bowled,15,14,1,0,107.14,FALSE,2020
+M117,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,2,Bowled,9,11,0,0,81.82,FALSE,2020
+M117,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,7,Bowled,5,11,0,0,45.45,FALSE,2020
+M117,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Caught,13,15,1,0,86.67,FALSE,2020
+M117,TBONTB,Two Bats or Not To Bat,,KM Toms,3,Caught,10,11,1,0,90.91,FALSE,2020
+M117,TBONTB,Two Bats or Not To Bat,,Vipin Kumar,6,Caught,7,7,0,0,100,FALSE,2020
+M117,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,8,Not Out,47,27,4,1,174.07,FALSE,2020
+M118,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Bowled,13,10,1,0,130,FALSE,2021
+M118,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,7,Bowled,1,5,0,0,20,FALSE,2021
+M118,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,4,Caught,51,26,7,1,196.15,FALSE,2021
+M118,TBONTB,Two Bats or Not To Bat,,TA Oberst,6,Caught,30,21,5,0,142.86,FALSE,2021
+M118,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,14,9,2,0,155.56,FALSE,2021
+M118,TBONTB,Two Bats or Not To Bat,,RP Matthews,1,Caught,0,5,0,0,0,FALSE,2021
+M118,TBONTB,Two Bats or Not To Bat,,KM Toms,2,Caught,5,4,1,0,125,FALSE,2021
+M118,TBONTB,Two Bats or Not To Bat,,CTP Clark,8,Stumped,4,7,0,0,57.14,FALSE,2021
+M119,TBONTB,Two Bats or Not To Bat,,Shelwin Shaju,2,Bowled,33,26,2,1,126.92,FALSE,2021
+M119,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,21,13,3,0,161.54,FALSE,2021
+M119,TBONTB,Two Bats or Not To Bat,,CTP Clark,8,Bowled,4,4,0,0,100,FALSE,2021
+M119,TBONTB,Two Bats or Not To Bat,,RP Matthews,6,Bowled,0,3,0,0,0,FALSE,2021
+M119,TBONTB,Two Bats or Not To Bat,,KM Toms,7,Bowled,0,2,0,0,0,FALSE,2021
+M119,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,4,Caught,6,8,0,0,75,FALSE,2021
+M119,TBONTB,Two Bats or Not To Bat,,Tristan Langford,1,Caught,7,5,1,0,140,FALSE,2021
+M119,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,5,Caught,1,3,0,0,33.33,FALSE,2021
+M120,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,Bowled,16,15,1,0,106.67,FALSE,2021
+M120,TBONTB,Two Bats or Not To Bat,,HA Tebbutt,1,Bowled,21,11,2,0,190.91,FALSE,2021
+M120,TBONTB,Two Bats or Not To Bat,,DM Sheridan,5,Bowled,15,11,1,0,136.36,FALSE,2021
+M120,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Bowled,18,10,1,1,180,FALSE,2021
+M120,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,8,Bowled,0,1,0,0,0,FALSE,2021
+M120,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,25,17,3,0,147.06,FALSE,2021
+M120,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,2,Caught,14,15,2,0,93.33,FALSE,2021
+M120,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Not Out,24,18,4,0,133.33,FALSE,2021
+M121,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Bowled,13,16,0,0,81.25,FALSE,2021
+M121,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Bowled,1,4,0,0,25,FALSE,2021
+M121,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Bowled,0,2,0,0,0,FALSE,2021
+M121,TBONTB,Two Bats or Not To Bat,,RP Matthews,2,Bowled,0,1,0,0,0,FALSE,2021
+M121,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Caught,17,13,2,0,130.77,FALSE,2021
+M121,TBONTB,Two Bats or Not To Bat,,DM Sheridan,8,Caught,11,11,0,0,100,FALSE,2021
+M121,TBONTB,Two Bats or Not To Bat,,KM Toms,3,Caught,0,3,0,0,0,FALSE,2021
+M121,TBONTB,Two Bats or Not To Bat,,TA Oberst,6,Caught,1,2,0,0,50,FALSE,2021
+M122,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,4,Bowled,20,15,3,0,133.33,FALSE,2021
+M122,TBONTB,Two Bats or Not To Bat,,TA Garrard,1,Bowled,0,12,0,0,0,FALSE,2021
+M122,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,7,Bowled,3,5,0,0,60,FALSE,2021
+M122,TBONTB,Two Bats or Not To Bat,,TA Oberst,2,Bowled,2,4,0,0,50,FALSE,2021
+M122,TBONTB,Two Bats or Not To Bat,,KM Toms,3,Caught,37,29,2,0,127.59,FALSE,2021
+M122,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Caught,24,13,3,0,184.62,FALSE,2021
+M122,TBONTB,Two Bats or Not To Bat,,Tristan Langford,6,Not Out,50,27,4,3,185.19,FALSE,2021
+M122,TBONTB,Two Bats or Not To Bat,,OCYG Willems,8,Not Out,9,8,0,0,112.5,FALSE,2021
+M122,TBONTB,Two Bats or Not To Bat,,RP Matthews,,,,,,,,TRUE,2021
+M123,TBONTB,Two Bats or Not To Bat,,Tristan Langford,6,Bowled,33,21,4,0,157.14,FALSE,2021
+M123,TBONTB,Two Bats or Not To Bat,,TA Oberst,3,Bowled,17,20,1,0,85,FALSE,2021
+M123,TBONTB,Two Bats or Not To Bat,,SJ Carter,1,Bowled,1,3,0,0,33.33,FALSE,2021
+M123,TBONTB,Two Bats or Not To Bat,,Shelwin Shaju,7,Caught,10,10,1,0,100,FALSE,2021
+M123,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,2,Caught,8,5,1,0,160,FALSE,2021
+M123,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Caught,0,1,0,0,0,FALSE,2021
+M123,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Not Out,57,42,3,0,135.71,FALSE,2021
+M123,TBONTB,Two Bats or Not To Bat,,DM Sheridan,8,Not Out,20,16,0,0,125,FALSE,2021
+M123,TBONTB,Two Bats or Not To Bat,,RP Matthews,9,Not Out,0,0,0,0,0,FALSE,2021
+M124,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Bowled,16,15,1,0,106.67,FALSE,2021
+M124,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,5,Caught,29,14,3,1,207.14,FALSE,2021
+M124,TBONTB,Two Bats or Not To Bat,,KM Toms,4,Caught,8,6,1,0,133.33,FALSE,2021
+M124,TBONTB,Two Bats or Not To Bat,,CTP Clark,8,Caught,6,6,0,0,100,FALSE,2021
+M124,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,7,Caught,2,3,0,0,66.67,FALSE,2021
+M124,TBONTB,Two Bats or Not To Bat,,RM Sheridan,1,Not Out,55,37,4,0,148.65,FALSE,2021
+M124,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Not Out,52,22,9,0,236.36,FALSE,2021
+M124,TBONTB,Two Bats or Not To Bat,,Tristan Langford,6,Not Out,9,7,1,0,128.57,FALSE,2021
+M125,TBONTB,Two Bats or Not To Bat,,Alexander Whitehead,1,Bowled,16,34,1,0,47.06,FALSE,2021
+M125,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Bowled,23,12,2,0,191.67,FALSE,2021
+M125,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Bowled,15,9,4,0,166.67,FALSE,2021
+M125,TBONTB,Two Bats or Not To Bat,,KM Toms,6,Bowled,6,3,0,0,200,FALSE,2021
+M125,TBONTB,Two Bats or Not To Bat,,SJ Carter,3,Caught,16,11,0,2,145.45,FALSE,2021
+M125,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,4,Not Out,50,28,6,0,178.57,FALSE,2021
+M125,TBONTB,Two Bats or Not To Bat,,Tristan Langford,7,Not Out,28,15,1,1,186.67,FALSE,2021
+M125,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,8,Not Out,2,2,0,0,100,FALSE,2021
+M126,TBONTB,Two Bats or Not To Bat,,JBP Dempsey,1,Bowled,48,38,0,0,126.32,FALSE,2021
+M126,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Bowled,23,17,1,1,135.29,FALSE,2021
+M126,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,3,Bowled,5,4,1,0,125,FALSE,2021
+M126,TBONTB,Two Bats or Not To Bat,,DM Sheridan,5,Bowled,1,4,0,0,25,FALSE,2021
+M126,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Bowled,0,1,0,0,0,FALSE,2021
+M126,TBONTB,Two Bats or Not To Bat,,SJ Carter,6,Caught,30,35,1,1,85.71,FALSE,2021
+M126,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Caught,12,10,2,0,120,FALSE,2021
+M126,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,8,Not Out,1,1,0,0,100,FALSE,2021
+M127,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Bowled,21,16,2,0,131.25,FALSE,2021
+M127,TBONTB,Two Bats or Not To Bat,,JB Louw,1,Bowled,11,7,2,0,157.14,FALSE,2021
+M127,TBONTB,Two Bats or Not To Bat,,TA Oberst,8,Bowled,2,3,0,0,66.67,FALSE,2021
+M127,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Caught,15,7,1,0,214.29,FALSE,2021
+M127,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Caught,10,7,1,0,142.86,FALSE,2021
+M127,TBONTB,Two Bats or Not To Bat,,Tristan Langford,6,Caught,3,5,0,0,60,FALSE,2021
+M127,TBONTB,Two Bats or Not To Bat,,Asad Rehman,3,Caught,0,1,0,0,0,FALSE,2021
+M127,TBONTB,Two Bats or Not To Bat,,SJ Carter,2,Not Out,126,72,7,8,175,FALSE,2021
+M128,TBONTB,Two Bats or Not To Bat,,TA Garrard,5,Bowled,5,13,0,0,38.46,FALSE,2021
+M128,TBONTB,Two Bats or Not To Bat,,SJ Carter,1,Bowled,1,5,0,0,20,FALSE,2021
+M128,TBONTB,Two Bats or Not To Bat,,J Tobin-Berry,4,Bowled,7,5,0,0,140,FALSE,2021
+M128,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,3,Caught,55,53,3,0,103.77,FALSE,2021
+M128,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Caught,8,5,1,0,160,FALSE,2021
+M128,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,LBW,26,19,2,0,136.84,FALSE,2021
+M128,TBONTB,Two Bats or Not To Bat,,Alexander Whitehead,6,LBW,3,6,0,0,50,FALSE,2021
+M130,TBONTB,Two Bats or Not To Bat,,KM Toms,2,Bowled,18,11,0,0,163.64,FALSE,2021
+M130,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Caught,9,8,1,0,112.5,FALSE,2021
+M130,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Not Out,51,35,3,0,145.71,FALSE,2021
+M130,TBONTB,Two Bats or Not To Bat,,Shelwin Shaju,4,Not Out,52,27,4,1,192.59,FALSE,2021
+M130,TBONTB,Two Bats or Not To Bat,,Tristan Langford,5,Not Out,50,27,3,1,185.19,FALSE,2021
+M130,TBONTB,Two Bats or Not To Bat,,JB Louw,6,Not Out,16,11,1,0,145.45,FALSE,2021
+M130,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,8,Not Out,0,0,0,0,0,FALSE,2021
+M130,TBONTB,Two Bats or Not To Bat,,SJ Carter,7,Run Out,1,1,0,0,100,FALSE,2021
+M131,TBONTB,Two Bats or Not To Bat,,SJ Carter,2,Bowled,36,27,3,0,133.33,FALSE,2021
+M131,TBONTB,Two Bats or Not To Bat,,Shelwin Shaju,7,Bowled,11,12,0,0,91.67,FALSE,2021
+M131,TBONTB,Two Bats or Not To Bat,,OCYG Willems,5,Bowled,4,6,0,0,66.67,FALSE,2021
+M131,TBONTB,Two Bats or Not To Bat,,JB Louw,3,Bowled,0,3,0,0,0,FALSE,2021
+M131,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,1,Caught,28,27,1,0,103.7,FALSE,2021
+M131,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,Caught,25,16,2,0,156.25,FALSE,2021
+M131,TBONTB,Two Bats or Not To Bat,,KM Toms,4,Caught,3,7,0,0,42.86,FALSE,2021
+M131,TBONTB,Two Bats or Not To Bat,,Tristan Langford,8,Stumped,4,5,0,0,80,FALSE,2021
+M132,TBONTB,Two Bats or Not To Bat,,OCYG Willems,6,Bowled,4,7,0,0,57.14,FALSE,2021
+M132,TBONTB,Two Bats or Not To Bat,,Asad Rehman,4,Caught,27,21,4,0,128.57,FALSE,2021
+M132,TBONTB,Two Bats or Not To Bat,,SJ Carter,3,Caught,4,7,0,0,57.14,FALSE,2021
+M132,TBONTB,Two Bats or Not To Bat,,Tristan Langford,1,Not Out,50,39,4,1,128.21,FALSE,2021
+M132,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,5,Not Out,17,21,0,0,80.95,FALSE,2021
+M132,TBONTB,Two Bats or Not To Bat,,DM Sheridan,7,Not Out,5,6,0,0,83.33,FALSE,2021
+M132,TBONTB,Two Bats or Not To Bat,,TA Oberst,2,Stumped,16,12,1,0,133.33,FALSE,2021
+M133,TBONTB,Two Bats or Not To Bat,,TA Oberst,4,Caught,9,14,1,0,64.29,FALSE,2022
+M133,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,1,Caught,20,12,1,0,166.67,FALSE,2022
+M133,TBONTB,Two Bats or Not To Bat,,KM Toms,5,Caught,5,12,0,0,41.67,FALSE,2022
+M133,TBONTB,Two Bats or Not To Bat,,SJ Carter,2,Caught,3,6,0,0,50,FALSE,2022
+M133,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,6,Caught,4,4,0,0,100,FALSE,2022
+M133,TBONTB,Two Bats or Not To Bat,,OCYG Willems,8,Caught,1,2,0,0,50,FALSE,2022
+M133,TBONTB,Two Bats or Not To Bat,,Tristan Langford,7,Not Out,101,47,10,6,214.89,FALSE,2022
+M133,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Run Out,25,14,3,0,178.57,FALSE,2022
+M134,TBONTB,Two Bats or Not To Bat,,CTP Clark,2,Bowled,36,27,3,1,133.33,FALSE,2022
+M134,TBONTB,Two Bats or Not To Bat,,David Knowles,5,Bowled,14,15,2,0,93.33,FALSE,2022
+M134,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Bowled,14,8,0,1,175,FALSE,2022
+M134,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,3,Bowled,2,6,0,0,33.33,FALSE,2022
+M134,TBONTB,Two Bats or Not To Bat,,Tristan Langford,6,Bowled,10,5,1,1,200,FALSE,2022
+M134,TBONTB,Two Bats or Not To Bat,,Higgins PA,8,Caught,22,7,5,0,314.29,FALSE,2022
+M134,TBONTB,Two Bats or Not To Bat,,SJ Carter,1,Caught,2,4,0,0,50,FALSE,2022
+M134,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Not Out,60,38,7,0,157.89,FALSE,2022
+M135,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,4,Bowled,26,18,3,0,144.44,FALSE,2022
+M135,TBONTB,Two Bats or Not To Bat,,DJ Pollock,1,Bowled,7,13,0,0,53.85,FALSE,2022
+M135,TBONTB,Two Bats or Not To Bat,,SJ Carter,2,Caught,23,21,2,0,109.52,FALSE,2022
+M135,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Caught,28,14,4,0,200,FALSE,2022
+M135,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,6,10,1,0,60,FALSE,2022
+M135,TBONTB,Two Bats or Not To Bat,,Tristan Langford,7,Caught,1,4,0,0,25,FALSE,2022
+M135,TBONTB,Two Bats or Not To Bat,,KM Toms,8,Caught,0,1,0,0,0,FALSE,2022
+M135,TBONTB,Two Bats or Not To Bat,,JB Louw,6,Not Out,3,5,0,0,60,FALSE,2022
+M136,TBONTB,Two Bats or Not To Bat,,Taha Pag,2,Bowled,13,14,1,0,92.86,FALSE,2022
+M136,TBONTB,Two Bats or Not To Bat,,OCYG Willems,6,Caught,44,20,7,0,220,FALSE,2022
+M136,TBONTB,Two Bats or Not To Bat,,TA Oberst,7,Caught,37,17,6,0,217.65,FALSE,2022
+M136,TBONTB,Two Bats or Not To Bat,,Peter Smithson,1,Caught,1,3,0,0,33.33,FALSE,2022
+M136,TBONTB,Two Bats or Not To Bat,,Ewan Morgan,5,Caught,0,1,0,0,0,FALSE,2022
+M136,TBONTB,Two Bats or Not To Bat,,Tim Sharpe,3,Not Out,69,41,5,1,168.29,FALSE,2022
+M136,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Stumped,19,10,2,0,190,FALSE,2022
+M136,TBONTB,Two Bats or Not To Bat,,KM Toms,8,Stumped,16,8,3,0,200,FALSE,2022
+M137,TBONTB,Two Bats or Not To Bat,,J Tobin-Berry,3,Bowled,16,32,1,0,50,FALSE,2022
+M137,TBONTB,Two Bats or Not To Bat,,OCYG Willems,6,Caught,41,21,6,0,195.24,FALSE,2022
+M137,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Caught,30,16,3,1,187.5,FALSE,2022
+M137,TBONTB,Two Bats or Not To Bat,,Joseph Harker,1,Caught,15,12,2,0,125,FALSE,2022
+M137,TBONTB,Two Bats or Not To Bat,,Higgins PA,8,Caught,6,10,1,0,60,FALSE,2022
+M137,TBONTB,Two Bats or Not To Bat,,Tristan Langford,5,Caught,16,9,2,0,177.78,FALSE,2022
+M137,TBONTB,Two Bats or Not To Bat,,KM Toms,4,Caught,1,6,0,0,16.67,FALSE,2022
+M137,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,2,Caught,5,4,1,0,125,FALSE,2022
+M138,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,4,Caught,29,19,5,0,152.63,FALSE,2022
+M138,TBONTB,Two Bats or Not To Bat,,Marcelo Terreiro,1,Caught,8,15,0,0,53.33,FALSE,2022
+M138,TBONTB,Two Bats or Not To Bat,,TA Oberst,2,Caught,15,11,1,1,136.36,FALSE,2022
+M138,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,22,9,5,0,244.44,FALSE,2022
+M138,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,5,Caught,4,3,1,0,133.33,FALSE,2022
+M138,TBONTB,Two Bats or Not To Bat,,Adam Day,6,Not Out,4,3,1,0,133.33,FALSE,2022
+M139,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Bowled,23,18,3,0,127.78,FALSE,2022
+M139,TBONTB,Two Bats or Not To Bat,,CTP Clark,7,Bowled,10,9,2,0,111.11,FALSE,2022
+M139,TBONTB,Two Bats or Not To Bat,,TA Wood,5,Bowled,10,6,2,0,166.67,FALSE,2022
+M139,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Caught,38,25,7,0,152,FALSE,2022
+M139,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,1,Caught,25,22,4,0,113.64,FALSE,2022
+M139,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Caught,22,17,3,0,129.41,FALSE,2022
+M139,TBONTB,Two Bats or Not To Bat,,SJ Carter,6,Not Out,18,13,2,0,138.46,FALSE,2022
+M139,TBONTB,Two Bats or Not To Bat,,KM Toms,8,Not Out,0,0,0,0,0,FALSE,2022
+M140,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,3,Bowled,38,23,6,0,165.22,FALSE,2022
+M140,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Caught,26,21,3,0,123.81,FALSE,2022
+M140,TBONTB,Two Bats or Not To Bat,,CTP Clark,2,Caught,4,14,0,0,28.57,FALSE,2022
+M140,TBONTB,Two Bats or Not To Bat,,KM Toms,1,Caught,10,9,1,0,111.11,FALSE,2022
+M140,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Not Out,50,30,10,0,166.67,FALSE,2022
+M140,TBONTB,Two Bats or Not To Bat,,OCYG Willems,6,Not Out,17,13,2,0,130.77,FALSE,2022
+M140,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Not Out,1,1,0,0,100,FALSE,2022
+M141,TBONTB,Two Bats or Not To Bat,,Marcelo Terreiro,3,Bowled,16,28,0,0,57.14,FALSE,2022
+M141,TBONTB,Two Bats or Not To Bat,,Tristan Langford,1,Bowled,31,21,6,0,147.62,FALSE,2022
+M141,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,5,Bowled,17,12,2,0,141.67,FALSE,2022
+M141,TBONTB,Two Bats or Not To Bat,,PT Spooner,2,Bowled,0,1,0,0,0,FALSE,2022
+M141,TBONTB,Two Bats or Not To Bat,,AN Le,6,Caught,2,3,0,0,66.67,FALSE,2022
+M141,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Not Out,80,37,10,0,216.22,FALSE,2022
+M141,TBONTB,Two Bats or Not To Bat,,CTP Clark,7,Not Out,25,9,2,1,277.78,FALSE,2022
+M142,TBONTB,Two Bats or Not To Bat,,SJ Carter,7,Bowled,21,19,1,0,110.53,FALSE,2022
+M142,TBONTB,Two Bats or Not To Bat,,KM Toms,1,Bowled,1,3,0,0,33.33,FALSE,2022
+M142,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,4,Caught,4,12,0,0,33.33,FALSE,2022
+M142,TBONTB,Two Bats or Not To Bat,,PT Spooner,6,Caught,0,1,0,0,0,FALSE,2022
+M142,TBONTB,Two Bats or Not To Bat,,TA Oberst,5,Not Out,69,30,12,1,230,FALSE,2022
+M142,TBONTB,Two Bats or Not To Bat,,Tristan Langford,3,Not Out,50,15,7,0,333.33,FALSE,2022
+M142,TBONTB,Two Bats or Not To Bat,,Marcelo Terreiro,8,Not Out,15,12,2,0,125,FALSE,2022
+M142,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Stumped,44,19,8,0,231.58,FALSE,2022
+M143,TBONTB,Two Bats or Not To Bat,,Pia Schwierz,5,Bowled,12,19,0,0,63.16,FALSE,2023
+M143,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,3,Bowled,14,16,0,0,87.5,FALSE,2023
+M143,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,1,Caught,14,23,0,0,60.87,FALSE,2023
+M143,TBONTB,Two Bats or Not To Bat,,Tristan Langford,2,Not Out,50,31,5,0,161.29,FALSE,2023
+M143,TBONTB,Two Bats or Not To Bat,,SJ Carter,4,Not Out,12,24,0,0,50,FALSE,2023
+M143,TBONTB,Two Bats or Not To Bat,,KM Toms,6,Not Out,7,3,0,0,233.33,FALSE,2023
+M143,TBONTB,Two Bats or Not To Bat,,OCYG Willems,,,,,,,,TRUE,2023
+M143,TBONTB,Two Bats or Not To Bat,,Higgins PA,,,,,,,,TRUE,2023
+M144,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,4,Bowled,31,19,6,0,163.16,FALSE,2023
+M144,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Bowled,8,3,2,0,266.67,FALSE,2023
+M144,TBONTB,Two Bats or Not To Bat,,Tristan Langford,6,Bowled,2,3,0,0,66.67,FALSE,2023
+M144,TBONTB,Two Bats or Not To Bat,,TA Oberst,1,Caught,47,38,7,0,123.68,FALSE,2023
+M144,TBONTB,Two Bats or Not To Bat,,SJ Carter,7,Caught,9,7,0,1,128.57,FALSE,2023
+M144,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,5,Caught,7,6,0,0,116.67,FALSE,2023
+M144,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Caught,4,4,1,0,100,FALSE,2023
+M145,TBONTB,Two Bats or Not To Bat,,Tristan Langford,5,Bowled,37,20,2,1,185,FALSE,2023
+M145,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Bowled,31,19,3,0,163.16,FALSE,2023
+M145,TBONTB,Two Bats or Not To Bat,,KM Toms,2,Bowled,10,9,1,0,111.11,FALSE,2023
+M145,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,3,Caught,7,8,1,0,87.5,FALSE,2023
+M145,TBONTB,Two Bats or Not To Bat,,Robbie Ransom,1,Not Out,50,32,9,0,156.25,FALSE,2023
+M145,TBONTB,Two Bats or Not To Bat,,Altaf Hussain,7,Not Out,32,12,2,1,266.67,FALSE,2023
+M145,TBONTB,Two Bats or Not To Bat,,Higgins PA,6,Not Out,12,11,1,0,109.09,FALSE,2023
+M146,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Bowled,39,29,4,0,134.48,FALSE,2023
+M146,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Bowled,24,17,4,0,141.18,FALSE,2023
+M146,TBONTB,Two Bats or Not To Bat,,KM Toms,4,Not Out,26,28,1,0,92.86,FALSE,2023
+M146,TBONTB,Two Bats or Not To Bat,,Tristan Langford,5,Not Out,37,19,5,1,194.74,FALSE,2023
+M146,TBONTB,Two Bats or Not To Bat,,SJ Carter,2,Run Out,9,19,1,0,47.37,FALSE,2023
+M146,TBONTB,Two Bats or Not To Bat,,Altaf Hussain,,,,,,,,TRUE,2023
+M147,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Bowled,0,1,0,0,0,FALSE,2023
+M147,TBONTB,Two Bats or Not To Bat,,CTP Clark,3,Caught,0,2,0,0,0,FALSE,2023
+M147,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Caught,0,2,0,0,0,FALSE,2023
+M147,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,2,LBW,20,18,3,0,111.11,FALSE,2023
+M147,TBONTB,Two Bats or Not To Bat,,SJ Carter,5,Not Out,39,30,6,0,130,FALSE,2023
+M147,TBONTB,Two Bats or Not To Bat,,OCYG Willems,8,Not Out,20,13,2,0,153.85,FALSE,2023
+M147,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,1,Run Out,26,38,4,0,68.42,FALSE,2023
+M147,TBONTB,Two Bats or Not To Bat,,DJ Pollock,4,Run Out,0,1,0,0,0,FALSE,2023
+M148,TBONTB,Two Bats or Not To Bat,,DJ Pollock,2,Bowled,1,13,0,0,7.69,FALSE,2023
+M148,TBONTB,Two Bats or Not To Bat,,CTP Clark,4,Caught,8,5,0,0,160,FALSE,2023
+M148,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,1,Not Out,52,33,4,0,157.58,FALSE,2023
+M148,TBONTB,Two Bats or Not To Bat,,OCYG Willems,5,Not Out,41,29,4,0,141.38,FALSE,2023
+M148,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Not Out,51,25,2,0,204,FALSE,2023
+M148,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,6,Not Out,21,14,1,0,150,FALSE,2023
+M148,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,,,,,,,,TRUE,2023
+M148,TBONTB,Two Bats or Not To Bat,,SJ Carter,,,,,,,,TRUE,2023
+M150,TBONTB,Two Bats or Not To Bat,,WE Leuty,3,Bowled,29,30,1,0,96.67,FALSE,2023
+M150,TBONTB,Two Bats or Not To Bat,,KM Toms,2,Bowled,18,23,0,0,78.26,FALSE,2023
+M150,TBONTB,Two Bats or Not To Bat,,AJ Brooke,1,Caught,6,11,0,0,54.55,FALSE,2023
+M150,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Not Out,55,19,7,0,289.47,FALSE,2023
+M150,TBONTB,Two Bats or Not To Bat,,SJ Carter,5,Not Out,37,17,3,1,217.65,FALSE,2023
+M150,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,6,Not Out,22,17,2,0,129.41,FALSE,2023
+M150,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,,,,,,,,TRUE,2023
+M151,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Caught,39,37,3,0,105.41,FALSE,2023
+M151,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,6,Caught,10,15,1,0,66.67,FALSE,2023
+M151,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Caught,0,1,0,0,0,FALSE,2023
+M151,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,2,Not Out,50,25,6,1,200,FALSE,2023
+M151,TBONTB,Two Bats or Not To Bat,,Tristan Langford,8,Not Out,14,4,3,0,350,FALSE,2023
+M151,TBONTB,Two Bats or Not To Bat,,SJ Carter,7,Not Out,0,1,0,0,0,FALSE,2023
+M151,TBONTB,Two Bats or Not To Bat,,JB Louw,4,Run Out,28,23,3,1,121.74,FALSE,2023
+M151,TBONTB,Two Bats or Not To Bat,,WE Leuty,5,Stumped,0,4,0,0,0,FALSE,2023
+M152,TBONTB,Two Bats or Not To Bat,,TA Oberst,2,Caught,35,29,3,0,120.69,FALSE,2023
+M152,TBONTB,Two Bats or Not To Bat,,OCYG Willems,6,Caught,16,15,2,0,106.67,FALSE,2023
+M152,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Caught,15,9,3,0,166.67,FALSE,2023
+M152,TBONTB,Two Bats or Not To Bat,,Tristan Langford,3,Caught,0,1,0,0,0,FALSE,2023
+M152,TBONTB,Two Bats or Not To Bat,,RM Sheridan,1,LBW,19,10,2,0,190,FALSE,2023
+M152,TBONTB,Two Bats or Not To Bat,,AJ Brooke,5,Not Out,41,38,1,2,107.89,FALSE,2023
+M152,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Not Out,11,7,1,0,157.14,FALSE,2023
+M152,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,,,,,,,,TRUE,2023
+M153,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,5,Bowled,38,27,3,0,140.74,FALSE,2023
+M153,TBONTB,Two Bats or Not To Bat,,SJ Carter,3,Caught,14,12,1,1,116.67,FALSE,2023
+M153,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,1,Caught,1,7,0,0,14.29,FALSE,2023
+M153,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,2,Caught,0,2,0,0,0,FALSE,2023
+M153,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,LBW,4,3,1,0,133.33,FALSE,2023
+M154,TBONTB,Two Bats or Not To Bat,,CTP Clark,1,Bowled,1,2,0,0,50,FALSE,2023
+M154,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Caught,32,26,2,0,123.08,FALSE,2023
+M154,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Caught,1,4,0,0,25,FALSE,2023
+M154,TBONTB,Two Bats or Not To Bat,,Tristan Langford,8,Caught,5,4,1,0,125,FALSE,2023
+M154,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,6,Run Out,39,32,4,0,121.88,FALSE,2023
+M154,TBONTB,Two Bats or Not To Bat,,KM Toms,2,Run Out,4,10,0,0,40,FALSE,2023
+M154,TBONTB,Two Bats or Not To Bat,,BRD Perkins,3,Run Out,6,5,0,0,120,FALSE,2023
+M154,TBONTB,Two Bats or Not To Bat,,SJ Carter,5,Stumped,0,1,0,0,0,FALSE,2023
+M155,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Caught,24,21,2,0,114.29,FALSE,2023
+M155,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,4,Caught,11,17,0,0,64.71,FALSE,2023
+M155,TBONTB,Two Bats or Not To Bat,,DM Sheridan,1,Caught,13,16,1,0,81.25,FALSE,2023
+M155,TBONTB,Two Bats or Not To Bat,,AJ Brooke,3,Not Out,35,33,2,0,106.06,FALSE,2023
+M155,TBONTB,Two Bats or Not To Bat,,Syed Ali,5,Not Out,12,14,,,85.71,FALSE,2023
+M156,TBONTB,Two Bats or Not To Bat,,Tristan Langford,3,Bowled,11,10,1,0,110,FALSE,2023
+M156,TBONTB,Two Bats or Not To Bat,,Higgins PA,5,Bowled,2,6,0,0,33.33,FALSE,2023
+M156,TBONTB,Two Bats or Not To Bat,,Tim Jackman,1,Bowled,0,4,0,0,0,FALSE,2023
+M156,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Bowled,1,3,0,0,33.33,FALSE,2023
+M156,TBONTB,Two Bats or Not To Bat,,TA Oberst,6,Bowled,0,1,0,0,0,FALSE,2023
+M156,TBONTB,Two Bats or Not To Bat,,SJ Carter,2,Caught,25,24,3,0,104.17,FALSE,2023
+M156,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Caught,0,6,0,0,0,FALSE,2023
+M157,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,4,Bowled,37,27,5,1,137.04,FALSE,2023
+M157,TBONTB,Two Bats or Not To Bat,,TA Oberst,3,Bowled,35,19,6,0,184.21,FALSE,2023
+M157,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,1,Bowled,9,16,0,0,56.25,FALSE,2023
+M157,TBONTB,Two Bats or Not To Bat,,SJ Carter,6,Bowled,2,4,0,0,50,FALSE,2023
+M157,TBONTB,Two Bats or Not To Bat,,Manoj Oswal,7,Caught,0,2,0,0,0,FALSE,2023
+M157,TBONTB,Two Bats or Not To Bat,,OCYG Willems,5,Not Out,36,14,7,0,257.14,FALSE,2023
+M157,TBONTB,Two Bats or Not To Bat,,Noor Khan,8,Not Out,0,2,0,0,0,FALSE,2023
+M157,TBONTB,Two Bats or Not To Bat,,Tim Jackman,2,Stumped,18,25,2,0,72,FALSE,2023
+M158,TBONTB,Two Bats or Not To Bat,,J Tobin-Berry,2,Bowled,8,22,1,0,36.36,FALSE,2023
+M158,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,1,Bowled,5,14,0,0,35.71,FALSE,2023
+M158,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Bowled,29,14,6,0,207.14,FALSE,2023
+M158,TBONTB,Two Bats or Not To Bat,,KM Toms,3,Caught,11,13,0,0,84.62,FALSE,2023
+M158,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,5,Not Out,34,24,4,0,141.67,FALSE,2023
+M158,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Not Out,26,19,1,1,136.84,FALSE,2023
+M159,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,21,16,2,0,131.25,FALSE,2023
+M159,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Bowled,16,13,2,0,123.08,FALSE,2023
+M159,TBONTB,Two Bats or Not To Bat,,Tristan Langford,6,Caught,21,20,1,1,105,FALSE,2023
+M159,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Caught,8,9,0,0,88.89,FALSE,2023
+M159,TBONTB,Two Bats or Not To Bat,,WSJ Franklin,5,Caught,2,3,0,0,66.67,FALSE,2023
+M159,TBONTB,Two Bats or Not To Bat,,SJ Carter,4,Not Out,68,41,10,1,165.85,FALSE,2023
+M159,TBONTB,Two Bats or Not To Bat,,DM Sheridan,8,Not Out,12,8,2,0,150,FALSE,2023
+M159,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,1,Stumped,0,1,0,0,0,FALSE,2023
+M160,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,2,Bowled,33,18,5,0,183.33,FALSE,2024
+M160,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,5,Bowled,12,7,1,0,171.43,FALSE,2024
+M160,TBONTB,Two Bats or Not To Bat,,SJ Carter,3,Bowled,2,4,0,0,50,FALSE,2024
+M160,TBONTB,Two Bats or Not To Bat,,Tristan Langford,1,Caught,45,25,3,0,180,FALSE,2024
+M160,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Not Out,58,35,5,0,165.71,FALSE,2024
+M160,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Not Out,43,27,2,0,159.26,FALSE,2024
+M161,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,1,Caught,29,24,0,0,120.83,FALSE,2024
+M161,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,3,Caught,34,22,3,0,154.55,FALSE,2024
+M161,TBONTB,Two Bats or Not To Bat,,Charlie Andrew,5,Caught,6,7,0,0,85.71,FALSE,2024
+M161,TBONTB,Two Bats or Not To Bat,,SJ Carter,2,Caught,10,3,0,1,333.33,FALSE,2024
+M161,TBONTB,Two Bats or Not To Bat,,Marfood Ahmed,4,Not Out,51,26,6,1,196.15,FALSE,2024
+M161,TBONTB,Two Bats or Not To Bat,,Asim Raheel,6,Not Out,16,16,0,0,100,FALSE,2024
+M161,TBONTB,Two Bats or Not To Bat,,Sheraz Chaudry,7,Not Out,18,13,1,0,138.46,FALSE,2024
+M162,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Bowled,8,11,0,0,72.73,FALSE,2024
+M162,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,5,7,0,0,71.43,FALSE,2024
+M162,TBONTB,Two Bats or Not To Bat,,Marcelo Terreiro,1,Caught,4,17,0,0,23.53,FALSE,2024
+M162,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,2,Caught,3,8,0,0,37.5,FALSE,2024
+M162,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Not Out,52,42,4,0,123.81,FALSE,2024
+M162,TBONTB,Two Bats or Not To Bat,,Higgins PA,7,Not Out,27,23,2,0,117.39,FALSE,2024
+M162,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,5,Run Out,13,6,1,0,216.67,FALSE,2024
+M163,TBONTB,Two Bats or Not To Bat,,Marfood Ahmed,5,Bowled,33,17,2,1,194.12,FALSE,2024
+M163,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,1,Bowled,3,4,0,0,75,FALSE,2024
+M163,TBONTB,Two Bats or Not To Bat,,Naufil Ahmad,4,Caught,78,27,7,7,288.89,FALSE,2024
+M163,TBONTB,Two Bats or Not To Bat,,Sachin Pardesi,2,Caught,4,15,0,0,26.67,FALSE,2024
+M163,TBONTB,Two Bats or Not To Bat,,Tristan Langford,7,Caught,20,13,2,0,153.85,FALSE,2024
+M163,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,3,Caught,7,5,1,0,140,FALSE,2024
+M163,TBONTB,Two Bats or Not To Bat,,Ahmed Khan,6,Caught,3,5,0,0,60,FALSE,2024
+M164,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,4,Caught,2,6,0,0,33.33,FALSE,2024
+M164,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,6,Caught,1,3,0,0,33.33,FALSE,2024
+M164,TBONTB,Two Bats or Not To Bat,,CTP Clark,3,LBW,0,2,0,0,0,FALSE,2024
+M164,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,1,Not Out,51,40,4,0,127.5,FALSE,2024
+M164,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Not Out,50,32,3,0,156.25,FALSE,2024
+M164,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,5,Not Out,9,24,0,0,37.5,FALSE,2024
+M164,TBONTB,Two Bats or Not To Bat,,Tristan Langford,7,Not Out,14,6,2,0,233.33,FALSE,2024
+M165,TBONTB,Two Bats or Not To Bat,,Joe Bailey,1,LBW,11,8,0,0,137.5,FALSE,2024
+M165,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,2,Not Out,50,52,1,0,96.15,FALSE,2024
+M165,TBONTB,Two Bats or Not To Bat,,SJ Carter,3,Not Out,54,44,4,3,122.73,FALSE,2024
+M165,TBONTB,Two Bats or Not To Bat,,Tristan Langford,4,Not Out,24,9,3,0,266.67,FALSE,2024
+M165,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,5,Not Out,0,0,0,0,0,FALSE,2024
+M165,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,,,,,,,,TRUE,2024
+M165,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,,,,,,,,TRUE,2024
+M166,TBONTB,Two Bats or Not To Bat,,JT Hills,1,Bowled,25,17,5,0,147.06,FALSE,2024
+M166,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,4,Bowled,6,10,0,0,60,FALSE,2024
+M166,TBONTB,Two Bats or Not To Bat,,SJ Carter,6,Bowled,0,1,0,0,0,FALSE,2024
+M166,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,3,Caught,49,39,3,0,125.64,FALSE,2024
+M166,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,2,Caught,37,29,2,2,127.59,FALSE,2024
+M166,TBONTB,Two Bats or Not To Bat,,Tristan Langford,5,Caught,8,6,1,0,133.33,FALSE,2024
+M166,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,7,Run Out,8,12,0,0,66.67,FALSE,2024
+M167,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Bowled,7,6,0,0,116.67,FALSE,2024
+M167,TBONTB,Two Bats or Not To Bat,,Tristan Langford,5,Caught,52,32,5,0,162.5,FALSE,2024
+M167,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,4,Caught,12,19,0,0,63.16,FALSE,2024
+M167,TBONTB,Two Bats or Not To Bat,,TA Oberst,1,Caught,13,10,0,0,130,FALSE,2024
+M167,TBONTB,Two Bats or Not To Bat,,SJ Carter,7,Caught,10,10,1,0,100,FALSE,2024
+M167,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,2,Caught,6,8,0,0,75,FALSE,2024
+M167,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Caught,14,7,1,0,200,FALSE,2024
+M167,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,9,Not Out,0,1,0,0,0,FALSE,2024
+M167,TBONTB,Two Bats or Not To Bat,,KM Toms,8,Stumped,1,5,0,0,20,FALSE,2024
+M168,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,5,Bowled,5,6,0,0,83.33,FALSE,2024
+M168,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Bowled,7,3,1,0,233.33,FALSE,2024
+M168,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,2,Bowled,4,2,1,0,200,FALSE,2024
+M168,TBONTB,Two Bats or Not To Bat,,SJ Carter,6,Caught,36,20,4,1,180,FALSE,2024
+M168,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,7,Caught,15,13,2,0,115.38,FALSE,2024
+M168,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Caught,14,10,2,0,140,FALSE,2024
+M168,TBONTB,Two Bats or Not To Bat,,Lg Rass,8,Caught,1,4,0,0,25,FALSE,2024
+M168,TBONTB,Two Bats or Not To Bat,,JD Hodges,1,Run Out,26,30,2,0,86.67,FALSE,2024
+M169,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,3,Bowled,25,22,2,1,113.64,FALSE,2024
+M169,TBONTB,Two Bats or Not To Bat,,Tristan Langford,2,Caught,38,26,1,0,146.15,FALSE,2024
+M169,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,4,Caught,19,10,2,1,190,FALSE,2024
+M169,TBONTB,Two Bats or Not To Bat,,JT Hills,5,Not Out,11,7,1,0,157.14,FALSE,2024
+M169,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,6,Not Out,2,3,0,0,66.67,FALSE,2024
+M169,TBONTB,Two Bats or Not To Bat,,SJ Carter,1,Run Out,37,40,2,1,92.5,FALSE,2024
+M169,TBONTB,Two Bats or Not To Bat,,Higgins PA,,,,,,,,TRUE,2024
+M169,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,,,,,,,,TRUE,2024
+M170,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,1,Bowled,22,22,1,0,100,FALSE,2024
+M170,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Bowled,23,12,0,0,191.67,FALSE,2024
+M170,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,3,Caught,19,23,0,0,82.61,FALSE,2024
+M170,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,2,Not Out,52,49,2,0,106.12,FALSE,2024
+M170,TBONTB,Two Bats or Not To Bat,,SJ Carter,5,Not Out,2,5,0,0,40,FALSE,2024
+M170,TBONTB,Two Bats or Not To Bat,,Tristan Langford,,,,,,,,TRUE,2024
+M170,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,,,,,,,,TRUE,2024
+M171,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,4,Bowled,44,30,5,1,146.67,FALSE,2025
+M171,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,5,Bowled,0,3,0,0,0,FALSE,2025
+M171,TBONTB,Two Bats or Not To Bat,,OCYG Willems,1,Bowled,0,1,0,0,0,FALSE,2025
+M171,TBONTB,Two Bats or Not To Bat,,Higgins PA,3,Bowled,0,1,0,0,0,FALSE,2025
+M171,TBONTB,Two Bats or Not To Bat,,AA Rozario,2,Not Out,51,43,1,0,118.6,FALSE,2025
+M171,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,7,Not Out,22,25,0,0,88,FALSE,2025
+M171,TBONTB,Two Bats or Not To Bat,,SJ Carter,6,Not Out,50,22,4,3,227.27,FALSE,2025
+M171,TBONTB,Two Bats or Not To Bat,,Tristan Langford,8,Not Out,0,0,0,0,0,FALSE,2025
+M172,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,4,Bowled,55,36,7,0,152.78,FALSE,2025
+M172,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Bowled,11,9,1,0,122.22,FALSE,2025
+M172,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,2,Caught,11,9,1,0,122.22,FALSE,2025
+M172,TBONTB,Two Bats or Not To Bat,,SJ Carter,5,Caught,13,9,1,0,144.44,FALSE,2025
+M172,TBONTB,Two Bats or Not To Bat,,Tristan Langford,1,Not Out,67,52,6,0,128.85,FALSE,2025
+M173,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,1,Caught,70,55,9,0,127.27,FALSE,2025
+M173,TBONTB,Two Bats or Not To Bat,,SJ Carter,4,Caught,9,18,0,0,50,FALSE,2025
+M173,TBONTB,Two Bats or Not To Bat,,Shelwin Shaju,5,Caught,17,12,3,0,141.67,FALSE,2025
+M173,TBONTB,Two Bats or Not To Bat,,Tristan Langford,6,Caught,11,8,2,0,137.5,FALSE,2025
+M173,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,2,Caught,5,5,1,0,100,FALSE,2025
+M173,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,3,Caught,1,4,0,0,25,FALSE,2025
+M174,TBONTB,Two Bats or Not To Bat,,TA Oberst,1,Bowled,5,3,0,0,166.67,FALSE,2025
+M174,TBONTB,Two Bats or Not To Bat,,SJ Brinkley,4,Not Out,49,38,3,0,128.95,FALSE,2025
+M174,TBONTB,Two Bats or Not To Bat,,Tristan Langford,2,Not Out,50,28,4,1,178.57,FALSE,2025
+M174,TBONTB,Two Bats or Not To Bat,,LM Hatten,5,Not Out,6,7,0,0,85.71,FALSE,2025
+M174,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,3,Run Out,44,37,3,0,118.92,FALSE,2025
+M174,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,,,,,,,,TRUE,2025
+M174,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,,,,,,,,TRUE,2025
+M174,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,,,,,,,,TRUE,2025
+M175,TBONTB,Two Bats or Not To Bat,,SJ Carter,5,Caught,5,5,1,0,100,FALSE,2025
+M175,TBONTB,Two Bats or Not To Bat,,RM Sheridan,2,Caught,5,3,1,0,166.67,FALSE,2025
+M175,TBONTB,Two Bats or Not To Bat,,OCYG Willems,3,Not Out,50,22,6,0,227.27,FALSE,2025
+M175,TBONTB,Two Bats or Not To Bat,,DM Sheridan,1,Not Out,53,21,5,1,252.38,FALSE,2025
+M175,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Not Out,4,5,1,0,80,FALSE,2025
+M175,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Not Out,5,3,1,0,166.67,FALSE,2025
+M175,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,,,,,,,,TRUE,2025
+M175,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,,,,,,,,TRUE,2025
+M176,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,4,Bowled,37,30,1,0,123.33,FALSE,2025
+M176,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Bowled,15,9,0,0,166.67,FALSE,2025
+M176,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,3,Bowled,6,4,0,0,150,FALSE,2025
+M176,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,2,Caught,28,17,4,0,164.71,FALSE,2025
+M176,TBONTB,Two Bats or Not To Bat,,SJ Carter,5,Caught,11,9,0,0,122.22,FALSE,2025
+M176,TBONTB,Two Bats or Not To Bat,,Tristan Langford,1,Not Out,77,48,9,1,160.42,FALSE,2025
+M177,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,2,Bowled,15,22,0,0,68.18,FALSE,2025
+M177,TBONTB,Two Bats or Not To Bat,,Tristan Langford,6,Bowled,31,22,2,0,140.91,FALSE,2025
+M177,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,1,Bowled,44,20,6,1,220,FALSE,2025
+M177,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,4,Bowled,27,20,3,0,135,FALSE,2025
+M177,TBONTB,Two Bats or Not To Bat,,BRD Perkins,3,Bowled,4,7,0,0,57.14,FALSE,2025
+M177,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,5,Caught,25,13,4,0,192.31,FALSE,2025
+M178,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,1,Bowled,42,26,6,0,161.54,FALSE,2025
+M178,TBONTB,Two Bats or Not To Bat,,SJ Brinkley,3,Bowled,27,18,5,0,150,FALSE,2025
+M178,TBONTB,Two Bats or Not To Bat,,OCYG Willems,4,Caught,46,25,6,0,184,FALSE,2025
+M178,TBONTB,Two Bats or Not To Bat,,Andrew McMahon,5,Caught,1,6,0,0,16.67,FALSE,2025
+M178,TBONTB,Two Bats or Not To Bat,,Fergal Hanna,2,Caught,0,1,0,0,0,FALSE,2025
+M178,TBONTB,Two Bats or Not To Bat,,Nick French,6,Stumped,45,31,6,1,145.16,FALSE,2025
+M178,TBONTB,Two Bats or Not To Bat,,Ollie Cobb,7,Stumped,2,5,0,0,40,FALSE,2025
+M179,TBONTB,Two Bats or Not To Bat,,Suraj Saggar,5,Bowled,30,34,1,0,88.24,FALSE,2025
+M179,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,3,Bowled,6,10,0,0,60,FALSE,2025
+M179,TBONTB,Two Bats or Not To Bat,,SJ Carter,1,Bowled,6,4,1,0,150,FALSE,2025
+M179,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,7,Bowled,3,4,0,0,75,FALSE,2025
+M179,TBONTB,Two Bats or Not To Bat,,Tristan Langford,2,LBW,14,12,1,0,116.67,FALSE,2025
+M179,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,4,Not Out,64,33,3,0,193.94,FALSE,2025
+M179,TBONTB,Two Bats or Not To Bat,,LM Hatten,6,Not Out,10,13,1,0,76.92,FALSE,2025
+M180,TBONTB,Two Bats or Not To Bat,,Tristan Langford,8,Bowled,37,25,5,1,148,FALSE,2025
+M180,TBONTB,Two Bats or Not To Bat,,SJ Carter,7,Bowled,11,10,1,1,110,FALSE,2025
+M180,TBONTB,Two Bats or Not To Bat,,OCYG Willems,2,Caught,36,22,5,0,163.64,FALSE,2025
+M180,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,5,Caught,9,6,1,0,150,FALSE,2025
+M180,TBONTB,Two Bats or Not To Bat,,LM Hatten,3,Caught,3,4,0,0,75,FALSE,2025
+M180,TBONTB,Two Bats or Not To Bat,,CPW Chilvers,6,Caught,0,1,0,0,0,FALSE,2025
+M180,TBONTB,Two Bats or Not To Bat,,Higgins PA,4,Not Out,50,40,6,0,125,FALSE,2025
+M180,TBONTB,Two Bats or Not To Bat,,TA Oberst,1,Run Out,4,4,0,0,100,FALSE,2025
+M181,TBONTB,Two Bats or Not To Bat,,SJ Carter,6,Bowled,34,24,5,0,141.67,FALSE,2025
+M181,TBONTB,Two Bats or Not To Bat,,Ayush Newatia,3,Bowled,24,19,5,0,126.32,FALSE,2025
+M181,TBONTB,Two Bats or Not To Bat,,J Tobin-Berry,2,Bowled,7,14,0,0,50,FALSE,2025
+M181,TBONTB,Two Bats or Not To Bat,,SJ Brinkley,5,Bowled,16,12,1,1,133.33,FALSE,2025
+M181,TBONTB,Two Bats or Not To Bat,,KM Toms,1,Caught,9,12,2,0,75,FALSE,2025
+M181,TBONTB,Two Bats or Not To Bat,,Prasanna Dhamal,7,Not Out,13,6,2,0,216.67,FALSE,2025
+M181,TBONTB,Two Bats or Not To Bat,,Tristan Langford,8,Not Out,1,1,0,0,100,FALSE,2025
+M181,TBONTB,Two Bats or Not To Bat,,BRD Perkins,4,Run Out,9,22,0,0,40.91,FALSE,2025
