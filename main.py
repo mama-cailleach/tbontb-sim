@@ -140,7 +140,7 @@ def select_bowlers_from_team(team):
 	return bowlers + random.sample(others, min(need, len(others)))
 
 
-def simulate_innings(batting_team, bowling_team, balls=100):
+def simulate_innings(batting_team, bowling_team, balls=100, target=None):
 	# simple simulator for 100 balls
 	# batting_team: list of player dicts (ordered)
 	# bowling_team: list of player dicts (we'll rotate bowlers)
@@ -272,6 +272,11 @@ def simulate_innings(batting_team, bowling_team, balls=100):
 			if (not last_mode) and (run % 2 == 1):
 				striker_idx, non_striker_idx = non_striker_idx, striker_idx
 
+		# if chasing a target, stop as soon as target is reached or passed
+		if target is not None and total_runs >= target:
+			# innings over - chasing team has reached the target
+			break
+
 		# end of over swap (no swap in last mode since only one batsman)
 		if (ball_no + 1) % 5 == 0 and (not last_mode):
 			striker_idx, non_striker_idx = non_striker_idx, striker_idx
@@ -337,26 +342,23 @@ def main():
 
 	print(f"\nSimulating second innings: {second_batting[0]} batting...")
 	time.sleep(5)  # brief pause for realism
-	second = simulate_innings(second_batting[1], first_batting[1])
+	# set a chase target: need one more than the first innings
+	target_score = first['runs'] + 1
+	second = simulate_innings(second_batting[1], first_batting[1], target=target_score)
 	print_innings_summary(second_batting[0], second)
 
 	# decide winner
 	if first['runs'] > second['runs']:
 		winner = first_batting[0]
 		margin = first['runs'] - second['runs']
+		print(f"\nFinal Result:\n{winner} won by {margin} runs")
 	elif second['runs'] > first['runs']:
 		winner = second_batting[0]
-		margin = second['wickets'] - first['wickets']
+		# wickets remaining = team size - wickets lost
+		wickets_remaining = len(second_batting[1]) - second['wickets']
+		print(f"\nFinal Result:\n{winner} won by {wickets_remaining} wickets")
 	else:
-		winner = None
-
-	print("\nFinal Result:")
-	if winner == first_batting[0]:
-		print(f"{winner} won by {margin} runs")
-	elif winner == second_batting[0]:
-		print(f"{winner} won by {margin} wickets")
-	else:
-		print("Match tied")
+		print("\nFinal Result:\nMatch tied")
 
 
 if __name__ == '__main__':
