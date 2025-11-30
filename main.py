@@ -1,12 +1,14 @@
-import csv
+import json
 import random
 import os
 import sys
 import re
 import time
+import argparse
+import datetime
 
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "csv")
+DATA_DIR = os.path.join(os.path.dirname(__file__), "json")
 
 
 def parse_float(s, default=None):
@@ -20,19 +22,28 @@ def parse_float(s, default=None):
 
 
 def load_players_summary():
-	path = os.path.join(DATA_DIR, "TBONTB_players_summary.csv")
+	# prefer JSON summary if present
+	json_path = os.path.join(os.path.dirname(__file__), "json", "TBONTB_players_summary.json")
 	players = {}
-	if not os.path.exists(path):
-		print(f"Players summary not found at {path}")
-		return players
-
-	# use utf-8-sig to gracefully handle files that include a UTF-8 BOM
-	with open(path, encoding="utf-8-sig") as f:
-		reader = csv.DictReader(f)
-		for r in reader:
-			pid = r.get("player_id")
-			if not pid:
+	if os.path.exists(json_path):
+		with open(json_path, encoding="utf-8") as f:
+			try:
+				rows = json.load(f)
+			except Exception:
+				rows = []
+		for r in rows:
+			raw_id = r.get("player_id")
+			if raw_id is None:
 				continue
+			# canonical string id like TBONTB_0001 for compatibility with existing code
+			try:
+				if isinstance(raw_id, int):
+					pid = f"TBONTB_{int(raw_id):04d}"
+				else:
+					pid = str(raw_id)
+			except Exception:
+				pid = str(raw_id)
+
 			# extract trailing digits for short id (e.g. TBONTB_0001 -> 1 / '0001')
 			m = re.search(r"(\d+)$", pid)
 			short_str = m.group(1) if m else None
@@ -44,8 +55,13 @@ def load_players_summary():
 				# short id forms
 				"short_str": short_str,
 				"short_int": short_int,
+				# extra stats: batting average, boundaries, bowling average
+				"bat_avg": parse_float(r.get("bat_avg"), None),
+				"fours": int(parse_float(r.get("4s", r.get("fours")), 0) or 0),
+				"sixes": int(parse_float(r.get("6s", r.get("sixes")), 0) or 0),
+				"bowl_avg": parse_float(r.get("bowl_avg"), None),
 				# batting
-				"matches": int(r.get("matches") or 0),
+				"matches": int(r.get("matches") or r.get("matches_played") or 0),
 				"runs": parse_float(r.get("runs"), 0) or 0,
 				"balls_faced": parse_float(r.get("balls_faced"), 0) or 0,
 				"strike_rate": parse_float(r.get("strike_rate"), None),
@@ -55,6 +71,11 @@ def load_players_summary():
 				"wickets": int(parse_float(r.get("wickets"), 0) or 0),
 				"economy": parse_float(r.get("economy"), None),
 			}
+		# proceed to build SHORT_ID_INDEX below
+	else:
+		# require JSON summary only (CSV kept for reference but not used)
+		print(f"JSON players summary not found at {json_path}. Please ensure the file exists in the json/ folder.")
+		return players
 
 	# build a short-id index for quick lookup (accept '1' or '0001')
 	global SHORT_ID_INDEX
@@ -82,7 +103,7 @@ def show_player_list(players):
 
 def choose_team(players, team_name="User"):
 	pool = set(players.keys())
-	show_player_list(players)
+	#show_player_list(players) COMMENTED FOR NOW
 	print(f"\nChoose 8 players for {team_name} by entering their IDs separated by commas.")
 	while True:
 		s = input("Enter 8 player IDs: ").strip()
@@ -140,13 +161,13 @@ def select_bowlers_from_team(team):
 	return bowlers + random.sample(others, min(need, len(others)))
 
 
-def simulate_innings(batting_team, bowling_team, balls=100, target=None):
+def simulate_innings(batting_team, bowling_team, balls=100, target=None, print_over_summary=False):
 	# simple simulator for 100 balls
 	# batting_team: list of player dicts (ordered)
 	# bowling_team: list of player dicts (we'll rotate bowlers)
 
 	batsmen_stats = {p['player_id']: {'name': p['player_name'], 'runs': 0, 'balls': 0, 'dismissed': False, 'howout': ''} for p in batting_team}
-	bowlers_stats = {p['player_id']: {'name': p['player_name'], 'balls': 0, 'runs': 0, 'wickets': 0} for p in bowling_team}
+	bowlers_stats = {p['player_id']: {'name': p['player_name'], 'balls': 0, 'runs': 0, 'wickets': 0, 'maidens': 0} for p in bowling_team}
 
 	# initial batsmen
 	striker_idx = 0
@@ -159,12 +180,27 @@ def simulate_innings(batting_team, bowling_team, balls=100, target=None):
 
 	total_runs = 0
 	total_wickets = 0
+	balls_bowled = 0
 
 	num_players = len(batting_team)
 	for ball_no in range(balls):
 		over = ball_no // 5
 		bowler = bowlers[over % num_bowlers]
 		bstats = bowlers_stats[bowler['player_id']]
+
+		# start of over bookkeeping for per-over summary
+		if ball_no % 5 == 0:
+			per_over_start_balls = {pid: s['balls'] for pid, s in batsmen_stats.items()}
+			runs_in_over = 0
+			wickets_in_over = 0
+			over_bowler = bowler
+			over_index = over + 1
+			start_striker = striker_idx
+			start_non_striker = non_striker_idx
+			# capture bowler stats at start of over to compute maiden/full-over runs
+			bowler_runs_start = bstats['runs']
+			bowler_balls_start = bstats['balls']
+			per_over_fow = []
 
 		# determine alive batsmen
 		alive = [i for i, p in enumerate(batting_team) if not batsmen_stats[p['player_id']]['dismissed']]
@@ -182,12 +218,18 @@ def simulate_innings(batting_team, bowling_team, balls=100, target=None):
 		pstats = batsmen_stats[batsman['player_id']]
 
 		# get batting rpb (runs per ball) from strike_rate or runs/balls
+		# combine strike_rate and batting average to estimate runs-per-ball
 		if batsman.get('strike_rate'):
 			batsman_rpb = batsman['strike_rate'] / 100.0
 		else:
 			bf = batsman.get('balls_faced') or 0
 			runs = batsman.get('runs') or 0
 			batsman_rpb = (runs / bf) if bf > 0 else 0.8
+		# small boost from batting average (higher avg -> slightly higher scoring consistency)
+		if batsman.get('bat_avg'):
+			bat_avg = batsman['bat_avg']
+			# Balanced preset: scale between 0 and ~+33% for reasonable averages
+			batsman_rpb *= (1.0 + min(max(bat_avg, 0), 100) / 300.0)
 
 		# bowler runs per ball from economy if present
 		if bowler.get('economy'):
@@ -195,58 +237,123 @@ def simulate_innings(batting_team, bowling_team, balls=100, target=None):
 		else:
 			# fallback: average
 			bowler_rpb = (bowler.get('runs_conceded', 10) / max(1, (bowler.get('overs_bowled') or 1))) / 5.0
+		# capture bowling average for influencing wicket chances
+		bowler_bowl_avg = bowler.get('bowl_avg')
+		bowler_wickets = bowler.get('wickets') or 0
 
 		# batting advantage metric
 		ba = batsman_rpb / (batsman_rpb + bowler_rpb + 1e-6)
 
-		# wicket probability increases when bowling is strong
-		wicket_prob = 0.02 + (1 - ba) * 0.18
+		# base wicket probability (depends on batting advantage)
+		base_wicket_prob = 0.02 + (1 - ba) * 0.18
+		# adjust wicket probability by batting average (higher avg => more resistance)
+		bat_avg = batsman.get('bat_avg') or 0
+		# Balanced preset: batting average offers moderate protection
+		bat_protect = 1.0 - min(max(bat_avg, 0), 100) / 180.0
+		# adjust for bowler quality: lower bowling average increases wicket likelihood
+		bowl_boost = 1.0
+		if bowler_bowl_avg:
+			# Balanced preset: make bowl_avg differences a bit more influential
+			bowl_boost += max(0.0, (50.0 - bowler_bowl_avg) / 80.0)
+		# also modest boost from bowler wickets experience (Balanced)
+		bowl_boost *= (1.0 + min(bowler_wickets, 200) / 300.0)
+
+		wicket_prob = base_wicket_prob * bowl_boost * bat_protect
+		# clamp
+		wicket_prob = max(0.01, min(wicket_prob, 0.5))
 
 		r = random.random()
 		if r < wicket_prob:
-			# wicket
+			# wicket - choose mode including Stumped and Run Out
 			total_wickets += 1
-			pstats['balls'] += 1
-			pstats['dismissed'] = True
-			pstats['howout'] = 'Bowled' if random.random() < 0.5 else 'Caught'
+			# possible modes and rough likelihoods
+			mode_pick = random.random()
+			if mode_pick < 0.4:
+				mode = 'Bowled'
+			elif mode_pick < 0.75:
+				mode = 'Caught'
+			elif mode_pick < 0.88:
+				mode = 'Stumped'
+			else:
+				mode = 'Run Out'
+
+			# determine who is dismissed (usually striker, but run outs can hit non-striker)
+			dismissed_idx = striker_idx
+			if mode == 'Run Out' and (not last_mode) and non_striker_idx is not None:
+				# 70% striker, 30% non-striker for run-outs
+				if random.random() < 0.3:
+					dismissed_idx = non_striker_idx
+
+			dismissed_player = batting_team[dismissed_idx]
+			dstats = batsmen_stats[dismissed_player['player_id']]
+			dstats['balls'] += 1
+			dstats['dismissed'] = True
+			dstats['howout'] = mode
+
+			# update bowler stats: do not credit bowler with wicket for run-outs
 			bstats['balls'] += 1
-			bstats['wickets'] += 1
+			# record fall-of-wicket for this over (label uses zero-based over like '0.2')
+			ball_in_over = (ball_no % 5) + 1
+			fow_label = f"{over}.{ball_in_over}"
+			per_over_fow.append((fow_label, dismissed_player['player_name'], dstats['runs'], dstats['balls']))
+			wickets_in_over += 1
+			if mode != 'Run Out':
+				bstats['wickets'] += 1
 
 			# if that was the last batter, innings ends immediately
 			alive_after = [i for i, p in enumerate(batting_team) if not batsmen_stats[p['player_id']]['dismissed']]
 			if len(alive_after) == 0:
 				break
-			# otherwise bring next batsman if available
+
+			# otherwise bring next batsman if available, replacing the dismissed slot
 			if next_batsman < num_players:
-				striker_idx = next_batsman
+				if dismissed_idx == striker_idx:
+					striker_idx = next_batsman
+				else:
+					non_striker_idx = next_batsman
 				next_batsman += 1
 			else:
-				# if no next batsman but still someone alive, ensure striker points to them
+				# if no next batsman but still someone alive, ensure striker/non-striker point correctly
 				if len(alive_after) == 1:
 					striker_idx = alive_after[0]
+					non_striker_idx = None
 				else:
 					break
 		else:
 			# runs scored
-			# base probabilities influenced by batting advantage
-			# base distribution for [0,1,2,3,4,6]
-			base = [0.50, 0.30, 0.08, 0.01, 0.08, 0.03]
-			# if last batsman only even runs allowed (no 1s or 3s)
+			# Build player-specific base probabilities for [0,1,2,3,4,6]
+			# start with default non-boundary distribution
+			balls_faced = batsman.get('balls_faced') or 0
+			fours = batsman.get('fours') or 0
+			sixes = batsman.get('sixes') or 0
+			four_rate = (fours / balls_faced) if balls_faced > 0 else 0.03
+			six_rate = (sixes / balls_faced) if balls_faced > 0 else 0.01
+			# map boundary empirical rates into ball-level probabilities (Balanced scaling)
+			p4 = max(0.03, four_rate * 0.8)
+			p6 = max(0.01, six_rate * 0.8)
+			# remaining mass to distribute to 0/1/2/3
+			rem = max(0.0, 1.0 - (p4 + p6))
+			# base split for non-boundary events (favor dot and single)
+			base_split = [0.6, 0.25, 0.1, 0.05]
+			base0123 = [rem * r for r in base_split]
+			base = [base0123[0], base0123[1], base0123[2], base0123[3], p4, p6]
+
+			# if last batsman only even runs allowed (no 1s or 3s), redistribute odd mass
 			if last_mode:
-				# shift odd-run probabilities into 0/2 slots conservatively
-				# remove indices 1 and 3 (1 and 3 runs)
-				base[0] += base[1] * 0.6 + base[3] * 0.6
-				base[2] += base[1] * 0.4
-				base[4] += base[3] * 0.4
+				odd_mass = base[1] + base[3]
+				base[0] += odd_mass * 0.6
+				base[2] += odd_mass * 0.4
 				base[1] = 0.0
 				base[3] = 0.0
-			# boost boundary chances by ba
-			boost = ba - 0.5
-			if boost > 0:
-				# increase 4/6 chance proportionally
-				base[4] += boost * 0.1
-				base[5] += boost * 0.05
-			# normalize
+
+			# boost boundaries for stronger batting advantage
+			if ba > 0.5:
+				boost = (ba - 0.5)
+				# Balanced preset: slightly stronger boundary uplift for positive batting advantage
+				base[4] += boost * 0.18
+				base[5] += boost * 0.10
+
+			# normalize and sample
 			s = sum(base)
 			probs = [x / s for x in base]
 			pick = random.random()
@@ -263,6 +370,7 @@ def simulate_innings(batting_team, bowling_team, balls=100, target=None):
 				run = 0
 
 			total_runs += run
+			runs_in_over += run
 			pstats['runs'] += run
 			pstats['balls'] += 1
 			bstats['balls'] += 1
@@ -273,13 +381,90 @@ def simulate_innings(batting_team, bowling_team, balls=100, target=None):
 				striker_idx, non_striker_idx = non_striker_idx, striker_idx
 
 		# if chasing a target, stop as soon as target is reached or passed
+		balls_bowled += 1
 		if target is not None and total_runs >= target:
 			# innings over - chasing team has reached the target
+			# print end-of-over (partial) summary if requested
+			if print_over_summary:
+				# bowler cumulative figures
+				bowler_pid = over_bowler['player_id']
+				b = bowlers_stats[bowler_pid]
+				overs_done = b['balls'] // 5
+				balls_extra = b['balls'] % 5
+				maidens = b.get('maidens', 0)
+				print(f"Over {over_index} (partial): {total_runs}/{total_wickets}")
+				print(f"Bowler: {b['name']} {overs_done}-{maidens}-{b['runs']}-{b['wickets']}")
+				# batters currently in (striker/non-striker)
+				batters_line = []
+				if striker_idx is not None:
+					s = batsmen_stats[batting_team[striker_idx]['player_id']]
+					batters_line.append(f"{s['name']} {s['runs']}* ({s['balls']})")
+				if non_striker_idx is not None:
+					ns = batsmen_stats[batting_team[non_striker_idx]['player_id']]
+					batters_line.append(f"{ns['name']} {ns['runs']}* ({ns['balls']})")
+				print("Batters: " + " | ".join(batters_line))
+				if per_over_fow:
+					print("FOW:")
+					for f in per_over_fow:
+						label, name, rr, bb = f
+						print(f"{label} Wicket: {name} {rr}({bb})")
 			break
 
 		# end of over swap (no swap in last mode since only one batsman)
 		if (ball_no + 1) % 5 == 0 and (not last_mode):
+			# determine runs conceded by bowler this over
+			bowler_runs_this_over = bstats['runs'] - bowler_runs_start
+			bowler_balls_this_over = bstats['balls'] - bowler_balls_start
+			# if full over (5 balls) and zero runs, count as maiden
+			if bowler_balls_this_over == 5 and bowler_runs_this_over == 0:
+				bowlers_stats[over_bowler['player_id']]['maidens'] += 1
+			if print_over_summary:
+				# bowler cumulative figures
+				bowler_pid = over_bowler['player_id']
+				b = bowlers_stats[bowler_pid]
+				overs_done = b['balls'] // 5
+				balls_extra = b['balls'] % 5
+				maidens = b.get('maidens', 0)
+				print(f"Over {over_index}: {total_runs}/{total_wickets}")
+				print(f"Bowler: {b['name']} {overs_done}-{maidens}-{b['runs']}-{b['wickets']}")
+				# batters currently in (striker/non-striker)
+				batters_line = []
+				if striker_idx is not None:
+					s = batsmen_stats[batting_team[striker_idx]['player_id']]
+					batters_line.append(f"{s['name']} {s['runs']}* ({s['balls']})")
+				if non_striker_idx is not None:
+					ns = batsmen_stats[batting_team[non_striker_idx]['player_id']]
+					batters_line.append(f"{ns['name']} {ns['runs']}* ({ns['balls']})")
+				print("Batters: " + " | ".join(batters_line))
+				if per_over_fow:
+					print("FOW:")
+					for f in per_over_fow:
+						label, name, rr, bb = f
+						print(f"{label} Wicket: {name} {rr}({bb})")
 			striker_idx, non_striker_idx = non_striker_idx, striker_idx
+		# if the innings ended mid-over due to all out, print a partial over summary
+		alive_after = [i for i, p in enumerate(batting_team) if not batsmen_stats[p['player_id']]['dismissed']]
+		if len(alive_after) == 0:
+			if print_over_summary:
+				# partial over summary at innings end
+				b = bowlers_stats[over_bowler['player_id']]
+				overs_done = b['balls'] // 5
+				maidens = b.get('maidens', 0)
+				print(f"Over {over_index} (end): {total_runs}/{total_wickets}")
+				print(f"Bowler: {b['name']} {overs_done}-{maidens}-{b['runs']}-{b['wickets']}")
+				# batters currently in
+				batters_line = []
+				if alive_after:
+					for idx in alive_after:
+						s = batsmen_stats[batting_team[idx]['player_id']]
+						batters_line.append(f"{s['name']} {s['runs']}* ({s['balls']})")
+				print("Batters: " + " | ".join(batters_line))
+				if per_over_fow:
+					print("FOW:")
+					for f in per_over_fow:
+						label, name, rr, bb = f
+						print(f"{label} Wicket: {name} {rr}({bb})")
+			break
 
 	# convert bowlers stats balls to overs (5-ball overs)
 	for pid, b in bowlers_stats.items():
@@ -290,23 +475,60 @@ def simulate_innings(batting_team, bowling_team, balls=100, target=None):
 	return {
 		'runs': total_runs,
 		'wickets': total_wickets,
+		'balls': balls_bowled,
 		'batsmen': batsmen_stats,
 		'bowlers': bowlers_stats,
 	}
 
 
 def print_innings_summary(team_name, innings):
-	print(f"\n{team_name} innings: {innings['runs']} / {innings['wickets']}")
+	# format overs from total balls (5-ball overs)
+	total_balls = innings.get('balls', 0)
+	overs = total_balls // 5
+	balls_extra = total_balls % 5
+	print(f"\n{team_name} innings: {innings['runs']} / {innings['wickets']} ({overs}.{balls_extra} Overs)")
 	print("BATTING:")
 	for pid, s in innings['batsmen'].items():
-		out = s['howout'] if s['dismissed'] else 'Not Out' if s['balls']>0 else 'DNB'
-		print(f"  {s['name']}: {s['runs']} ({s['balls']}) - {out}")
+		if s['dismissed']:
+			print(f"  {s['name']}: {s['runs']} ({s['balls']}) - {s['howout']}")
+		else:
+			# batsman still in
+			if s['balls'] > 0:
+				print(f"  {s['name']}: {s['runs']}* ({s['balls']}) - Not Out")
+			else:
+				print(f"  {s['name']}: DNB")
 	print("BOWLING:")
 	for pid, s in innings['bowlers'].items():
-		print(f"  {s['name']}: {s.get('overs','0')} overs, {s['runs']} runs, {s['wickets']} wickets")
+		# show overs-maidens-runs-wickets if maidens present
+		maidens = s.get('maidens', 0)
+		overs = s.get('overs', '0')
+		print(f"  {s['name']}: {overs}-{maidens}-{s['runs']}-{s['wickets']}")
+
+
+def export_match_json(path, match_obj):
+	"""Write match_obj (a serializable dict) to path (dir) with timestamped filename."""
+	try:
+		os.makedirs(path, exist_ok=True)
+		ts = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+		fname = f"match_{ts}.json"
+		full = os.path.join(path, fname)
+		with open(full, 'w', encoding='utf-8') as f:
+			json.dump(match_obj, f, ensure_ascii=False, indent=2)
+		print(f"Match exported to {full}")
+	except Exception as e:
+		print(f"Failed to export match json: {e}")
 
 
 def main():
+	parser = argparse.ArgumentParser(description='TBONTB Simple Cricket Simulator - Prototype')
+	parser.add_argument('--demo', action='store_true', help='Run a non-interactive demo match')
+	parser.add_argument('--seed', type=int, help='Random seed for deterministic demo')
+	parser.add_argument('--export-json', action='store_true', help='Export match boxscore to json/')
+	args = parser.parse_args()
+
+	if args.seed is not None:
+		random.seed(args.seed)
+
 	print(DATA_DIR)
 	print("TBONTB Simple Cricket Simulator - Prototype")
 	players = load_players_summary()
@@ -314,19 +536,35 @@ def main():
 		print("No players loaded. Please ensure csv/TBONTB_players_summary.csv exists.")
 		sys.exit(1)
 
-	user_team = choose_team(players, "User")
-	exclude = [p['player_id'] for p in user_team]
-	comp_team = pick_computer_team(players, exclude)
-	print("\nComputer team selected:")
-	for p in comp_team:
-		print(f"  {p['player_name']}")
+	if args.demo:
+		# Non-interactive demo: pick two random teams from the pool
+		pool = list(players.values())
+		random.shuffle(pool)
+		user_team = pool[:8]
+		comp_team = pool[8:16]
+		print("Demo mode: Teams selected automatically.")
+		print("User team:")
+		for p in user_team:
+			print(f"  {p['player_name']}")
+		print("Computer team:")
+		for p in comp_team:
+			print(f"  {p['player_name']}")
+		choice = 'bat'  # default demo choice: user bats first
+	else:
+		user_team = choose_team(players, "User")
+		exclude = [p['player_id'] for p in user_team]
+		comp_team = pick_computer_team(players, exclude)
+		print("\nComputer team selected:")
+		for p in comp_team:
+			print(f"  {p['player_name']}")
 
 	# choose bat or bowl
-	while True:
-		choice = input("Do you want to bat first or bowl first? (bat/bowl): ").strip().lower()
-		if choice in ('bat', 'bowl'):
-			break
-		print("Please type 'bat' or 'bowl'.")
+	if not args.demo:
+		while True:
+			choice = input("Do you want to bat first or bowl first? (bat/bowl): ").strip().lower()
+			if choice in ('bat', 'bowl'):
+				break
+			print("Please type 'bat' or 'bowl'.")
 
 	if choice == 'bat':
 		first_batting = ('User', user_team)
@@ -336,15 +574,17 @@ def main():
 		second_batting = ('User', user_team)
 
 	print(f"\nSimulating first innings: {first_batting[0]} batting...")
-	time.sleep(5)  # brief pause for realism
-	first = simulate_innings(first_batting[1], second_batting[1])
+	if not args.demo:
+		time.sleep(5)  # brief pause for realism
+	first = simulate_innings(first_batting[1], second_batting[1], print_over_summary=True)
 	print_innings_summary(first_batting[0], first)
 
 	print(f"\nSimulating second innings: {second_batting[0]} batting...")
-	time.sleep(5)  # brief pause for realism
+	if not args.demo:
+		time.sleep(5)  # brief pause for realism
 	# set a chase target: need one more than the first innings
 	target_score = first['runs'] + 1
-	second = simulate_innings(second_batting[1], first_batting[1], target=target_score)
+	second = simulate_innings(second_batting[1], first_batting[1], target=target_score, print_over_summary=True)
 	print_innings_summary(second_batting[0], second)
 
 	# decide winner
@@ -359,6 +599,76 @@ def main():
 		print(f"\nFinal Result:\n{winner} won by {wickets_remaining} wickets")
 	else:
 		print("\nFinal Result:\nMatch tied")
+
+	# optional export
+	if args.export_json:
+		# build serializable match object
+		match_obj = {
+			"date": datetime.datetime.now().isoformat(),
+			"teams": {
+				first_batting[0]: [{"player_id": p.get('player_id'), "player_name": p.get('player_name')} for p in first_batting[1]],
+				second_batting[0]: [{"player_id": p.get('player_id'), "player_name": p.get('player_name')} for p in second_batting[1]],
+			},
+			"first_innings": {
+				"team": first_batting[0],
+				"runs": first['runs'],
+				"wickets": first['wickets'],
+				"balls": first['balls'],
+				"batsmen": [],
+				"bowlers": [],
+			},
+			"second_innings": {
+				"team": second_batting[0],
+				"runs": second['runs'],
+				"wickets": second['wickets'],
+				"balls": second['balls'],
+				"batsmen": [],
+				"bowlers": [],
+			},
+			"result": {
+				"text": (f"{winner} won by {margin} runs") if first['runs'] != second['runs'] else (f"{winner} won by {wickets_remaining} wickets" if first['runs'] != second['runs'] else "Match tied")
+			}
+		}
+		# populate batsmen and bowlers lists for both innings
+		for pid, b in first['batsmen'].items():
+			match_obj['first_innings']['batsmen'].append({
+				"player_id": pid,
+				"name": b['name'],
+				"runs": b['runs'],
+				"balls": b['balls'],
+				"dismissed": b['dismissed'],
+				"howout": b.get('howout', '')
+			})
+		for pid, b in first['bowlers'].items():
+			match_obj['first_innings']['bowlers'].append({
+				"player_id": pid,
+				"name": b['name'],
+				"overs": b.get('overs'),
+				"maidens": b.get('maidens', 0),
+				"runs": b.get('runs', 0),
+				"wickets": b.get('wickets', 0)
+			})
+		for pid, b in second['batsmen'].items():
+			match_obj['second_innings']['batsmen'].append({
+				"player_id": pid,
+				"name": b['name'],
+				"runs": b['runs'],
+				"balls": b['balls'],
+				"dismissed": b['dismissed'],
+				"howout": b.get('howout', '')
+			})
+		for pid, b in second['bowlers'].items():
+			match_obj['second_innings']['bowlers'].append({
+				"player_id": pid,
+				"name": b['name'],
+				"overs": b.get('overs'),
+				"maidens": b.get('maidens', 0),
+				"runs": b.get('runs', 0),
+				"wickets": b.get('wickets', 0)
+			})
+		# write to json/ directory next to script
+		export_dir = os.path.join(os.path.dirname(__file__), 'json')
+		export_match_json(export_dir, match_obj)
 
 
 if __name__ == '__main__':
