@@ -245,7 +245,7 @@ def simulate_innings(batting_team, bowling_team, balls=100, target=None, print_o
 		ba = batsman_rpb / (batsman_rpb + bowler_rpb + 1e-6)
 
 		# base wicket probability (depends on batting advantage)
-		base_wicket_prob = 0.02 + (1 - ba) * 0.18
+		base_wicket_prob = 0.015 + (1 - ba) * 0.12
 		# adjust wicket probability by batting average (higher avg => more resistance)
 		bat_avg = batsman.get('bat_avg') or 0
 		# Balanced preset: batting average offers moderate protection
@@ -260,7 +260,7 @@ def simulate_innings(batting_team, bowling_team, balls=100, target=None, print_o
 
 		wicket_prob = base_wicket_prob * bowl_boost * bat_protect
 		# clamp
-		wicket_prob = max(0.01, min(wicket_prob, 0.5))
+		wicket_prob = max(0.005, min(wicket_prob, 0.25))
 
 		r = random.random()
 		if r < wicket_prob:
@@ -329,8 +329,8 @@ def simulate_innings(batting_team, bowling_team, balls=100, target=None, print_o
 			four_rate = (fours / balls_faced) if balls_faced > 0 else 0.03
 			six_rate = (sixes / balls_faced) if balls_faced > 0 else 0.01
 			# map boundary empirical rates into ball-level probabilities (Balanced scaling)
-			p4 = max(0.03, four_rate * 0.8)
-			p6 = max(0.01, six_rate * 0.8)
+			p4 = max(0.02, four_rate * 0.6)
+			p6 = max(0.005, six_rate * 0.5)
 			# remaining mass to distribute to 0/1/2/3
 			rem = max(0.0, 1.0 - (p4 + p6))
 			# base split for non-boundary events (favor dot and single)
@@ -350,8 +350,8 @@ def simulate_innings(batting_team, bowling_team, balls=100, target=None, print_o
 			if ba > 0.5:
 				boost = (ba - 0.5)
 				# Balanced preset: slightly stronger boundary uplift for positive batting advantage
-				base[4] += boost * 0.18
-				base[5] += boost * 0.10
+				base[4] += boost * 0.12
+				base[5] += boost * 0.06
 
 			# normalize and sample
 			s = sum(base)
@@ -533,7 +533,7 @@ def main():
 	print("TBONTB Simple Cricket Simulator - Prototype")
 	players = load_players_summary()
 	if not players:
-		print("No players loaded. Please ensure csv/TBONTB_players_summary.csv exists.")
+		print("No players loaded. Please ensure json/TBONTB_players_summary.json exists.")
 		sys.exit(1)
 
 	if args.demo:
@@ -551,7 +551,24 @@ def main():
 			print(f"  {p['player_name']}")
 		choice = 'bat'  # default demo choice: user bats first
 	else:
-		user_team = choose_team(players, "User")
+		# If a saved user team exists, load it and use that; otherwise prompt interactively
+		user_team_path = os.path.join(os.path.dirname(__file__), 'json', 'user_team.json')
+		if os.path.exists(user_team_path):
+			try:
+				with open(user_team_path, encoding='utf-8') as f:
+					ut = json.load(f)
+					saved_ids = [p.get('player_id') for p in ut.get('team', []) if p.get('player_id')]
+			except Exception:
+				saved_ids = []
+			# map saved ids to player dicts, ignoring missing ids
+			user_team = [players[pid] for pid in saved_ids if pid in players]
+			if len(user_team) != 8:
+				print(f"Saved team found but incomplete or invalid ({len(user_team)} players). Falling back to interactive selection.")
+				user_team = choose_team(players, "User")
+		else:
+			user_team = choose_team(players, "User")
+
+		# ensure computer team doesn't include user picks
 		exclude = [p['player_id'] for p in user_team]
 		comp_team = pick_computer_team(players, exclude)
 		print("\nComputer team selected:")
