@@ -1,3 +1,4 @@
 # Github stuff
 .github/
 
+.__pycache__/
