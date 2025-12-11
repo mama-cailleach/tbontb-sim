@@ -156,9 +156,10 @@ def run_player_tracking(team1_file, team2_file, player_search, stat_type='battin
 					'details': stats
 				})
 		
-		# Bowling tracking
+		# Bowling tracking (player bowls when OPPOSING team bats)
 		if 'bowling' in stat_type:
-			if first_batting[0] == target_team_name and player_id in first['bowlers']:
+			if second_batting[0] == target_team_name and player_id in first['bowlers']:
+				innings_count += 1
 				stats = first['bowlers'][player_id]
 				perf = _extract_bowling_stat(stat_type, stats)
 				if perf is not None:
@@ -171,7 +172,8 @@ def run_player_tracking(team1_file, team2_file, player_search, stat_type='battin
 						'role': 'bowling'
 					})
 			
-			if second_batting[0] == target_team_name and player_id in second['bowlers']:
+			if first_batting[0] == target_team_name and player_id in second['bowlers']:
+				innings_count += 1
 				stats = second['bowlers'][player_id]
 				perf = _extract_bowling_stat(stat_type, stats)
 				if perf is not None:
@@ -306,7 +308,10 @@ def export_to_csv(result, filename=None):
 	try:
 		with open(csv_path, 'w', encoding='utf-8') as f:
 			# Header
-			f.write("Sim,Inning,Match_Inning,Value,Runs,Balls,Dismissed,HowOut\n")
+			if 'batting' in result['stat_type']:
+				f.write("Sim,Inning,Match_Inning,Value,Runs,Balls,Dismissed,HowOut\n")
+			else:
+				f.write("Sim,Inning,Match_Inning,Value,Balls,Runs,Wickets,Overs\n")
 			
 			for entry in result['performance_log']:
 				details = entry['details']
@@ -314,6 +319,12 @@ def export_to_csv(result, filename=None):
 					f.write(f"{entry['sim']},{entry['innings']},{entry['match_inning']},")
 					f.write(f"{entry['value']:.2f},{details['runs']},{details['balls']},")
 					f.write(f"{1 if details['dismissed'] else 0},{details['howout']}\n")
+				else:  # Bowling stats
+					overs = details['balls'] // 5
+					balls_rem = details['balls'] % 5
+					overs_str = f"{overs}.{balls_rem}"
+					f.write(f"{entry['sim']},{entry['innings']},{entry['match_inning']},")
+					f.write(f"{entry['value']:.2f},{details['balls']},{details['runs']},{details['wickets']},{overs_str}\n")
 		
 		print(f"Results exported to {csv_path}")
 	except Exception as e:
