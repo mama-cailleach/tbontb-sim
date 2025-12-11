@@ -207,8 +207,9 @@ def reorder_batting(team):
         print("Invalid input. Please provide a permutation of 1..8 separated by commas.")
 
 
-def save_team(team, captain, keeper, path=None):
+def save_team(team, captain, keeper, team_name, path=None):
     obj = {
+        "team_name": team_name,
         "team": [
             {
                 "player_id": p['player_id'],
@@ -222,7 +223,11 @@ def save_team(team, captain, keeper, path=None):
         "wicketkeeper": keeper['player_id'],
     }
     if path is None:
-        path = os.path.join(DATA_DIR, 'user_team.json')
+        # sanitize team_name for filename (replace spaces and special chars with underscore)
+        safe_name = "".join(c if c.isalnum() or c in (' ', '-', '_') else '_' for c in team_name)
+        safe_name = safe_name.replace(' ', '_')
+        teams_dir = os.path.join(DATA_DIR, 'teams')
+        path = os.path.join(teams_dir, f"{safe_name}.json")
     try:
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, 'w', encoding='utf-8') as f:
@@ -254,9 +259,16 @@ def main():
         role_str = ' '.join(role)
         print(f" {i}. {p.get('short_int') or p['player_id']} - {p['player_name']} {role_str}")
 
-    ans = input("Save this team to json/user_team.json? (Y/n): ").strip().lower()
+    # prompt for team name
+    while True:
+        team_name = input("\nEnter a name for this team: ").strip()
+        if team_name:
+            break
+        print("Team name cannot be empty.")
+
+    ans = input(f"Save this team as '{team_name}' to json/teams/? (Y/n): ").strip().lower()
     if ans in ('', 'y', 'yes'):
-        save_team(team, captain, keeper)
+        save_team(team, captain, keeper, team_name)
 
 
 if __name__ == '__main__':
