@@ -1,5 +1,5 @@
 """
-Match configuration module for TBONTB Cricket Simulator.
+Match configuration module for LMS Cricket Simulator.
 Defines match types, rules, and simulation parameters.
 """
 
@@ -19,13 +19,13 @@ class MatchConfig:
 			'balls_per_innings': 100,  # current prototype: 20 overs * 5 balls
 			'balls_per_over': 5,
 			'team_size': 8,
-			'description': 'TBONTB format (5-ball overs)'
+			'description': 'Last Man Standing format (5-ball overs)'
 		},
-		'ODI': {
+		'OD': {
 			'balls_per_innings': 300,  # 50 overs * 6 balls
 			'balls_per_over': 6,
 			'team_size': 11,
-			'description': 'One Day International'
+			'description': 'One Day format (50 overs)'
 		},
 		'FIRST_CLASS': {
 			'balls_per_innings': None,  # no ball limit
@@ -56,6 +56,11 @@ class MatchConfig:
 			'description': 'Highly unpredictable, chaos mode',
 			'randomness_factor': 2.0,
 			'stat_weight': 0.5
+		},
+		'RNG': {
+			'description': 'True RNG-based simulation, minimal stats influence',
+			'randomness_factor': 2.0,
+			'stat_weight': 0.0
 		}
 	}
 	
@@ -80,15 +85,20 @@ class MatchConfig:
 			'description': 'Maximum aggression, high risk',
 			'aggression': 1.8,
 			'risk_taking': 1.7
+		},
+		'BAZZBALL': {
+			'description': 'Bazzball style',
+			'aggression': 2.0,
+			'risk_taking': 2.0
 		}
 	}
 	
-	def __init__(self, match_type='TBONTB', simulation_style='DEFAULT', team_mindset='BALANCED'):
+	def __init__(self, match_type='LMS', simulation_style='DEFAULT', team_mindset='BALANCED'):
 		"""
 		Initialize match configuration.
 		
 		Args:
-			match_type: Type of match (T20, TBONTB, ODI, FIRST_CLASS)
+			match_type: Type of match (T20, LMS, ODI, FIRST_CLASS)
 			simulation_style: Simulation algorithm style (DEFAULT, MATHEMATICAL, RANDOM, WILD)
 			team_mindset: Team approach (BALANCED, CONSERVATIVE, AGGRESSIVE, BRUTAL)
 		"""
@@ -130,7 +140,7 @@ class MatchConfig:
 	@classmethod
 	def default(cls):
 		"""Create a default configuration matching current prototype behavior."""
-		return cls(match_type='TBONTB', simulation_style='DEFAULT', team_mindset='BALANCED')
+		return cls(match_type='LMS', simulation_style='DEFAULT', team_mindset='BALANCED')
 	
 	def __repr__(self):
 		return (f"MatchConfig(type={self.match_type}, "

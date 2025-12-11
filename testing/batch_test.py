@@ -2,6 +2,7 @@
 Batch simulation testing script.
 Runs multiple simulations between two teams to validate that player performance
 matches their historical averages (batting and bowling).
+Uses the new modular architecture.
 """
 
 import json
@@ -10,21 +11,15 @@ import sys
 import random
 from collections import defaultdict
 
-# Import the simulation functions from main.py (in parent directory)
-# We'll load the necessary functions
-import importlib.util
+# Add parent directory to path for imports
 parent_dir = os.path.join(os.path.dirname(__file__), '..')
-main_path = os.path.join(parent_dir, 'main.py')
-spec = importlib.util.spec_from_file_location("main", main_path)
-main_module = importlib.util.module_from_spec(spec)
 sys.path.insert(0, parent_dir)
-spec.loader.exec_module(main_module)
 
-# Access the functions we need
-load_players_summary = main_module.load_players_summary
-load_team_from_file = main_module.load_team_from_file
-simulate_innings = main_module.simulate_innings
-select_bowlers_from_team = main_module.select_bowlers_from_team
+# Import from new modular system
+from data_loader import load_players_summary, load_team_from_file
+from match_config import MatchConfig
+from simulation_engine import simulate_innings
+from output_formatter import OutputConfig
 
 
 def run_batch_simulations(team1_file, team2_file, num_simulations=50, seed=None):
@@ -49,6 +44,10 @@ def run_batch_simulations(team1_file, team2_file, num_simulations=50, seed=None)
 	print(f"Running {num_simulations} simulations between {team1_name} and {team2_name}...")
 	print()
 	
+	# Create configurations
+	match_config = MatchConfig.default()
+	output_config = OutputConfig.default()
+	
 	# Initialize stats collection
 	team1_batting_stats = defaultdict(lambda: {'runs': 0, 'balls': 0, 'dismissals': 0, 'innings': 0})
 	team1_bowling_stats = defaultdict(lambda: {'balls': 0, 'runs': 0, 'wickets': 0, 'innings': 0})
@@ -68,12 +67,20 @@ def run_batch_simulations(team1_file, team2_file, num_simulations=50, seed=None)
 			first_batting = (team2_name, team2)
 			second_batting = (team1_name, team1)
 		
+		# Reset output config for each match
+		output_config.over_summaries = []
+		
 		# Simulate first innings
-		first = simulate_innings(first_batting[1], second_batting[1], print_over_summary=False)
+		first = simulate_innings(first_batting[1], second_batting[1], match_config, 
+								  target=None, output_config=output_config)
+		
+		# Reset for second innings
+		output_config.over_summaries = []
 		
 		# Simulate second innings (with target)
 		target_score = first['runs'] + 1
-		second = simulate_innings(second_batting[1], first_batting[1], target=target_score, print_over_summary=False)
+		second = simulate_innings(second_batting[1], first_batting[1], match_config,
+								   target=target_score, output_config=output_config)
 		
 		# Collect stats for team1
 		if first_batting[0] == team1_name:
@@ -277,8 +284,8 @@ def main():
 			# Export to CSV
 			csv_file = f"batch_test_{results['team1']['name']}_{results['team2']['name']}_{args.num_sims}sims.csv"
 			csv_file = csv_file.replace(' ', '_')
-			parent_dir = os.path.join(os.path.dirname(__file__), '..')
-			csv_path = os.path.join(parent_dir, 'json', csv_file)
+			csv_dir = os.path.join(os.path.dirname(__file__), 'csv_exports')
+			csv_path = os.path.join(csv_dir, csv_file)
 			
 			with open(csv_path, 'w', encoding='utf-8') as f:
 				# Header
