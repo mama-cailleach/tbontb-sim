@@ -22,14 +22,14 @@ from simulation_engine import simulate_innings
 from output_formatter import OutputConfig
 
 
-def run_batch_simulations(team1_file, team2_file, num_simulations=50, seed=None):
+def run_batch_simulations(team1_file, team2_file, num_simulations=50, seed=None, players_path=None):
 	"""Run multiple simulations and collect statistics."""
 	
 	if seed is not None:
 		random.seed(seed)
 	
 	# Load players and teams
-	players = load_players_summary()
+	players = load_players_summary(players_path)
 	if not players:
 		print("Failed to load players summary.")
 		return None
@@ -272,10 +272,11 @@ def main():
 	parser.add_argument('-n', '--num-sims', type=int, default=50, help='Number of simulations to run (default: 50)')
 	parser.add_argument('--seed', type=int, help='Random seed for reproducibility')
 	parser.add_argument('--csv', action='store_true', help='Export results to CSV file')
+	parser.add_argument('--players-file', type=str, help='Path to alternate players summary JSON (e.g., combined with blanks)')
 	
 	args = parser.parse_args()
 	
-	results = run_batch_simulations(args.team1, args.team2, args.num_sims, args.seed)
+	results = run_batch_simulations(args.team1, args.team2, args.num_sims, args.seed, args.players_file)
 	
 	if results:
 		print_report(results)

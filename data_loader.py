@@ -23,17 +23,20 @@ def parse_float(s, default=None):
 		return default
 
 
-def load_players_summary():
+def load_players_summary(json_path=None):
 	"""
 	Load player data from JSON file.
 	Returns a dictionary of player objects keyed by player_id.
 	"""
-	json_path = os.path.join(os.path.dirname(__file__), "json", "TBONTB_players_summary.json")
+	if not json_path:
+		json_path = os.path.join(os.path.dirname(__file__), "json", "TBONTB_players_summary.json")
 	players = {}
 	
 	if not os.path.exists(json_path):
 		print(f"JSON players summary not found at {json_path}. Please ensure the file exists in the json/ folder.")
 		return players
+
+	print(f"Loading players from {json_path}")
 	
 	with open(json_path, encoding="utf-8") as f:
 		try:

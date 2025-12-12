@@ -297,7 +297,7 @@ def print_performance_report(result):
 
 
 def export_to_csv(result, filename=None):
-	"""Export performance data to CSV."""
+	"""Export performance data to CSV with both batting and bowling stats."""
 	
 	if filename is None:
 		filename = f"{result['player_name'].replace(' ', '_')}_{result['stat_type']}_{result['num_simulations']}sims.csv"
@@ -307,24 +307,42 @@ def export_to_csv(result, filename=None):
 	
 	try:
 		with open(csv_path, 'w', encoding='utf-8') as f:
-			# Header
-			if 'batting' in result['stat_type']:
-				f.write("Sim,Inning,Match_Inning,Value,Runs,Balls,Dismissed,HowOut\n")
-			else:
-				f.write("Sim,Inning,Match_Inning,Value,Balls,Runs,Wickets,Overs\n")
+			# Header with all stats
+			f.write("Sim,Inning,Match_Inning,Tracked_Stat,")
+			f.write("Bat_Runs,Bat_Balls,Bat_SR,Bat_Dismissed,Bat_HowOut,")
+			f.write("Bowl_Balls,Bowl_Runs,Bowl_Wickets,Bowl_Overs,Bowl_Economy\n")
 			
 			for entry in result['performance_log']:
 				details = entry['details']
+				tracked_value = entry['value']
+				
+				# Extract or calculate all batting stats
 				if 'batting' in result['stat_type']:
-					f.write(f"{entry['sim']},{entry['innings']},{entry['match_inning']},")
-					f.write(f"{entry['value']:.2f},{details['runs']},{details['balls']},")
-					f.write(f"{1 if details['dismissed'] else 0},{details['howout']}\n")
-				else:  # Bowling stats
-					overs = details['balls'] // 5
-					balls_rem = details['balls'] % 5
-					overs_str = f"{overs}.{balls_rem}"
-					f.write(f"{entry['sim']},{entry['innings']},{entry['match_inning']},")
-					f.write(f"{entry['value']:.2f},{details['balls']},{details['runs']},{details['wickets']},{overs_str}\n")
+					bat_runs = details['runs']
+					bat_balls = details['balls']
+					bat_sr = (bat_runs / bat_balls * 100) if bat_balls > 0 else 0
+					bat_dismissed = 1 if details['dismissed'] else 0
+					bat_howout = details['howout']
+				else:
+					bat_runs = bat_balls = bat_sr = bat_dismissed = 0
+					bat_howout = ""
+				
+				# Extract or calculate all bowling stats
+				if 'bowling' in result['stat_type']:
+					bowl_balls = details['balls']
+					bowl_runs = details['runs']
+					bowl_wickets = details['wickets']
+					bowl_overs = bowl_balls // 5
+					bowl_balls_rem = bowl_balls % 5
+					bowl_economy = (bowl_runs / bowl_balls * 5) if bowl_balls > 0 else 0
+					overs_str = f"{bowl_overs}.{bowl_balls_rem}"
+				else:
+					bowl_balls = bowl_runs = bowl_wickets = bowl_economy = 0
+					overs_str = "0.0"
+				
+				f.write(f"{entry['sim']},{entry['innings']},{entry['match_inning']},{tracked_value:.2f},")
+				f.write(f"{bat_runs},{bat_balls},{bat_sr:.2f},{bat_dismissed},{bat_howout},")
+				f.write(f"{bowl_balls},{bowl_runs},{bowl_wickets},{overs_str},{bowl_economy:.2f}\n")
 		
 		print(f"Results exported to {csv_path}")
 	except Exception as e:

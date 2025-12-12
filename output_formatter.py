@@ -48,13 +48,14 @@ class OutputConfig:
 		self.over_by_over = settings['over_by_over']
 		self.scorecard = settings['scorecard']
 		
-		# Storage for over summaries (populated during simulation)
+		# Storage for over summaries and ball-by-ball (populated during simulation)
 		self.over_summaries = []
+		self.ball_by_ball_events = []
 	
 	@classmethod
 	def default(cls):
 		"""Create default output config matching current prototype."""
-		return cls(mode='OVER_BY_OVER')
+		return cls(mode='BALL_BY_BALL')
 	
 	def __repr__(self):
 		return f"OutputConfig(mode={self.mode})"
@@ -77,6 +78,14 @@ def print_over_summaries(output_config):
 			print("FOW:")
 			for fow_label, name, runs, balls in summary['fow']:
 				print(f"{fow_label} Wicket: {name} {runs}({balls})")
+
+
+def print_ball_by_ball(output_config):
+	"""Print stored ball-by-ball events."""
+	if not output_config.ball_by_ball:
+		return
+	for evt in output_config.ball_by_ball_events:
+		print(f"{evt['ball']} - {evt['bowler']} - to - {evt['batter']} - {evt['outcome']}")
 
 
 def print_innings_summary(team_name, innings, match_config):

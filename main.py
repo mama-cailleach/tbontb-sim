@@ -18,6 +18,7 @@ from match_config import MatchConfig
 from simulation_engine import simulate_innings
 from output_formatter import (
 	OutputConfig,
+	print_ball_by_ball,
 	print_over_summaries,
 	print_innings_summary,
 	export_match_json,
@@ -38,6 +39,7 @@ def main():
 	parser.add_argument('--demo', action='store_true', help='Run a non-interactive demo match')
 	parser.add_argument('--seed', type=int, help='Random seed for deterministic demo')
 	parser.add_argument('--export-json', action='store_true', help='Export match boxscore to json/')
+	parser.add_argument('--players-file', type=str, help='Path to alternate players summary JSON (e.g., blank set for testing)')
 	args = parser.parse_args()
 	
 	if args.seed is not None:
@@ -55,7 +57,7 @@ def main():
 	print(f"Output mode: {output_config.mode}")
 	
 	# Load players
-	players = load_players_summary()
+	players = load_players_summary(args.players_file)
 	if not players:
 		print("No players loaded. Please ensure json/TBONTB_players_summary.json exists.")
 		sys.exit(1)
@@ -123,11 +125,13 @@ def main():
 	)
 	
 	# Display first innings results
+	print_ball_by_ball(output_config)
 	print_over_summaries(output_config)
 	print_innings_summary(first_batting[0], first, match_config)
 	
 	# Reset over summaries for second innings
 	output_config.over_summaries = []
+	output_config.ball_by_ball_events = []
 	
 	# Simulate second innings
 	print(f"\nSimulating second innings: {second_batting[0]} batting...")
@@ -144,6 +148,7 @@ def main():
 	)
 	
 	# Display second innings results
+	print_ball_by_ball(output_config)
 	print_over_summaries(output_config)
 	print_innings_summary(second_batting[0], second, match_config)
 	

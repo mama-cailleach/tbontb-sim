@@ -1,0 +1,352 @@
+{
+  "date": "2025-12-12T20:59:15.945522",
+  "teams": {
+    "Demo User Team": [
+      {
+        "player_id": "TBONTB_0010",
+        "player_name": "TP Marshall"
+      },
+      {
+        "player_id": "TBONTB_0091",
+        "player_name": "Peter Smithson"
+      },
+      {
+        "player_id": "TBONTB_0101",
+        "player_name": "Suraj Saggar"
+      },
+      {
+        "player_id": "TBONTB_0077",
+        "player_name": "Sam Latter"
+      },
+      {
+        "player_id": "TBONTB_0050",
+        "player_name": "Junaid Ahmed"
+      },
+      {
+        "player_id": "TBONTB_0017",
+        "player_name": "Altaf Hussain"
+      },
+      {
+        "player_id": "TBONTB_0063",
+        "player_name": "RA Fisher"
+      },
+      {
+        "player_id": "TBONTB_0102",
+        "player_name": "AJ Brooke"
+      }
+    ],
+    "Demo Computer Team": [
+      {
+        "player_id": "TBONTB_0103",
+        "player_name": "BRD Perkins"
+      },
+      {
+        "player_id": "TBONTB_0126",
+        "player_name": "Ollie Cobb"
+      },
+      {
+        "player_id": "TBONTB_0048",
+        "player_name": "S M Tanvir (LS)"
+      },
+      {
+        "player_id": "TBONTB_0022",
+        "player_name": "JP Hopper"
+      },
+      {
+        "player_id": "TBONTB_0031",
+        "player_name": "LW Fraser"
+      },
+      {
+        "player_id": "TBONTB_0086",
+        "player_name": "SJ Carter"
+      },
+      {
+        "player_id": "TBONTB_0033",
+        "player_name": "JD Walker"
+      },
+      {
+        "player_id": "TBONTB_0051",
+        "player_name": "J Tobin-Berry"
+      }
+    ]
+  },
+  "first_innings": {
+    "team": "Demo User Team",
+    "runs": 174,
+    "wickets": 3,
+    "balls": 100,
+    "batsmen": [
+      {
+        "player_id": "TBONTB_0010",
+        "name": "TP Marshall",
+        "runs": 48,
+        "balls": 40,
+        "dismissed": true,
+        "howout": "Run Out"
+      },
+      {
+        "player_id": "TBONTB_0091",
+        "name": "Peter Smithson",
+        "runs": 10,
+        "balls": 9,
+        "dismissed": true,
+        "howout": "Run Out"
+      },
+      {
+        "player_id": "TBONTB_0101",
+        "name": "Suraj Saggar",
+        "runs": 53,
+        "balls": 30,
+        "dismissed": true,
+        "howout": "Bowled"
+      },
+      {
+        "player_id": "TBONTB_0077",
+        "name": "Sam Latter",
+        "runs": 62,
+        "balls": 20,
+        "dismissed": false,
+        "howout": ""
+      },
+      {
+        "player_id": "TBONTB_0050",
+        "name": "Junaid Ahmed",
+        "runs": 1,
+        "balls": 1,
+        "dismissed": false,
+        "howout": ""
+      },
+      {
+        "player_id": "TBONTB_0017",
+        "name": "Altaf Hussain",
+        "runs": 0,
+        "balls": 0,
+        "dismissed": false,
+        "howout": ""
+      },
+      {
+        "player_id": "TBONTB_0063",
+        "name": "RA Fisher",
+        "runs": 0,
+        "balls": 0,
+        "dismissed": false,
+        "howout": ""
+      },
+      {
+        "player_id": "TBONTB_0102",
+        "name": "AJ Brooke",
+        "runs": 0,
+        "balls": 0,
+        "dismissed": false,
+        "howout": ""
+      }
+    ],
+    "bowlers": [
+      {
+        "player_id": "TBONTB_0103",
+        "name": "BRD Perkins",
+        "overs": "3.0",
+        "maidens": 0,
+        "runs": 39,
+        "wickets": 0
+      },
+      {
+        "player_id": "TBONTB_0126",
+        "name": "Ollie Cobb",
+        "overs": "3.0",
+        "maidens": 0,
+        "runs": 26,
+        "wickets": 0
+      },
+      {
+        "player_id": "TBONTB_0048",
+        "name": "S M Tanvir (LS)",
+        "overs": "3.0",
+        "maidens": 0,
+        "runs": 16,
+        "wickets": 0
+      },
+      {
+        "player_id": "TBONTB_0022",
+        "name": "JP Hopper",
+        "overs": "3.0",
+        "maidens": 0,
+        "runs": 30,
+        "wickets": 0
+      },
+      {
+        "player_id": "TBONTB_0031",
+        "name": "LW Fraser",
+        "overs": "2.0",
+        "maidens": 0,
+        "runs": 6,
+        "wickets": 0
+      },
+      {
+        "player_id": "TBONTB_0086",
+        "name": "SJ Carter",
+        "overs": "2.0",
+        "maidens": 0,
+        "runs": 14,
+        "wickets": 0
+      },
+      {
+        "player_id": "TBONTB_0033",
+        "name": "JD Walker",
+        "overs": "2.0",
+        "maidens": 0,
+        "runs": 23,
+        "wickets": 1
+      },
+      {
+        "player_id": "TBONTB_0051",
+        "name": "J Tobin-Berry",
+        "overs": "2.0",
+        "maidens": 0,
+        "runs": 20,
+        "wickets": 0
+      }
+    ]
+  },
+  "second_innings": {
+    "team": "Demo Computer Team",
+    "runs": 140,
+    "wickets": 4,
+    "balls": 100,
+    "batsmen": [
+      {
+        "player_id": "TBONTB_0103",
+        "name": "BRD Perkins",
+        "runs": 11,
+        "balls": 12,
+        "dismissed": true,
+        "howout": "Bowled"
+      },
+      {
+        "player_id": "TBONTB_0126",
+        "name": "Ollie Cobb",
+        "runs": 24,
+        "balls": 20,
+        "dismissed": true,
+        "howout": "Caught"
+      },
+      {
+        "player_id": "TBONTB_0048",
+        "name": "S M Tanvir (LS)",
+        "runs": 55,
+        "balls": 41,
+        "dismissed": true,
+        "howout": "Caught"
+      },
+      {
+        "player_id": "TBONTB_0022",
+        "name": "JP Hopper",
+        "runs": 18,
+        "balls": 9,
+        "dismissed": true,
+        "howout": "Stumped"
+      },
+      {
+        "player_id": "TBONTB_0031",
+        "name": "LW Fraser",
+        "runs": 31,
+        "balls": 17,
+        "dismissed": false,
+        "howout": ""
+      },
+      {
+        "player_id": "TBONTB_0086",
+        "name": "SJ Carter",
+        "runs": 1,
+        "balls": 1,
+        "dismissed": false,
+        "howout": ""
+      },
+      {
+        "player_id": "TBONTB_0033",
+        "name": "JD Walker",
+        "runs": 0,
+        "balls": 0,
+        "dismissed": false,
+        "howout": ""
+      },
+      {
+        "player_id": "TBONTB_0051",
+        "name": "J Tobin-Berry",
+        "runs": 0,
+        "balls": 0,
+        "dismissed": false,
+        "howout": ""
+      }
+    ],
+    "bowlers": [
+      {
+        "player_id": "TBONTB_0010",
+        "name": "TP Marshall",
+        "overs": "2.0",
+        "maidens": 0,
+        "runs": 9,
+        "wickets": 0
+      },
+      {
+        "player_id": "TBONTB_0091",
+        "name": "Peter Smithson",
+        "overs": "3.0",
+        "maidens": 0,
+        "runs": 16,
+        "wickets": 0
+      },
+      {
+        "player_id": "TBONTB_0101",
+        "name": "Suraj Saggar",
+        "overs": "3.0",
+        "maidens": 0,
+        "runs": 17,
+        "wickets": 1
+      },
+      {
+        "player_id": "TBONTB_0077",
+        "name": "Sam Latter",
+        "overs": "3.0",
+        "maidens": 0,
+        "runs": 25,
+        "wickets": 1
+      },
+      {
+        "player_id": "TBONTB_0050",
+        "name": "Junaid Ahmed",
+        "overs": "2.0",
+        "maidens": 0,
+        "runs": 12,
+        "wickets": 0
+      },
+      {
+        "player_id": "TBONTB_0017",
+        "name": "Altaf Hussain",
+        "overs": "3.0",
+        "maidens": 0,
+        "runs": 30,
+        "wickets": 1
+      },
+      {
+        "player_id": "TBONTB_0063",
+        "name": "RA Fisher",
+        "overs": "2.0",
+        "maidens": 0,
+        "runs": 15,
+        "wickets": 0
+      },
+      {
+        "player_id": "TBONTB_0102",
+        "name": "AJ Brooke",
+        "overs": "2.0",
+        "maidens": 0,
+        "runs": 16,
+        "wickets": 1
+      }
+    ]
+  },
+  "result": {
+    "text": "Demo User Team won by 34 runs"
+  }
+}
