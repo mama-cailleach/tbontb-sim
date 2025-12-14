@@ -34,8 +34,8 @@ def run_batch_simulations(team1_file, team2_file, num_simulations=50, seed=None,
 		print("Failed to load players summary.")
 		return None
 	
-	team1, team1_name = load_team_from_file(team1_file, players)
-	team2, team2_name = load_team_from_file(team2_file, players)
+	team1, team1_name, team1_captain, team1_keeper = load_team_from_file(team1_file, players)
+	team2, team2_name, team2_captain, team2_keeper = load_team_from_file(team2_file, players)
 	
 	if not team1 or not team2:
 		print("Failed to load teams.")
@@ -67,12 +67,17 @@ def run_batch_simulations(team1_file, team2_file, num_simulations=50, seed=None,
 			first_batting = (team2_name, team2)
 			second_batting = (team1_name, team1)
 		
-		# Reset output config for each match
-		output_config.over_summaries = []
+		# Determine keeper IDs for the bowling teams
+		if first_batting[0] == team1_name:
+			first_keeper_id = team2_keeper
+			second_keeper_id = team1_keeper
+		else:
+			first_keeper_id = team1_keeper
+			second_keeper_id = team2_keeper
 		
 		# Simulate first innings
 		first = simulate_innings(first_batting[1], second_batting[1], match_config, 
-								  target=None, output_config=output_config)
+								  target=None, output_config=output_config, keeper_id=first_keeper_id)
 		
 		# Reset for second innings
 		output_config.over_summaries = []
@@ -80,7 +85,7 @@ def run_batch_simulations(team1_file, team2_file, num_simulations=50, seed=None,
 		# Simulate second innings (with target)
 		target_score = first['runs'] + 1
 		second = simulate_innings(second_batting[1], first_batting[1], match_config,
-								   target=target_score, output_config=output_config)
+								   target=target_score, output_config=output_config, keeper_id=second_keeper_id)
 		
 		# Collect stats for team1
 		if first_batting[0] == team1_name:

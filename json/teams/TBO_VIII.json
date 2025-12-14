@@ -1,0 +1,64 @@
+{
+  "team_name": "TBO_VIII",
+  "squad": "TBONTB_players_summary",
+  "team": [
+    {
+      "player_id": "TBONTB_0097",
+      "player_name": "Marcelo Terreiro",
+      "short_int": 97,
+      "strike_rate": 59.72,
+      "bat_avg": 14.33
+    },
+    {
+      "player_id": "TBONTB_0096",
+      "player_name": "Ayush Newatia",
+      "short_int": 96,
+      "strike_rate": 121.59,
+      "bat_avg": 22.9
+    },
+    {
+      "player_id": "TBONTB_0101",
+      "player_name": "Suraj Saggar",
+      "short_int": 101,
+      "strike_rate": 79.93,
+      "bat_avg": 22.09
+    },
+    {
+      "player_id": "TBONTB_0009",
+      "player_name": "CTP Clark",
+      "short_int": 9,
+      "strike_rate": 63.56,
+      "bat_avg": 3.86
+    },
+    {
+      "player_id": "TBONTB_0008",
+      "player_name": "OCYG Willems",
+      "short_int": 8,
+      "strike_rate": 135.22,
+      "bat_avg": 26.72
+    },
+    {
+      "player_id": "TBONTB_0103",
+      "player_name": "BRD Perkins",
+      "short_int": 103,
+      "strike_rate": 55.88,
+      "bat_avg": 6.33
+    },
+    {
+      "player_id": "TBONTB_0064",
+      "player_name": "TA Oberst",
+      "short_int": 64,
+      "strike_rate": 127.07,
+      "bat_avg": 19.5
+    },
+    {
+      "player_id": "TBONTB_0021",
+      "player_name": "CPW Chilvers",
+      "short_int": 21,
+      "strike_rate": 115.88,
+      "bat_avg": 23.19
+    }
+  ],
+  "captain": "TBONTB_0008",
+  "wicketkeeper": "TBONTB_0096"
+}

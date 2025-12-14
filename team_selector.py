@@ -104,12 +104,12 @@ def choose_team_from_list(players, prompt="Choose a team"):
 		prompt: Prompt message to display
 	
 	Returns:
-		Tuple of (team_list, team_name) or (None, None) if cancelled
+		Tuple of (team_list, team_name, captain_id, keeper_id) or (None, None, None, None) if cancelled
 	"""
 	team_files = list_available_teams()
 	if not team_files:
 		print("No saved teams found in json/teams/. Please create a team using team_builder.py first.")
-		return None, None
+		return None, None, None, None
 	
 	print(f"\n{prompt}:")
 	for i, fname in enumerate(team_files, start=1):
@@ -121,9 +121,9 @@ def choose_team_from_list(players, prompt="Choose a team"):
 		try:
 			idx = int(choice)
 			if 1 <= idx <= len(team_files):
-				team, team_name = load_team_from_file(team_files[idx-1], players)
+				team, team_name, captain_id, keeper_id = load_team_from_file(team_files[idx-1], players)
 				if team:
-					return team, team_name
+					return team, team_name, captain_id, keeper_id
 				else:
 					print("Failed to load team. Please try another.")
 		except ValueError:
@@ -140,7 +140,7 @@ def choose_computer_team_from_list(players, exclude_ids):
 		exclude_ids: List of player IDs already selected (to avoid duplicates)
 	
 	Returns:
-		Tuple of (team_list, team_name)
+		Tuple of (team_list, team_name, captain_id, keeper_id)
 	"""
 	team_files = list_available_teams()
 	
@@ -155,12 +155,12 @@ def choose_computer_team_from_list(players, exclude_ids):
 		try:
 			idx = int(choice)
 			if idx == len(team_files) + 1:
-				# Random team
-				return pick_random_team(players, exclude_ids), "Random Team"
+				# Random team (no captain/keeper info)
+				return pick_random_team(players, exclude_ids), "Random Team", None, None
 			elif 1 <= idx <= len(team_files):
-				team, team_name = load_team_from_file(team_files[idx-1], players)
+				team, team_name, captain_id, keeper_id = load_team_from_file(team_files[idx-1], players)
 				if team:
-					return team, team_name
+					return team, team_name, captain_id, keeper_id
 				else:
 					print("Failed to load team. Please try another.")
 		except ValueError:

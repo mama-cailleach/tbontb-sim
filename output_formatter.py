@@ -63,7 +63,8 @@ class OutputConfig:
 
 def print_over_summaries(output_config):
 	"""Print stored over-by-over summaries."""
-	if not output_config.over_by_over:
+	# Suppress when detailed ball-by-ball is requested to avoid duplicate summaries
+	if not output_config.over_by_over or output_config.ball_by_ball:
 		return
 	
 	for summary in output_config.over_summaries:
@@ -76,16 +77,52 @@ def print_over_summaries(output_config):
 		
 		if summary['fow']:
 			print("FOW:")
-			for fow_label, name, runs, balls in summary['fow']:
-				print(f"{fow_label} Wicket: {name} {runs}({balls})")
+			for entry in summary['fow']:
+				if len(entry) == 5:
+					fow_label, name, runs, balls, howout = entry
+					print(f"{fow_label} Wicket: {name} {howout} {runs}({balls})")
+				else:
+					fow_label, name, runs, balls = entry
+					print(f"{fow_label} Wicket: {name} {runs}({balls})")
 
 
 def print_ball_by_ball(output_config):
-	"""Print stored ball-by-ball events."""
+	"""Print stored ball-by-ball events grouped by over with end-of-over summary."""
 	if not output_config.ball_by_ball:
 		return
+
+	over_summaries = {s['over']: s for s in output_config.over_summaries}
+	current_over = None
+
+	def _print_over_footer(over_idx):
+		summary = over_summaries.get(over_idx)
+		if not summary:
+			return
+		runs_word = "run" if summary.get('over_runs', 0) == 1 else "runs"
+		wkts_word = "wicket" if summary.get('over_wkts', 0) == 1 else "wickets"
+		print()
+		print(f"End of Over {over_idx}: {summary['score']} | {summary.get('over_runs', 0)} {runs_word} | {summary.get('over_wkts', 0)} {wkts_word}")
+		print(f"Bowler: {summary['bowler']}")
+		if summary.get('batters'):
+			print("Batters: " + " | ".join(summary['batters']))
+		if summary.get('fow'):
+			print("FOW:")
+			for fow_label, name, runs, balls, howout in summary['fow']:
+				print(f"{fow_label} {name} {runs}({balls}) {howout}")
+		print()
+
 	for evt in output_config.ball_by_ball_events:
+		over_part = evt['ball'].split('.')[0]
+		over_idx = int(over_part) + 1
+		if current_over is None or over_idx != current_over:
+			if current_over is not None:
+				_print_over_footer(current_over)
+			print(f"Over {over_idx}:")
+			current_over = over_idx
 		print(f"{evt['ball']} - {evt['bowler']} - to - {evt['batter']} - {evt['outcome']}")
+
+	if current_over is not None:
+		_print_over_footer(current_over)
 
 
 def print_innings_summary(team_name, innings, match_config):
@@ -123,7 +160,7 @@ def export_match_json(path, match_obj):
 	Write match object to JSON file with timestamped filename.
 	
 	Args:
-		path: Directory path to save the file
+		path: Directory path to save the file (should be json/match_reports/)
 		match_obj: Serializable dictionary with match data
 	"""
 	try:

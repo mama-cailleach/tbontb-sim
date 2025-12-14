@@ -16,10 +16,11 @@ class MatchConfig:
 			'description': 'Twenty20 cricket'
 		},
 		'LMS': {
-			'balls_per_innings': 100,  # current prototype: 20 overs * 5 balls
+			'balls_per_innings': 100,  # 20 overs * 5 balls
 			'balls_per_over': 5,
 			'team_size': 8,
-			'description': 'Last Man Standing format (5-ball overs)'
+			'description': 'Last Man Standing format (5-ball overs). Batters retire at 50 runs and go to back of queue.',
+			'retirement_threshold': 50
 		},
 		'OD': {
 			'balls_per_innings': 300,  # 50 overs * 6 balls

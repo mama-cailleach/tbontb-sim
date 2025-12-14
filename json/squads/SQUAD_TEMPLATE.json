@@ -1,0 +1,32 @@
+[
+  {
+    "player_id": 1,
+    "player_name": "Player Name",
+    "strike_rate": 120.0,
+    "runs": 500,
+    "balls_faced": 416,
+    "bat_avg": 25.0,
+    "4s": 20,
+    "6s": 5,
+    "overs_bowled": 20.0,
+    "runs_conceded": 200,
+    "wickets": 8,
+    "economy": 10.0,
+    "bowl_avg": 25.0
+  },
+  {
+    "player_id": 2,
+    "player_name": "Another Player",
+    "strike_rate": 130.0,
+    "runs": 600,
+    "balls_faced": 461,
+    "bat_avg": 30.0,
+    "4s": 25,
+    "6s": 8,
+    "overs_bowled": 15.0,
+    "runs_conceded": 150,
+    "wickets": 6,
+    "economy": 10.0,
+    "bowl_avg": 25.0
+  }
+]

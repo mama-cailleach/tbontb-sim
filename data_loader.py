@@ -29,14 +29,22 @@ def load_players_summary(json_path=None):
 	Returns a dictionary of player objects keyed by player_id.
 	"""
 	if not json_path:
-		json_path = os.path.join(os.path.dirname(__file__), "json", "TBONTB_players_summary.json")
+		json_path = os.path.join(os.path.dirname(__file__), "json", "squads", "TBONTB_players_summary.json")
 	players = {}
 	
 	if not os.path.exists(json_path):
-		print(f"JSON players summary not found at {json_path}. Please ensure the file exists in the json/ folder.")
+		print(f"JSON players summary not found at {json_path}. Please ensure the file exists in the json/squads/ folder.")
 		return players
 
 	print(f"Loading players from {json_path}")
+	
+	# Determine squad prefix from filename
+	squad_prefix = "TBONTB"
+	filename = os.path.basename(json_path).replace(".json", "")
+	if filename.startswith("England"):
+		squad_prefix = "ENG"
+	elif filename.startswith("TBONTB"):
+		squad_prefix = "TBONTB"
 	
 	with open(json_path, encoding="utf-8") as f:
 		try:
@@ -52,7 +60,7 @@ def load_players_summary(json_path=None):
 		# canonical string id like TBONTB_0001 for compatibility
 		try:
 			if isinstance(raw_id, int):
-				pid = f"TBONTB_{int(raw_id):04d}"
+				pid = f"{squad_prefix}_{int(raw_id):04d}"
 			else:
 				pid = str(raw_id)
 		except Exception:
@@ -114,9 +122,10 @@ def list_available_teams():
 		return []
 
 
-def load_team_from_file(filename, players):
+def load_team_from_file(filename, players=None):
 	"""
 	Load a team from json/teams/filename and return list of player dicts.
+	Automatically loads the correct squad specified in the team JSON.
 	Returns: (team_list, team_name) or (None, None) on failure.
 	"""
 	teams_dir = os.path.join(os.path.dirname(__file__), 'json', 'teams')
@@ -124,14 +133,60 @@ def load_team_from_file(filename, players):
 	try:
 		with open(path, encoding='utf-8') as f:
 			team_data = json.load(f)
-			saved_ids = [p.get('player_id') for p in team_data.get('team', []) if p.get('player_id')]
-			team = [players[pid] for pid in saved_ids if pid in players]
-			team_name = team_data.get('team_name', filename.replace('.json', ''))
-			if len(team) == 8:
-				return team, team_name
-	except Exception:
+		
+		# Determine which squad to load from
+		squad_name = team_data.get('squad', 'TBONTB')
+		
+		# Always load from the squad specified in the team file, ignoring passed players parameter
+		# This ensures teams from different squads load the correct player data
+		squad_file = f"{squad_name}.json"
+		squad_path = os.path.join(os.path.dirname(__file__), 'json', 'squads', squad_file)
+		players = load_players_summary(squad_path)
+		if not players:
+			print(f"Warning: Could not load squad {squad_name}. Team load may be incomplete.")
+			return None, None
+		
+		saved_ids = [p.get('player_id') for p in team_data.get('team', []) if p.get('player_id')]
+		
+		# Determine squad prefix for ID normalization
+		squad_prefix = "TBONTB"
+		if squad_name.startswith("England"):
+			squad_prefix = "ENG"
+		elif squad_name.startswith("TBONTB"):
+			squad_prefix = "TBONTB"
+		
+		# Normalize saved IDs to match the squad's ID format
+		# Try direct lookup first, then try converting to squad format
+		team = []
+		for saved_id in saved_ids:
+			# Direct lookup
+			if saved_id in players:
+				team.append(players[saved_id])
+			else:
+				# Try normalizing: if saved_id is numeric, convert to squad_prefix_XXXX format
+				try:
+					int_id = int(saved_id) if isinstance(saved_id, (int, str)) else None
+					if int_id is not None:
+						normalized_id = f"{squad_prefix}_{int_id:04d}"
+						if normalized_id in players:
+							team.append(players[normalized_id])
+				except (ValueError, TypeError):
+					pass
+		
+		team_name = team_data.get('team_name', filename.replace('.json', ''))
+		captain_id = team_data.get('captain')
+		keeper_id = team_data.get('wicketkeeper')
+		
+		if len(team) == 8:
+			return team, team_name, captain_id, keeper_id
+		else:
+			print(f"Warning: Team {filename} has {len(team)} players instead of 8. Check squad availability.")
+			return None, None, None, None
+			return None, None
+	except Exception as e:
+		print(f"Error loading team {filename}: {e}")
 		pass
-	return None, None
+	return None, None, None, None
 
 
 def get_team_name_from_file(filename):

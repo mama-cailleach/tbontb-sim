@@ -1,0 +1,64 @@
+{
+  "team_name": "ENG_test",
+  "squad": "England_T20_Squad_Sep2025",
+  "team": [
+    {
+      "player_id": 1,
+      "player_name": "Harry Brook",
+      "short_int": 1,
+      "strike_rate": 151.89,
+      "bat_avg": 33.53
+    },
+    {
+      "player_id": 2,
+      "player_name": "Tom Banton",
+      "short_int": 2,
+      "strike_rate": 143.41,
+      "bat_avg": 27.25
+    },
+    {
+      "player_id": 3,
+      "player_name": "Jos Buttler",
+      "short_int": 3,
+      "strike_rate": 146.44,
+      "bat_avg": 35.63
+    },
+    {
+      "player_id": 4,
+      "player_name": "Jordan Cox",
+      "short_int": 4,
+      "strike_rate": 141.62,
+      "bat_avg": 30.79
+    },
+    {
+      "player_id": 5,
+      "player_name": "Zak Crawley",
+      "short_int": 5,
+      "strike_rate": 139.07,
+      "bat_avg": 27.36
+    },
+    {
+      "player_id": 6,
+      "player_name": "Phil Salt",
+      "short_int": 6,
+      "strike_rate": 155.67,
+      "bat_avg": 28.18
+    },
+    {
+      "player_id": 7,
+      "player_name": "Jacob Bethell",
+      "short_int": 7,
+      "strike_rate": 141.75,
+      "bat_avg": 24.03
+    },
+    {
+      "player_id": 8,
+      "player_name": "Brydon Carse",
+      "short_int": 8,
+      "strike_rate": 139.19,
+      "bat_avg": 17.21
+    }
+  ],
+  "captain": 1,
+  "wicketkeeper": 3
+}

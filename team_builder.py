@@ -4,7 +4,7 @@ import re
 import sys
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "json")
-PLAYERS_JSON = os.path.join(DATA_DIR, "TBONTB_players_summary.json")
+PLAYERS_JSON = os.path.join(DATA_DIR, "squads", "TBONTB_players_summary.json")
 
 
 def parse_float(s, default=None):
@@ -75,7 +75,7 @@ def print_player_brief(p):
     wk = p.get("wickets")
     econ = p.get("economy")
     bavg = p.get("bowl_avg")
-    print(f"{id_label:4} | {p['player_name'][:30]:30} | R:{runs:5} | SR:{sr or '-':6} | AVG:{ba or '-':6} | 4s:{f:3} | 6s:{s:3} | WK:{wk:3} | ECO:{econ or '-':6} | BAVG:{bavg or '-'}")
+    print(f"{id_label:3} | {p['player_name'][:19]:19} | R:{runs:6} | SR:{sr or '-':6} | AVG:{ba or '-':6} | 4s:{f:3} | 6s:{s:3} | WK:{wk:3} | ECO:{econ or '-':6} | BAVG:{bavg or '-':5} |")
 
 
 def show_players_paginated(players, per_page=20):
@@ -144,7 +144,7 @@ def choose_team(players):
         selected = [players[pid] for pid in picks]
         print("\nTeam selected:")
         for idx, p in enumerate(selected, start=1):
-            print(f" {idx}. {p['short_int'] or p['player_id']} - {p['player_name']}")
+            print(f" {idx}. {p['player_name']}")
         confirm = input("Accept this team? (Y/n): ").strip().lower()
         if confirm in ('', 'y', 'yes'):
             return selected
@@ -153,7 +153,7 @@ def choose_team(players):
 def choose_captain_and_keeper(team):
     print("\nSelect a captain (enter 1-8)")
     for i, p in enumerate(team, start=1):
-        print(f" {i}. {p['short_int'] or p['player_id']} - {p['player_name']}")
+        print(f" {i}. {p['player_name']}")
     while True:
         c = input("Captain number: ").strip()
         try:
@@ -183,7 +183,7 @@ def choose_captain_and_keeper(team):
 def reorder_batting(team):
     print("\nCurrent batting order:")
     for i, p in enumerate(team, start=1):
-        print(f" {i}. {p['short_int'] or p['player_id']} - {p['player_name']}")
+        print(f" {i}. {p['player_name']}")
     ans = input("Would you like to reorder the batting lineup? (y/N): ").strip().lower()
     if ans not in ('y', 'yes'):
         return team
@@ -198,7 +198,7 @@ def reorder_batting(team):
             new = [team[n-1] for n in nums]
             print("New batting order:")
             for i, p in enumerate(new, start=1):
-                print(f" {i}. {p['short_int'] or p['player_id']} - {p['player_name']}")
+                print(f" {i}. {p['player_name']}")
             ok = input("Accept new order? (Y/n): ").strip().lower()
             if ok in ('', 'y', 'yes'):
                 return new
@@ -207,20 +207,38 @@ def reorder_batting(team):
         print("Invalid input. Please provide a permutation of 1..8 separated by commas.")
 
 
-def save_team(team, captain, keeper, team_name, path=None):
+def save_team(team, captain, keeper, team_name, squad_name=None, path=None):
+    def normalize_player_id(pid):
+        """Convert TBONTB_0001 format to simple numeric ID, or keep as-is if already simple."""
+        if isinstance(pid, int):
+            return pid
+        if isinstance(pid, str):
+            # If it's TBONTB_XXXX format, extract just the number
+            import re
+            m = re.search(r'TBONTB_(\d+)', str(pid))
+            if m:
+                return int(m.group(1))
+            # If it's already a simple numeric string, return as int
+            try:
+                return int(pid)
+            except ValueError:
+                return pid  # Keep as-is if not numeric
+        return pid
+    
     obj = {
         "team_name": team_name,
+        "squad": squad_name or "TBONTB",
         "team": [
             {
-                "player_id": p['player_id'],
+                "player_id": normalize_player_id(p['player_id']),
                 "player_name": p['player_name'],
                 "short_int": p.get('short_int'),
                 "strike_rate": p.get('strike_rate'),
                 "bat_avg": p.get('bat_avg'),
             } for p in team
         ],
-        "captain": captain['player_id'],
-        "wicketkeeper": keeper['player_id'],
+        "captain": normalize_player_id(captain['player_id']),
+        "wicketkeeper": normalize_player_id(keeper['player_id']),
     }
     if path is None:
         # sanitize team_name for filename (replace spaces and special chars with underscore)
@@ -268,7 +286,7 @@ def main():
 
     ans = input(f"Save this team as '{team_name}' to json/teams/? (Y/n): ").strip().lower()
     if ans in ('', 'y', 'yes'):
-        save_team(team, captain, keeper, team_name)
+        save_team(team, captain, keeper, team_name, squad_name="TBONTB")
 
 
 if __name__ == '__main__':
