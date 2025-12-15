@@ -1,0 +1,64 @@
+{
+  "team_name": "TBO2_VII",
+  "squad": "TBONTB_players_summary",
+  "team": [
+    {
+      "player_id": 2,
+      "player_name": "RM Sheridan",
+      "short_int": 2,
+      "strike_rate": 110.02,
+      "bat_avg": 36.06
+    },
+    {
+      "player_id": 5,
+      "player_name": "DM Sheridan",
+      "short_int": 5,
+      "strike_rate": 133.9,
+      "bat_avg": 30.19
+    },
+    {
+      "player_id": 20,
+      "player_name": "Tristan Langford",
+      "short_int": 20,
+      "strike_rate": 155.73,
+      "bat_avg": 37.62
+    },
+    {
+      "player_id": 86,
+      "player_name": "SJ Carter",
+      "short_int": 86,
+      "strike_rate": 124.53,
+      "bat_avg": 26.23
+    },
+    {
+      "player_id": 3,
+      "player_name": "Higgins PA",
+      "short_int": 3,
+      "strike_rate": 118.82,
+      "bat_avg": 18.08
+    },
+    {
+      "player_id": 1,
+      "player_name": "PB Heath",
+      "short_int": 1,
+      "strike_rate": 102.64,
+      "bat_avg": 14.81
+    },
+    {
+      "player_id": 108,
+      "player_name": "Prasanna Dhamal",
+      "short_int": 108,
+      "strike_rate": 146.8,
+      "bat_avg": 27.09
+    },
+    {
+      "player_id": 6,
+      "player_name": "WE Leuty",
+      "short_int": 6,
+      "strike_rate": 54.69,
+      "bat_avg": 6.18
+    }
+  ],
+  "captain": 3,
+  "wicketkeeper": 3
+}

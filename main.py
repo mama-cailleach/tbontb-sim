@@ -226,8 +226,24 @@ def play_match(players, match_config, args):
 			return
 		
 		print(f"\nYou selected: {user_team_name}")
+		def _fmt_with_roles(p, captain_id, keeper_id):
+			roles = []
+			pid = p.get('player_id')
+			short_int = p.get('short_int')
+			def _matches(role_id):
+				if role_id is None:
+					return False
+				if pid == role_id:
+					return True
+				return isinstance(role_id, int) and short_int == role_id
+			if _matches(captain_id):
+				roles.append('c')
+			if _matches(keeper_id):
+				roles.append('wk')
+			suffix = '' if not roles else ' (' + ') ('.join(roles) + ')'
+			return f"  {p['player_name']}{suffix}"
 		for p in user_team:
-			print(f"  {p['player_name']}")
+			print(_fmt_with_roles(p, user_captain_id, user_keeper_id))
 		
 		# Computer team selection (excluding user picks)
 		exclude = [p['player_id'] for p in user_team]
@@ -235,7 +251,7 @@ def play_match(players, match_config, args):
 		
 		print(f"\nComputer team: {comp_team_name}")
 		for p in comp_team:
-			print(f"  {p['player_name']}")
+			print(_fmt_with_roles(p, comp_captain_id, comp_keeper_id))
 		
 		# Choose batting or bowling first via toss or Conversation
 		choice = choose_toss_or_conversation()

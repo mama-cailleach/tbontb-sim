@@ -183,11 +183,12 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 
 			if output_config and getattr(output_config, 'ball_by_ball', False):
 				outcome_txt = 'Wide' if is_wide else 'No Ball'
+				runs_word = 'run' if penalty_runs == 1 else 'runs'
 				output_config.ball_by_ball_events.append({
 					'ball': f"{display_over}.{display_ball_in_over}",
 					'bowler': bowler.get('player_name', 'Unknown'),
 					'batter': batsman.get('player_name', 'Unknown'),
-					'outcome': f"{outcome_txt} +{penalty_runs} runs"
+					'outcome': f"{outcome_txt} +{penalty_runs} {runs_word}"
 				})
 
 			if target is not None and total_runs >= target:
@@ -352,27 +353,23 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 
 			# LMS format: retire batter only once when they first reach threshold and a replacement exists
 			retirement_threshold = match_config.MATCH_TYPES.get(match_config.match_type, {}).get('retirement_threshold', None)
+			retirement_note = ""
 			if retirement_threshold and pstats['runs'] >= retirement_threshold and (not pstats['retired_once']) and len(batting_queue) > 0:
 				pstats['retired'] = True
 				pstats['retired_once'] = True
-				if output_config and getattr(output_config, 'ball_by_ball', False):
-					output_config.ball_by_ball_events.append({
-						'ball': f"{display_over}.{display_ball_in_over}",
-						'bowler': bowler.get('player_name', 'Unknown'),
-						'batter': batsman.get('player_name', 'Unknown'),
-						'outcome': f"Retired on {pstats['runs']}"
-					})
+				retirement_note = f" - Retired on {pstats['runs']}"
 				# Move retired batter to back of batting queue and bring next in
 				batting_queue.append(striker_idx)
 				striker_idx = batting_queue.pop(0)
 				batsmen_stats[batting_team[striker_idx]['player_id']]['retired'] = False
 
 			if output_config and getattr(output_config, 'ball_by_ball', False):
+				runs_word = 'run' if run == 1 else 'runs'
 				output_config.ball_by_ball_events.append({
 					'ball': f"{display_over}.{display_ball_in_over}",
 					'bowler': bowler.get('player_name', 'Unknown'),
 					'batter': batsman.get('player_name', 'Unknown'),
-					'outcome': f"{run} runs"
+					'outcome': f"{run} {runs_word}{retirement_note}"
 				})
 
 			if (not last_mode) and (run % 2 == 1):

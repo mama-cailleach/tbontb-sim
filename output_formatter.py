@@ -150,7 +150,20 @@ def print_innings_summary(team_name, innings, match_config):
 
 	extras = innings.get('extras', {})
 	total_extras = innings.get('total_extras', 0)
-	print(f"Extras: {total_extras} (w {extras.get('wides', 0)}, nb {extras.get('no_balls', 0)}, b {extras.get('byes', 0)}, lb {extras.get('leg_byes', 0)}, p {extras.get('penalty_runs', 0)})")
+	# Only include extras categories that were scored (non-zero)
+	parts = []
+	if extras.get('wides', 0):
+		parts.append(f"w {extras['wides']}")
+	if extras.get('no_balls', 0):
+		parts.append(f"nb {extras['no_balls']}")
+	if extras.get('byes', 0):
+		parts.append(f"b {extras['byes']}")
+	if extras.get('leg_byes', 0):
+		parts.append(f"lb {extras['leg_byes']}")
+	if extras.get('penalty_runs', 0):
+		parts.append(f"p {extras['penalty_runs']}")
+	breakdown = f" ({', '.join(parts)})" if parts else ""
+	print(f"Extras: {total_extras}{breakdown}")
 	print(f"Total: {innings['runs']} / {innings['wickets']} ({overs_str} Overs)")
 	
 	print("BOWLING:")
