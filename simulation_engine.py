@@ -36,7 +36,7 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 	keeper_id: player_id of the wicketkeeper (used for stumping)
 	"""
 	balls_per_over = match_config.balls_per_over
-	balls = match_config.balls_per_innings
+	max_overs = match_config.balls_per_innings // balls_per_over
 
 	batsmen_stats = {
 		p['player_id']: {
@@ -52,6 +52,14 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 
 	if output_config and getattr(output_config, 'ball_by_ball', False):
 		output_config.ball_by_ball_events = []
+
+	team_extras = {
+		'wides': 0,
+		'no_balls': 0,
+		'byes': 0,
+		'leg_byes': 0,
+		'penalty_runs': 0
+	}
 
 	bowlers_stats = {
 		p['player_id']: {
@@ -74,24 +82,29 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 	total_runs = 0
 	total_wickets = 0
 	balls_bowled = 0
+	legal_balls_bowled = 0
 
 	per_over_fow = []
 	over_bowler = None
-	over_index = 0
+	over_index = 1
 	last_mode = False
 	runs_in_over = 0
 	wkts_in_over = 0
 	bowler_runs_start = 0
 	bowler_balls_start = 0
 	bowler_wickets_start = 0
-	for ball_no in range(balls):
-		over = ball_no // balls_per_over
-		over_index = over + 1
-		ball_in_over = (ball_no % balls_per_over) + 1
-		bowler = bowlers[over % num_bowlers]
+	display_ball_in_over = 1
+	total_balls_in_over = 0
+	legal_balls_in_over = 0
+	penalty_in_over = 0
+	free_hit = False
+	carry_free_hit_next_over = False
+
+	while over_index <= max_overs:
+		bowler = bowlers[(over_index - 1) % num_bowlers]
 		bstats = bowlers_stats[bowler['player_id']]
 
-		if ball_no % balls_per_over == 0:
+		if display_ball_in_over == 1 and total_balls_in_over == 0:
 			per_over_fow = []
 			over_bowler = bowler
 			bowler_runs_start = bstats['runs']
@@ -99,6 +112,7 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 			bowler_wickets_start = bstats['wickets']
 			runs_in_over = 0
 			wkts_in_over = 0
+			legal_balls_in_over = 0
 
 		alive = [i for i, p in enumerate(batting_team) if not batsmen_stats[p['player_id']]['dismissed']]
 		if len(alive) == 0:
@@ -125,11 +139,73 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 		wicket_prob = 0.02 + (bowl_skill * 0.07) - (bat_skill * 0.03)
 		wicket_prob = max(0.01, min(wicket_prob, 0.12))
 
-		if random.random() < wicket_prob:
+		# Determine if this delivery is a penalty ball (wide/no-ball)
+		penalty_ball = False
+		is_wide = False
+		is_no_ball = False
+		# modest probability for penalty balls
+		penalty_roll = random.random()
+		if penalty_roll < 0.04:
+			penalty_ball = True
+			is_wide = penalty_roll < 0.02
+			is_no_ball = not is_wide
+
+		display_over = over_index - 1
+
+		if penalty_ball:
+			penalty_in_over += 1
+			# Runs for penalty balls per LMS rules
+			if over_index < max_overs:
+				penalty_runs = 1 if penalty_in_over == 1 else 3
+			else:
+				penalty_runs = 1
+
+			total_runs += penalty_runs
+			runs_in_over += penalty_runs
+			if is_wide:
+				team_extras['wides'] += penalty_runs
+			else:
+				team_extras['no_balls'] += penalty_runs
+			bstats['runs'] += penalty_runs
+			pstats['balls'] += 1
+			balls_bowled += 1
+			total_balls_in_over += 1
+
+			# Free hit handling
+			if is_no_ball:
+				if legal_balls_in_over >= balls_per_over and over_index < max_overs:
+					carry_free_hit_next_over = True
+				else:
+					free_hit = True
+			elif free_hit:
+				# Penalty ball during free hit carries over
+				free_hit = True
+
+			if output_config and getattr(output_config, 'ball_by_ball', False):
+				outcome_txt = 'Wide' if is_wide else 'No Ball'
+				output_config.ball_by_ball_events.append({
+					'ball': f"{display_over}.{display_ball_in_over}",
+					'bowler': bowler.get('player_name', 'Unknown'),
+					'batter': batsman.get('player_name', 'Unknown'),
+					'outcome': f"{outcome_txt} +{penalty_runs} runs"
+				})
+
+			if target is not None and total_runs >= target:
+				free_hit = False
+				if output_config and output_config.over_by_over:
+					_store_over_summary(output_config, over_index, total_runs, total_wickets,
+									runs_in_over, wkts_in_over,
+									bowlers_stats, over_bowler, batsmen_stats, batting_team,
+									striker_idx, non_striker_idx, last_mode, per_over_fow,
+									match_config.balls_per_over, partial=True)
+				break
+
+			# No over-end check here; over ends only after 5 legal balls
+			continue
+
+		if random.random() < wicket_prob and not free_hit:
 			total_wickets += 1
 			dismissed_idx = striker_idx
-			if (not last_mode) and non_striker_idx is not None and random.random() < 0.1:
-				dismissed_idx = non_striker_idx
 
 			dismissed_player = batting_team[dismissed_idx]
 			dstats = batsmen_stats[dismissed_player['player_id']]
@@ -188,19 +264,24 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 			if dismissal_type != 'Run Out':
 				bstats['wickets'] += 1
 
-			fow_label = f"{over}.{ball_in_over}"
+			fow_label = f"{display_over}.{display_ball_in_over}"
 			per_over_fow.append((fow_label, dismissed_player['player_name'], dstats['runs'], dstats['balls'], dstats['howout']))
 			wkts_in_over += 1
 
 			if output_config and getattr(output_config, 'ball_by_ball', False):
 				output_config.ball_by_ball_events.append({
-					'ball': f"{over}.{ball_in_over}",
+					'ball': f"{display_over}.{display_ball_in_over}",
 					'bowler': bowler.get('player_name', 'Unknown'),
-					'batter': batsman.get('player_name', 'Unknown'),
+					'batter': dismissed_player.get('player_name', 'Unknown'),
 					'outcome': f"Wicket ({dismissal_type})"
 				})
 
 			alive_after = [i for i, p in enumerate(batting_team) if not batsmen_stats[p['player_id']]['dismissed']]
+			balls_bowled += 1
+			legal_balls_bowled += 1
+			legal_balls_in_over += 1
+			total_balls_in_over += 1
+			display_ball_in_over += 1
 			if len(alive_after) == 0:
 				break
 
@@ -264,6 +345,10 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 			pstats['balls'] += 1
 			bstats['balls'] += 1
 			bstats['runs'] += run
+			balls_bowled += 1
+			legal_balls_bowled += 1
+			legal_balls_in_over += 1
+			free_hit = False
 
 			# LMS format: retire batter only once when they first reach threshold and a replacement exists
 			retirement_threshold = match_config.MATCH_TYPES.get(match_config.match_type, {}).get('retirement_threshold', None)
@@ -272,7 +357,7 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 				pstats['retired_once'] = True
 				if output_config and getattr(output_config, 'ball_by_ball', False):
 					output_config.ball_by_ball_events.append({
-						'ball': f"{over}.{ball_in_over}",
+						'ball': f"{display_over}.{display_ball_in_over}",
 						'bowler': bowler.get('player_name', 'Unknown'),
 						'batter': batsman.get('player_name', 'Unknown'),
 						'outcome': f"Retired on {pstats['runs']}"
@@ -284,7 +369,7 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 
 			if output_config and getattr(output_config, 'ball_by_ball', False):
 				output_config.ball_by_ball_events.append({
-					'ball': f"{over}.{ball_in_over}",
+					'ball': f"{display_over}.{display_ball_in_over}",
 					'bowler': bowler.get('player_name', 'Unknown'),
 					'batter': batsman.get('player_name', 'Unknown'),
 					'outcome': f"{run} runs"
@@ -293,7 +378,8 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 			if (not last_mode) and (run % 2 == 1):
 				striker_idx, non_striker_idx = non_striker_idx, striker_idx
 
-			balls_bowled += 1
+			total_balls_in_over += 1
+			display_ball_in_over += 1
 
 			if target is not None and total_runs >= target:
 				if output_config and output_config.over_by_over:
@@ -304,41 +390,57 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 										 match_config.balls_per_over, partial=True)
 				break
 
-		if (ball_no + 1) % balls_per_over == 0:
-			bowler_runs_this_over = bstats['runs'] - bowler_runs_start
-			bowler_balls_this_over = bstats['balls'] - bowler_balls_start
-			if bowler_balls_this_over == balls_per_over and bowler_runs_this_over == 0:
-				bowlers_stats[over_bowler['player_id']]['maidens'] += 1
-
-			if output_config and output_config.over_by_over:
-				_store_over_summary(output_config, over_index, total_runs, total_wickets,
-									 bowler_runs_this_over, wkts_in_over,
-									 bowlers_stats, over_bowler, batsmen_stats, batting_team,
-									 striker_idx, non_striker_idx, last_mode, per_over_fow,
-									 match_config.balls_per_over)
-
-			if not last_mode:
-				striker_idx, non_striker_idx = non_striker_idx, striker_idx
-
+		# End of over handling based on dynamic limits
 		alive_after = [i for i, p in enumerate(batting_team) if not batsmen_stats[p['player_id']]['dismissed']]
 		if len(alive_after) == 0:
 			if output_config and output_config.over_by_over:
 				_store_over_summary(output_config, over_index, total_runs, total_wickets,
-									 runs_in_over, wkts_in_over,
-									 bowlers_stats, over_bowler, batsmen_stats, batting_team,
-									 striker_idx, non_striker_idx, last_mode, per_over_fow,
-									 match_config.balls_per_over, end=True)
+							 runs_in_over, wkts_in_over,
+							 bowlers_stats, over_bowler, batsmen_stats, batting_team,
+							 striker_idx, non_striker_idx, last_mode, per_over_fow,
+							 match_config.balls_per_over, end=True)
 			break
 
-	if output_config and output_config.over_by_over and balls_bowled > 0:
-		last_ball_index = balls_bowled - 1
-		if (last_ball_index + 1) % balls_per_over != 0:
-			over_num = last_ball_index // balls_per_over + 1
-			_store_over_summary(output_config, over_num, total_runs, total_wickets,
-								runs_in_over, wkts_in_over,
-								bowlers_stats, over_bowler, batsmen_stats, batting_team,
-								striker_idx, non_striker_idx, last_mode, per_over_fow,
-								match_config.balls_per_over, partial=True)
+		# Recompute current over limit based on penalties bowled in this over
+		if over_index < max_overs:
+			current_over_limit = balls_per_over + (1 if penalty_in_over >= 1 else 0)
+		else:
+			current_over_limit = balls_per_over + penalty_in_over
+
+		if legal_balls_in_over >= balls_per_over:
+			bowler_runs_this_over = bstats['runs'] - bowler_runs_start
+			if legal_balls_in_over == balls_per_over and bowler_runs_this_over == 0:
+				bowlers_stats[over_bowler['player_id']]['maidens'] += 1
+
+			if output_config and output_config.over_by_over:
+				_store_over_summary(output_config, over_index, total_runs, total_wickets,
+							 bowler_runs_this_over, wkts_in_over,
+							 bowlers_stats, over_bowler, batsmen_stats, batting_team,
+							 striker_idx, non_striker_idx, last_mode, per_over_fow,
+							 match_config.balls_per_over)
+
+			if not last_mode:
+				striker_idx, non_striker_idx = non_striker_idx, striker_idx
+
+			# prepare next over
+			display_ball_in_over = 1
+			total_balls_in_over = 0
+			legal_balls_in_over = 0
+			penalty_in_over = 0
+			over_index += 1
+			if carry_free_hit_next_over:
+				free_hit = True
+				carry_free_hit_next_over = False
+			continue
+
+	# Ensure final over summary if partial
+	if output_config and output_config.over_by_over and balls_bowled > 0 and total_balls_in_over > 0:
+		over_num = over_index
+		_store_over_summary(output_config, over_num, total_runs, total_wickets,
+							runs_in_over, wkts_in_over,
+							bowlers_stats, over_bowler, batsmen_stats, batting_team,
+							striker_idx, non_striker_idx, last_mode, per_over_fow,
+							match_config.balls_per_over, partial=True)
 
 	for pid, b in bowlers_stats.items():
 		overs = b['balls'] // balls_per_over
@@ -348,9 +450,11 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 	return {
 		'runs': total_runs,
 		'wickets': total_wickets,
-		'balls': balls_bowled,
+		'balls': legal_balls_bowled,
 		'batsmen': batsmen_stats,
 		'bowlers': bowlers_stats,
+		'extras': team_extras,
+		'total_extras': sum(team_extras.values())
 	}
 
 

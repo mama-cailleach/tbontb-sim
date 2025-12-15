@@ -147,6 +147,11 @@ def print_innings_summary(team_name, innings, match_config):
 				print(f"  {s['name']}: {s['runs']}* ({s['balls']}) - Not Out")
 			else:
 				print(f"  {s['name']}: DNB")
+
+	extras = innings.get('extras', {})
+	total_extras = innings.get('total_extras', 0)
+	print(f"Extras: {total_extras} (w {extras.get('wides', 0)}, nb {extras.get('no_balls', 0)}, b {extras.get('byes', 0)}, lb {extras.get('leg_byes', 0)}, p {extras.get('penalty_runs', 0)})")
+	print(f"Total: {innings['runs']} / {innings['wickets']} ({overs_str} Overs)")
 	
 	print("BOWLING:")
 	for pid, s in innings['bowlers'].items():
@@ -200,6 +205,8 @@ def build_match_export_object(first_batting, first_innings, second_batting, seco
 			"runs": first_innings['runs'],
 			"wickets": first_innings['wickets'],
 			"balls": first_innings['balls'],
+			"extras": first_innings.get('extras', {}),
+			"total_extras": first_innings.get('total_extras', 0),
 			"batsmen": [],
 			"bowlers": [],
 		},
@@ -208,6 +215,8 @@ def build_match_export_object(first_batting, first_innings, second_batting, seco
 			"runs": second_innings['runs'],
 			"wickets": second_innings['wickets'],
 			"balls": second_innings['balls'],
+			"extras": second_innings.get('extras', {}),
+			"total_extras": second_innings.get('total_extras', 0),
 			"batsmen": [],
 			"bowlers": [],
 		},

@@ -28,7 +28,6 @@ from output_formatter import (
 from team_selector import (
 	choose_team_from_list,
 	choose_computer_team_from_list,
-	choose_bat_or_bowl,
 	pick_random_team
 )
 
@@ -155,6 +154,42 @@ def team_builder_menu(players, squad_name="TBONTB"):
 	return team
 
 
+def choose_toss_or_conversation():
+	"""Handle toss vs Conversation™ decision and return 'bat' or 'bowl'."""
+	while True:
+		choice = input("Do you want toss or Conversation (TM)? (toss/conversation): ").strip().lower()
+		if choice.startswith('c'):
+			print("\nConversation (TM) sucessfull, you are bowling first!")
+			return 'bowl'
+		if choice.startswith('t'):
+			break
+		print("Please type 'toss' or 'conversation'.")
+
+	while True:
+		call = input("Call heads or tails? (heads/tails): ").strip().lower()
+		if call.startswith('h'):
+			call = 'heads'
+			break
+		if call.startswith('t'):
+			call = 'tails'
+			break
+		print("Please type 'heads' or 'tails'.")
+
+	coin = random.choice(['heads', 'tails'])
+	print(f"\nCoin toss... it is {coin.upper()}!")
+
+	if call == coin:
+		while True:
+			decision = input("You won the toss. Bat or bowl? (bat/bowl): ").strip().lower()
+			if decision in ('bat', 'bowl'):
+				return decision
+			print("Please type 'bat' or 'bowl'.")
+	else:
+		comp_decision = random.choice(['bat', 'bowl'])
+		print(f"The computer won the toss and will {comp_decision} first.")
+		return comp_decision
+
+
 def play_match(players, match_config, args):
 	"""Run a match between two teams."""
 	output_config = OutputConfig.default()
@@ -202,8 +237,8 @@ def play_match(players, match_config, args):
 		for p in comp_team:
 			print(f"  {p['player_name']}")
 		
-		# Choose batting or bowling first
-		choice = choose_bat_or_bowl()
+		# Choose batting or bowling first via toss or Conversation
+		choice = choose_toss_or_conversation()
 	
 	# Determine batting order and keeper assignments
 	if choice == 'bat':

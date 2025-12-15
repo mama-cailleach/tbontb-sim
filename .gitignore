@@ -1,5 +1,6 @@
 # Github stuff
 .github/
+.github/agents/
 
 .__pycache__/
 
