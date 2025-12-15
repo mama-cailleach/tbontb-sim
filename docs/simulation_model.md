@@ -3,19 +3,10 @@
 This document describes the current ball-by-ball simulation logic in `simulation_engine.py` for analyst and design review. It focuses on how per-ball outcomes are generated, what inputs drive them, and where dynamic adjustments occur.
 
 ## Key Inputs
-- **Match config**: `balls_per_over`, `balls_per_innings` (TBONTB defaults: 5-ball overs, 100 balls).
-- **Batter stats** (per player): `strike_rate`, `bat_avg`, `runs`, `balls_faced`, `fours`, `sixes`.
-- **Bowler stats** (per player): `economy`, `bowl_avg`, `wickets`, `overs_bowled`, `runs_conceded`.
-- **Derived indices**: `SHORT_ID_INDEX` from `data_loader.py` for player lookup (not used in per-ball math).
-
-## Expectations (per innings, per player)
-At innings start:
-- For each batter:
-  - `exp_rpb`: expected runs per ball from historical strike rate (`SR/100`) if SR exists, else None.
-  - `exp_runs_inn`: expected runs for the innings from batting average if present, else None.
-- For each bowler:
-  - `exp_wpb`: expected wickets per ball from historical wickets and overs (if available), else None.
-- Statless/blank players (no SR/avg and zeroed counters) produce None expectations.
+- **Match config**: `balls_per_over`, `balls_per_innings` (LMS defaults: 5-ball overs, 100 balls, retirement_threshold=50).
+- **Batter stats** (per player): `strike_rate`, `bat_avg`, `fours`, `sixes`, `balls_faced`.
+- **Bowler stats** (per player): `wickets`, `overs_bowled`.
+- **Team config**: `captain` and `wicketkeeper` IDs (keeper excluded from bowling, credited for stumpings).
 
 ## Per-Ball Flow (summary)
 1) Select bowler by over rotation (up to 8 bowlers chosen from team; preference to those with `overs_bowled > 0`).
@@ -26,68 +17,109 @@ At innings start:
 
 ## Batter Run Potential (RPB)
 - Base RPB: `strike_rate/100` if present; else `runs/balls_faced` fallback; default 0.8 if no history.
-- Skill features:
-  - `quality_sr = clamp((SR - 80)/120, 0..1)`
-  - `quality_avg = clamp((bat_avg - 15)/35, 0..1)`
-  - `bat_skill = 0.5*quality_sr + 0.5*quality_avg`
-  - `statless_batter` flag if all key batting stats are missing/zero.
-- Uplift/dampen:
-  - If `bat_avg` exists: multiply by `(1 + bat_avg/420)` (capped at 100/420).
-  - Scale by `(0.35 + 0.55*bat_skill)`; additional 0.80x if `statless_batter`.
-  - Clamp: if `exp_rpb` exists and current RPB exceeds `1.5 * exp_rpb`, cap to `1.5 * exp_rpb`.
+- Skill features
+1) **Penalty ball check** (4% chance): Wide or no-ball; adds runs (first penalty +1, subsequent +3 except last over), counts toward batter balls faced but not bowler legal balls. No-balls trigger free hits.
+2) **Select bowler** by over rotation (up to 8 bowlers chosen from team; preference to those with `overs_bowled > 0`; excludes wicketkeeper).
+3) **Identify striker/non-striker**; last-batter mode when only one not-out batter remains (disables odd runs and strike swaps).
+4) **Compute wicket probability** from batter and bowler skills; roll for dismissal (unless free hit active).
+5) **If not out**: roll for runs from distribution based on boundary rates and bat_skill.
+6) **LMS retirement**: If batter reaches 50 runs (first time) and replacement exists, retire to back of queue.
+7) **Update totals**, strikes, per-over FOW log, ball-by-ball log; check target chase.
+8) **Over ends** after 5 legal deliveries (penalty balls don't count toward legal count).
+
+## Batting Skill
+- `bat_skill = clamp((strike_rate - 70) / 90, 0..1)`
+  - Lower bound: SR 70 → skill 0.0
+  - Upper bound: SR 160 → skill 1.0
+- Used to adjust boundary probabilities and run distribution.
+
+## Bowling Skill
+- `bowler_wpb = wickets / (overs_bowled * balls_per_over)` (default 0.018 if no history)
+- `bowl_skill = clamp((bowler_wpb - 0.01) / 0.04, 0..1)`
+- Used to compute wicket probability.
 
 ## Wicket Probability
-- Batting advantage: `ba = batsman_rpb / (batsman_rpb + bowler_rpb)`; `bowler_rpb = economy / balls_per_over` or fallback from `runs_conceded/overs_bowled`.
-- Base wicket rate: `0.0105 + (1 - ba) * 0.068`.
-- Batter protection: `bat_protect = 1 - bat_avg/600` (clamped 0..1).
-- Bowler boost: starts at 1.0; adds impact from low `bowl_avg` and wicket volume; capped at **1.00**.
-- Economy adjust: `econ_adjust` in **[0.90, 1.10]** via `10 / bowler_econ` with clamps.
-- Expectation pressure (dynamic, per ball):
-  - Uses `hist_avg`, `hist_sr`, `exp_rpb`, `exp_runs_inn`, and live runs/balls.
-  - Adds pressure when batter exceeds historical avg, historical SR, expected runs-so-far (`exp_rpb * balls`), or expected innings runs.
-  - Pressure multiplier is additive to wicket_prob (values >1 increase chances of dismissal).
-- Final wicket probability: `base * bat_protect * bowl_boost * econ_adjust * pressure`.
-  - Statless bowler: no extra damp (multiplier 1.0).
-  - Clamped to **[0.012, 0.14]**.
-  - **Per-over safeguard**: none yet; dismissals rely on the above pressure plus base floor.
+- Base formula: `0.02 + (bowl_skill * 0.07) - (bat_skill * 0.03)`
+- Clamped to **[0.01, 0.12]** (1% to 12% per legal delivery).
+- No additional dynamic pressure or expectation tracking.
+- Free hits: wickets disabled (but runs still scored)
+Outcome space: `[0, 1, 2, 3, 4, 6]`
+- Boundary base probabilities:
+  - `four_rate = fours / balls_faced` (default 0.03 if no history)
+  - `six_rate = sixes / balls_faced` (default 0.01 if no history)
+  - `p4 = max(0.035, four_rate * 1.1 + bat_skill * 0.02)` (plus 0.004 bonus if boundary_hint > 40)
+  - `p6 = max(0.015, six_rate * 1.1 + bat_skill * 0.01)` (plus 0.003 bonus if boundary_hint > 40)
+- Remaining mass allocated to `[0,1,2,3]` via fixed split: `[0.30, 0.38, 0.20, 0.12]` of the non-boundary probability.
+- **Last-batter mode**: odd runs (1, 3) redistributed to even outcomes (0, 2) at 60%/40% split; no strike rotation
+- SuMS Format Rules
+- **Penalty balls**: First penalty in an over: +1 run; subsequent penalties: +3 runs (except last over where all penalties are +1).
+  - Penalty balls count toward batter's balls faced but not bowler's legal ball count.
+  - No-balls trigger free hits (next legal delivery cannot result in wicket).
+  - Free hit carries to next over if no-ball occurs on 5th+ legal ball.
+- **Retirement**: Batters retire at 50 runs (configurable via `retirement_threshold` in match_config).
+  - Retired batters move to back of batting queue and can return if wickets fall.
+  - Retirement displayed inline: `"1 run - Retired on 50"`.
+  - Only retires once per batter (tracked via `retired_once` flag).
+- **Over counting**: Overs end after 5 legal deliveries (tracked via `legal_balls_in_over`).
+  - Penalty balls increment display ball number but not legal count.
+  - Overs display uses `legal_balls_bowled` for accurate 20.0 format.
 
-## Run Outcome Distribution
-- Uses batter skill and historical boundary rates.
-- Boundary priors:
-  - Four floor: `max(0.020, four_rate*1.02) * (0.26 + 0.90*bat_skill) + 0.0008`
-  - Six floor: `max(0.008, six_rate*1.02) * (0.22 + 1.00*bat_skill) + 0.0006`
-- Remaining mass allocated to `[0,1,2,3]` via `base_split = [0.38 - 0.06*skill, 0.34 + 0.05*skill, 0.19 + 0.02*skill, 0.09 + 0.02*skill]` then renormalized.
-- Advantage boost: if `ba > 0.5`, boundaries get a small uplift scaled by skill (current small coefficients).
-- Last-batter mode: odd runs redirected to 0/2; no strike swaps.
+## Dismissal Types
+- **Bowled** (b bowler), **Caught** (c fielder b bowler), **Caught & Bowled** (c&b bowler)
+- **Stumped** (st † keeper) — keeper identified via `keeper_id` parameter; credited for stumping only
+- **Run Out** (run out fielder) — not credited to bowler
+- **LBW** (lbw b bowler)
+- Keeper is excluded from bowling selection via `select_bowlers_from_team(team, keeper_id)`.
 
-## Logging & Output
-- Ball-by-ball events stored when `OutputConfig.ball_by_ball` is true: `over.ball - bowler - to - batter - outcome`.
-- Over summaries: per-over score, bowler figures, batters, and FOW list.
-- Scorecard: innings totals, batter lines, bowler lines.
+## Output Formatting
+- **Ball-by-ball** mode: `over.ball - bowler - to - batter - outcome`
+  - Singular/plural runs: "1 run" vs "2 runs" (applies to scoring and penalty events).
+- **Over summaries**: per-over score, runs, wickets, bowler figures, batters at crease, FOW.
+- **Core logic**: `simulation_engine.py` — ball-by-ball simulator, wicket/run calculations, LMS rules
+- **Config presets**: `match_config.py` — match types (T20, LMS, OD, FIRST_CLASS), simulation styles, team mindsets
+- **Output**: `output_formatter.py` — scorecard formatting, over summaries, JSON export
+- **Batch testing**: `testing/batch_test.py` — performance validation (compare sim vs historical stats)
+- **Score list**: `testing/match_score_list.py` — quick one-line match summaries for regression testing
+- **Data loading**: `data_loader.py` — squad/team loading, player ID normalization
+- **Team builder**: `team_builder.py` — interactive team creation with captain/keeper selection
 
-## Neutral/Blank Players
-- Supplied via `blank_players_summary.json` and `Neutral_Blank` team.
-- Statless players yield None expectations, low base RPB scaled by skill floor, no special wicket damp.
+---
 
-## Known Issues / Tuning Targets
-- Alpha bowlers remain too stingy (econ ~4–5) vs blanks; wicket floor and boosts still produce low run rates against strong attacks.
-- Some batters still above historical averages/SR; expectation clamps and pressure may need further tightening (lower RPB cap factor, higher wicket pressure for SR spikes).
-- No per-over escalating wicket pressure yet; could add a small multiplier when an over ends wicketless.
-- Economy realism: consider raising econ_adjust range and lowering bowl_boost further for strong bowlers.
+## Future Ideas
 
-## Change Levers (for designers/analysts)
-- **Wicket shape**: adjust `base_wicket_prob` intercept/slope, `bat_protect` divisor, caps/floors.
-- **Pressure weights**: increase contributions from `over_run_ratio`, SR exceedance, or add per-over wicketless multiplier.
-- **Bowler dominance**: lower `bowl_boost` cap, widen `econ_adjust` range to let runs through.
-- **Boundary floors**: tweak p4/p6 floors and advantage boosts to move economy and SR.
-- **RPB clamps**: lower `1.5 * exp_rpb` cap to reduce runaway hitters.
-- **Last batter rules**: currently even-only scoring; can be relaxed if desired.
+These features were explored in earlier calibration versions but are not currently implemented. They may be valuable for future realism tuning:
 
-## Files
-- Core logic: `simulation_engine.py`
-- Config presets: `match_config.py`
-- Output: `output_formatter.py`
-- Batch testing: `testing/batch_test.py`
+### Dynamic Expectation Tracking
+- **Per-innings expectations**: Track `exp_rpb` (expected runs per ball from SR/100), `exp_runs_inn` (from batting average), `exp_wpb` (expected wickets per ball).
+- **Live pressure adjustments**: Increase wicket probability when batter exceeds historical SR, avg, or expected runs-so-far.
+- **Pressure multipliers**: Add per-ball pressure that scales with over-performance (e.g., SR 20% above historical).
+
+### Advanced Wicket Probability Model
+- **Batting advantage**: `ba = batsman_rpb / (batsman_rpb + bowler_rpb)` to compute relative strength.
+- **Batter protection**: `bat_protect = 1 - bat_avg/600` to reduce dismissal chance for high-average batters.
+- **Bowler boost**: Scale wicket chance based on bowling average and wicket-taking history.
+- **Economy adjustment**: `econ_adjust` range [0.90, 1.10] to account for bowler economy rate.
+- **Per-over safeguards**: Escalating wicket pressure when overs end wicketless.
+
+### Batting Advantage in Run Distribution
+- **RPB-based uplift**: If `ba > 0.5`, boost boundary probabilities proportional to batting advantage.
+- **Skill scaling**: More refined boundary rate adjustments using `quality_sr` and `quality_avg` indices.
+- **Dynamic RPB clamps**: Cap batter RPB at `1.5 * exp_rpb` to prevent runaway performance.
+
+### Statless/Blank Player Handling
+- **Neutral players**: Support for `blank_players_summary.json` with zero/minimal stats.
+- **Statless flags**: Automatic detection and dampening for players with no historical data.
+- **Fallback distributions**: Use league-average rates for batters/bowlers without history.
+
+### Calibration Tooling
+- **Target matching**: Tune parameters to match desired batting avg/SR and bowling avg/economy distributions.
+- **Per-over analysis**: Track wicket rates and run rates per over to identify imbalances.
+- **Player-level tracking**: `testing/player_performance_tracker.py` for longitudinal performance analysis.
+- **CSV exports**: Detailed stat breakdowns for external analysis and visualization.
+
+These ideas can be layered back into the simulation engine if realism tuning or historical stat matching becomes a priority
+- **Last batter rules**: currently even-only scoring; could allow singles if desired.
+- **Retirement threshold**: configurable per match type; currently 50 for LMS
 - Player tracker: `Testing/player_performance_tracker.py`
 - Data loading: `data_loader.py`
 
