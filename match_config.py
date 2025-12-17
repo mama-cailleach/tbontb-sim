@@ -13,26 +13,37 @@ class MatchConfig:
 			'balls_per_innings': 120,  # 20 overs * 6 balls
 			'balls_per_over': 6,
 			'team_size': 11,
-			'description': 'Twenty20 cricket'
+			'description': 'Twenty20 cricket',
+			'enable_penalties': True,  # wides/no-balls enabled
+			'penalty_prob': 0.04,  # base probability for penalty balls
+			'retirement_threshold': None  # no retirement in T20
 		},
 		'LMS': {
 			'balls_per_innings': 100,  # 20 overs * 5 balls
 			'balls_per_over': 5,
 			'team_size': 8,
 			'description': 'Last Man Standing format (5-ball overs). Batters retire at 50 runs and go to back of queue.',
-			'retirement_threshold': 50
+			'enable_penalties': True,  # LMS-specific penalty rules
+			'penalty_prob': 0.04,  # modest penalty rate
+			'retirement_threshold': 50  # retire at 50 runs and go to back of queue
 		},
 		'OD': {
 			'balls_per_innings': 300,  # 50 overs * 6 balls
 			'balls_per_over': 6,
 			'team_size': 11,
-			'description': 'One Day format (50 overs)'
+			'description': 'One Day format (50 overs)',
+			'enable_penalties': True,  # wides/no-balls enabled
+			'penalty_prob': 0.04,  # base probability
+			'retirement_threshold': None  # no retirement in ODI
 		},
 		'FIRST_CLASS': {
 			'balls_per_innings': None,  # no ball limit
 			'balls_per_over': 6,
 			'team_size': 11,
-			'description': 'First-class cricket'
+			'description': 'First-class cricket',
+			'enable_penalties': True,  # wides/no-balls enabled
+			'penalty_prob': 0.03,  # slightly lower rate
+			'retirement_threshold': None  # no retirement in FC
 		}
 	}
 	

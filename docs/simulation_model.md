@@ -118,8 +118,6 @@ These features were explored in earlier calibration versions but are not current
 - **CSV exports**: Detailed stat breakdowns for external analysis and visualization.
 
 These ideas can be layered back into the simulation engine if realism tuning or historical stat matching becomes a priority
-- **Last batter rules**: currently even-only scoring; could allow singles if desired.
-- **Retirement threshold**: configurable per match type; currently 50 for LMS
 - Player tracker: `Testing/player_performance_tracker.py`
 - Data loading: `data_loader.py`
 

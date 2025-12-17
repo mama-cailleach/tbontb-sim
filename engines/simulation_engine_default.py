@@ -5,13 +5,6 @@ Simplified default engine: light stat influence with plenty of RNG.
 
 import random
 
-# Feature flags to toggle phased realism enhancements
-# Phase 1: Advanced, matchup-aware wicket probability
-ENABLE_ADV_WICKET = True
-# Phase 2/3 scaffolding (logic not yet implemented; flags enabled for future readiness)
-ENABLE_PRESSURE = True
-ENABLE_BOUNDARY_ADV = True
-
 
 def select_bowlers_from_team(team, keeper_id=None):
 	"""
@@ -143,14 +136,8 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 		bowler_wpb = (bowler_wkts / bowler_balls_hist) if bowler_balls_hist > 0 else 0.018
 		bowl_skill = max(0.0, min(1.0, (bowler_wpb - 0.01) / 0.04))
 
-		# Phase 1: Advanced wicket probability (behind feature flag)
-		if ENABLE_ADV_WICKET:
-			wicket_prob = 0.02 + (bowl_skill * 0.07) - (bat_skill * 0.03)
-			wicket_prob = max(0.01, min(wicket_prob, 0.12))
-		else:
-			# Simple fallback: flat-ish probability mildly adjusted by batter skill
-			wicket_prob = 0.05 - (bat_skill * 0.02)
-			wicket_prob = max(0.02, min(wicket_prob, 0.10))
+		wicket_prob = 0.02 + (bowl_skill * 0.07) - (bat_skill * 0.03)
+		wicket_prob = max(0.01, min(wicket_prob, 0.12))
 
 		# Determine if this delivery is a penalty ball (wide/no-ball)
 		penalty_ball = False
@@ -158,9 +145,7 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 		is_no_ball = False
 		# modest probability for penalty balls
 		penalty_roll = random.random()
-		# Gate LMS-specific penalty behaviour by match type; other formats can later customize here
-		lms_mode = getattr(match_config, 'match_type', 'LMS') == 'LMS'
-		if lms_mode and penalty_roll < 0.04:
+		if penalty_roll < 0.04:
 			penalty_ball = True
 			is_wide = penalty_roll < 0.02
 			is_no_ball = not is_wide
@@ -169,7 +154,7 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 
 		if penalty_ball:
 			penalty_in_over += 1
-			# Runs for penalty balls per LMS rules (other formats can vary later)
+			# Runs for penalty balls per LMS rules
 			if over_index < max_overs:
 				penalty_runs = 1 if penalty_in_over == 1 else 3
 			else:
@@ -197,13 +182,13 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 				free_hit = True
 
 			if output_config and getattr(output_config, 'ball_by_ball', False):
-				# Show penalty type only; omit explicit '+runs' to avoid confusion
 				outcome_txt = 'Wide' if is_wide else 'No Ball'
+				runs_word = 'run' if penalty_runs == 1 else 'runs'
 				output_config.ball_by_ball_events.append({
 					'ball': f"{display_over}.{display_ball_in_over}",
 					'bowler': bowler.get('player_name', 'Unknown'),
 					'batter': batsman.get('player_name', 'Unknown'),
-					'outcome': outcome_txt
+					'outcome': f"{outcome_txt} +{penalty_runs} {runs_word}"
 				})
 
 			if target is not None and total_runs >= target:
@@ -267,9 +252,9 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 				howout_text = f"c&b {bowler_surname}"
 			elif dismissal_type == 'Stumped':
 				if keeper_surname:
-					howout_text = f"st † {keeper_surname} b {bowler_surname}"
+					howout_text = f"st † {keeper_surname}"
 				else:
-					howout_text = f"st † Unknown b {bowler_surname}"
+					howout_text = f"st † Unknown"
 			elif dismissal_type == 'LBW':
 				howout_text = f"lbw b {bowler_surname}"
 			else:
@@ -366,9 +351,8 @@ def simulate_innings(batting_team, bowling_team, match_config, target=None, outp
 			legal_balls_in_over += 1
 			free_hit = False
 
-			# Retirement (LMS only): retire batter once when threshold reached and replacement exists
-			lms_mode = getattr(match_config, 'match_type', 'LMS') == 'LMS'
-			retirement_threshold = match_config.MATCH_TYPES.get(match_config.match_type, {}).get('retirement_threshold', None) if lms_mode else None
+			# LMS format: retire batter only once when they first reach threshold and a replacement exists
+			retirement_threshold = match_config.MATCH_TYPES.get(match_config.match_type, {}).get('retirement_threshold', None)
 			retirement_note = ""
 			if retirement_threshold and pstats['runs'] >= retirement_threshold and (not pstats['retired_once']) and len(batting_queue) > 0:
 				pstats['retired'] = True
